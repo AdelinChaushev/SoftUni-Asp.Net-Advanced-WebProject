@@ -2,9 +2,9 @@
 {
     public interface IPictureServiceInterface
     {
-        public Task UploadFiles(MemoryStream stream, Guid companyId);
+        public Task UploadPictureAsync(MemoryStream stream, Guid companyId);
 
-        public Task<string> DeleteFile(Guid id);
+        public Task DeletePictureAsync(Guid id,string userId);
     }
 }
 

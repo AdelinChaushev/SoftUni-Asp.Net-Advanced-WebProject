@@ -14,16 +14,21 @@ namespace JobFinder.Core.Services
         {
             this.context = jobFinderDbContext;
         }
-        public async Task DeleteFile(Guid id,string userId)
+        public async Task DeletePictureAsync(Guid id,string userId)
         {
             Picture picture = await context.Pictures.Include(c => c.Company).FirstOrDefaultAsync(c => c.Id == id);
             if(picture.Company.OwnerId != userId)
             {
                 throw new InvalidOperationException();
             }
+            File.Delete(picture.PicturePath);
+            context.Remove(picture);
+            await context.SaveChangesAsync();
+            
+
         }
 
-        public async Task UploadFiles(MemoryStream stream,Guid companyId)
+        public async Task UploadPictureAsync(MemoryStream stream,Guid companyId)
         {
             string path = "C:/Users/Adi/Dropbox/Pictures" + $"/{GetCompanyName(companyId)}";
             if (Directory.Exists(path))
