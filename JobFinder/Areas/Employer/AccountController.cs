@@ -1,11 +1,10 @@
 ﻿using JobFinder.Data.Models;
 using JobFinder.Models.AuthViewModels;
-using JobFinder.Models.AuthViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace JobFinder.Controllers
+namespace JobFinder.Areas.Employer
 {
     public class AccountController : BaseController
     {
@@ -38,20 +37,20 @@ namespace JobFinder.Controllers
                 Email = userViewModel.Email,
             };
 
-         var result =  await userManager.CreateAsync(user,userViewModel.Password);
+            var result = await userManager.CreateAsync(user, userViewModel.Password);
             if (result.Succeeded)
             {
-                await signInManager.SignInAsync(user,isPersistent:true);
-                return RedirectToAction("Index","Home");
-                
+                await signInManager.SignInAsync(user, isPersistent: true);
+                return RedirectToAction("Create", "Company");
+
             }
-          
+
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError("", error.Description);
             }
             return View(userViewModel);
-            
+
         }
 
         [AllowAnonymous]
@@ -85,10 +84,10 @@ namespace JobFinder.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
-               ModelState.AddModelError("", "Invalid Login");
-               return View(loginViewModel);
+            ModelState.AddModelError("", "Invalid Login");
+            return View(loginViewModel);
 
-          
+
         }
 
         public async Task<IActionResult> Logout()
@@ -96,9 +95,6 @@ namespace JobFinder.Controllers
             await signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
-
-
 
     }
 }

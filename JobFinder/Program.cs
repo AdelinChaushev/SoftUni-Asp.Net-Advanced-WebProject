@@ -1,5 +1,7 @@
+using JobFinder.Core.Contracs;
+using JobFinder.Core.Services;
 using JobFinder.Data;
-using JobFinder.Data.Model;
+using JobFinder.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +12,9 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<JobFinderDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddScoped<IJobListingServiceInterface, JobListingService>();
+builder.Services.AddScoped<IPictureServiceInterface, PictureService>();
+builder.Services.AddScoped<ICompanyServiceInterface, CompanyService>();
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
@@ -52,6 +57,10 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

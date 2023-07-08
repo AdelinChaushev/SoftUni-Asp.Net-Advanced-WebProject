@@ -37,7 +37,7 @@ namespace JobFinder.Data
                 .HasOne(k => k.User)
                 .WithMany(k => k.Interviews)
                 .OnDelete(DeleteBehavior.Restrict);
-           // builder.Entity<Interview>().HasKey(k => new { k.CompanyId, k.UserId });
+           
 
 
             builder.Entity<JobApplication>().HasKey(k => new { k.JobListingId, k.UserId });

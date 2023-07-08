@@ -768,6 +768,19 @@
           }
         }
       },
+      "JobFinder.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "JobFinder.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/JobFinder.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JobFinder.Core.dll": {}
+        }
+      },
       "JobFinder.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2274,14 +2287,20 @@
         "version.txt"
       ]
     },
+    "JobFinder.Core/1.0.0": {
+      "type": "project",
+      "path": "../JobFinder.Core/JobFinder.Core.csproj",
+      "msbuildProject": "../JobFinder.Core/JobFinder.Core.csproj"
+    },
     "JobFinder.Data/1.0.0": {
       "type": "project",
-      "path": "../JobFinder.Core/JobFinder.Data.csproj",
-      "msbuildProject": "../JobFinder.Core/JobFinder.Data.csproj"
+      "path": "../JobFinder.Data/JobFinder.Data.csproj",
+      "msbuildProject": "../JobFinder.Data/JobFinder.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "JobFinder.Core >= 1.0.0",
       "JobFinder.Data >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.6",
@@ -2317,8 +2336,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Core\\JobFinder.Data.csproj": {
-              "projectPath": "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Core\\JobFinder.Data.csproj"
+            "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Core\\JobFinder.Core.csproj": {
+              "projectPath": "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Core\\JobFinder.Core.csproj"
+            },
+            "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Data\\JobFinder.Data.csproj": {
+              "projectPath": "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Data\\JobFinder.Data.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q/Q+aOtaOSTvTRldui+iPbC/KyxGUNqD9snqlcey5WM4/Trc4RXmTiakFao1v3sx6SJ4RWzyzGqpy842/frbEw==",
+  "dgSpecHash": "4WtdoDd0kfcSleA+TAnzcy24d4pdFsVm1jK5C0eyjjSIiIyXPB1U8+taZUAhkPDEsq9EirxJPMmoawiNB+1dVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Core\\JobFinder.Data.csproj",
+  "projectFilePath": "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Data\\JobFinder.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Adi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.6\\microsoft.aspnetcore.cryptography.internal.6.0.6.nupkg.sha512",

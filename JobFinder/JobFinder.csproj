@@ -16,12 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JobFinder.Core\JobFinder.Data.csproj" />
+    <Folder Include="Areas\Adminstration\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\" />
-    <Folder Include="Areas\Employer\" />
+    <ProjectReference Include="..\JobFinder.Core\JobFinder.Core.csproj" />
+    <ProjectReference Include="..\JobFinder.Data\JobFinder.Data.csproj" />
   </ItemGroup>
 
 </Project>
