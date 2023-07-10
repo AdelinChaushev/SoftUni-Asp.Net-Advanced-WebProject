@@ -22,7 +22,7 @@ namespace JobFinder.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("JobFinder.Data.Model.ApplicationUser", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -87,7 +87,7 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Company", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Company", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -115,7 +115,7 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("Companies");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Interview", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Interview", b =>
                 {
                     b.Property<Guid>("CompanyId")
                         .HasColumnType("uniqueidentifier");
@@ -136,7 +136,7 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("Interviews");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.JobApplication", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.JobApplication", b =>
                 {
                     b.Property<Guid>("JobListingId")
                         .HasColumnType("uniqueidentifier");
@@ -151,16 +151,11 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("JobApplications");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.JobCategory", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.JobCategory", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CategoryDescription")
-                        .IsRequired()
-                        .HasMaxLength(270)
-                        .HasColumnType("nvarchar(270)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -170,9 +165,31 @@ namespace JobFinder.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("JobCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("007a9393-c864-4134-bc4b-1de9bc46d10d"),
+                            Name = "Tech"
+                        },
+                        new
+                        {
+                            Id = new Guid("26751c0d-4a5b-401b-ad80-03f50f704ca9"),
+                            Name = "Farming"
+                        },
+                        new
+                        {
+                            Id = new Guid("5ab07bf9-845e-499c-944e-66612ed7c2b7"),
+                            Name = "Finnance"
+                        },
+                        new
+                        {
+                            Id = new Guid("4031bfe0-7468-482d-80de-8ea9ce5d4bf5"),
+                            Name = "Architecture"
+                        });
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.JobListing", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.JobListing", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -214,7 +231,7 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("JobListings");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Picture", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Picture", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -234,7 +251,7 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("Pictures");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Resume", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Resume", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -256,7 +273,7 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("Resumes");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Review", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Review", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -289,7 +306,7 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("Reviews");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Schedule", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Schedule", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -302,6 +319,28 @@ namespace JobFinder.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Schedules");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("746334c1-0f7a-4ef7-88a8-a7477b61d593"),
+                            WorkingSchedule = "9-5"
+                        },
+                        new
+                        {
+                            Id = new Guid("8cf6f986-690b-4936-8fdf-880359510b69"),
+                            WorkingSchedule = "Weekends"
+                        },
+                        new
+                        {
+                            Id = new Guid("4fb60442-4486-4215-b7d7-a89b3ad8b58d"),
+                            WorkingSchedule = "4 hours a day"
+                        },
+                        new
+                        {
+                            Id = new Guid("315387ad-38bd-452e-99e9-de62844ff896"),
+                            WorkingSchedule = "full working week"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -441,26 +480,26 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Company", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Company", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", "Owner")
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", "Owner")
                         .WithOne("Company")
-                        .HasForeignKey("JobFinder.Data.Model.Company", "OwnerId")
+                        .HasForeignKey("JobFinder.Data.Models.Company", "OwnerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Interview", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Interview", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.Company", "Company")
+                    b.HasOne("JobFinder.Data.Models.Company", "Company")
                         .WithMany("Interviews")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", "User")
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", "User")
                         .WithMany("Interviews")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -471,15 +510,15 @@ namespace JobFinder.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.JobApplication", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.JobApplication", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.JobListing", "JobListing")
+                    b.HasOne("JobFinder.Data.Models.JobListing", "JobListing")
                         .WithMany("UsersApplications")
                         .HasForeignKey("JobListingId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", "User")
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", "User")
                         .WithMany("JobApplications")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -490,21 +529,21 @@ namespace JobFinder.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.JobListing", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.JobListing", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.Company", "Company")
+                    b.HasOne("JobFinder.Data.Models.Company", "Company")
                         .WithMany("JobListings")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("JobFinder.Data.Model.JobCategory", "JobCategory")
+                    b.HasOne("JobFinder.Data.Models.JobCategory", "JobCategory")
                         .WithMany("JobListings")
                         .HasForeignKey("JobCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("JobFinder.Data.Model.Schedule", "Schedule")
+                    b.HasOne("JobFinder.Data.Models.Schedule", "Schedule")
                         .WithMany("Jobs")
                         .HasForeignKey("ScheduleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -517,9 +556,9 @@ namespace JobFinder.Data.Migrations
                     b.Navigation("Schedule");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Picture", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Picture", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.Company", "Company")
+                    b.HasOne("JobFinder.Data.Models.Company", "Company")
                         .WithMany("Pictures")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -528,24 +567,24 @@ namespace JobFinder.Data.Migrations
                     b.Navigation("Company");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Resume", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Resume", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", "User")
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", "User")
                         .WithOne("Resume")
-                        .HasForeignKey("JobFinder.Data.Model.Resume", "UserId")
+                        .HasForeignKey("JobFinder.Data.Models.Resume", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Review", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Review", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", null)
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", null)
                         .WithMany("Reviews")
                         .HasForeignKey("ApplicationUserId");
 
-                    b.HasOne("JobFinder.Data.Model.Company", "Company")
+                    b.HasOne("JobFinder.Data.Models.Company", "Company")
                         .WithMany("Reviews")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -565,7 +604,7 @@ namespace JobFinder.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", null)
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -574,7 +613,7 @@ namespace JobFinder.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", null)
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -589,7 +628,7 @@ namespace JobFinder.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", null)
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -598,14 +637,14 @@ namespace JobFinder.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("JobFinder.Data.Model.ApplicationUser", null)
+                    b.HasOne("JobFinder.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.ApplicationUser", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.ApplicationUser", b =>
                 {
                     b.Navigation("Company");
 
@@ -618,7 +657,7 @@ namespace JobFinder.Data.Migrations
                     b.Navigation("Reviews");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Company", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Company", b =>
                 {
                     b.Navigation("Interviews");
 
@@ -629,17 +668,17 @@ namespace JobFinder.Data.Migrations
                     b.Navigation("Reviews");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.JobCategory", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.JobCategory", b =>
                 {
                     b.Navigation("JobListings");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.JobListing", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.JobListing", b =>
                 {
                     b.Navigation("UsersApplications");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Model.Schedule", b =>
+            modelBuilder.Entity("JobFinder.Data.Models.Schedule", b =>
                 {
                     b.Navigation("Jobs");
                 });

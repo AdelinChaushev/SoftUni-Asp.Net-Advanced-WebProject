@@ -1,4 +1,6 @@
 ﻿using JobFinder.Core.Contracs;
+using JobFinder.Data.Models;
+using JobFinder.Models.CompanyViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobFinder.Controllers
@@ -17,5 +19,26 @@ namespace JobFinder.Controllers
             
             return View();
         }
+        [HttpGet]
+        public IActionResult Create()
+       => View();
+
+        [HttpPost]
+        public async Task<IActionResult> Create(CompanyInputViewModel compnay)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(compnay);
+            }
+            await companyService.AddAsync(ToDbModel(compnay), GetUserId());
+            return RedirectToAction("CreateEmployerAccount", "Account");
+
+        }
+        private Company ToDbModel(CompanyInputViewModel compnayViewModel)
+        => new()
+        {
+            CompanyDescription = compnayViewModel.CompanyDescription,
+            CompanyName = compnayViewModel.CompanyName,
+        };
     }
 }

@@ -13,8 +13,9 @@ builder.Services.AddDbContext<JobFinderDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddScoped<IJobListingServiceInterface, JobListingService>();
-builder.Services.AddScoped<IPictureServiceInterface, PictureService>();
+builder.Services.AddScoped<IFileServiceInterface, FileService>();
 builder.Services.AddScoped<ICompanyServiceInterface, CompanyService>();
+
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
@@ -27,10 +28,19 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 
     options.SignIn.RequireConfirmedEmail = false;
 })
+    
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<JobFinderDbContext>();
+builder.Services.ConfigureApplicationCookie(c =>
+{
+    c.Cookie.HttpOnly = true;
+    c.LoginPath = "/Account/Login";
+});
+
+
 
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -59,8 +69,8 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 app.MapControllerRoute(
-    name: "areas",
-    pattern: "{area:exists}{controller=Home}/{action=Index}/{id?}");
+    name: "Area",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

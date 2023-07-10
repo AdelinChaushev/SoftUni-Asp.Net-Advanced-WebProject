@@ -1,6 +1,5 @@
 ﻿using JobFinder.Data.Models;
 using JobFinder.Models.AuthViewModels;
-using JobFinder.Models.AuthViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +10,7 @@ namespace JobFinder.Controllers
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
+     
 
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
@@ -32,7 +32,7 @@ namespace JobFinder.Controllers
             {
                 return View(userViewModel);
             }
-            ApplicationUser user = new ApplicationUser()
+            ApplicationUser user =  new ApplicationUser()
             {
                 UserName = userViewModel.Username,
                 Email = userViewModel.Email,
@@ -42,7 +42,7 @@ namespace JobFinder.Controllers
             if (result.Succeeded)
             {
                 await signInManager.SignInAsync(user,isPersistent:true);
-                return RedirectToAction("Index","Home");
+                return RedirectToAction(nameof(SelectAccountType));
                 
             }
           
@@ -97,7 +97,20 @@ namespace JobFinder.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public IActionResult SelectAccountType()
+        {
+            return View();
+        }
+        
+        public async Task<IActionResult> CreateEmployerAccount()
+        {
+            ApplicationUser user = await userManager.FindByIdAsync(GetUserId()); 
+            await userManager.AddToRoleAsync(user, "Employer");
 
+            return Redirect("/Employer/Home/Index");
+
+
+        }
 
 
     }

@@ -17,7 +17,7 @@ namespace JobFinder.Data.Models
         [MinLength(3)]
         public string CompanyName { get; set; }
         [Required]
-        [MinLength(80)]
+        [MinLength(25)]
         [MaxLength(800)]
         public string CompanyDescription { get; set; }
 

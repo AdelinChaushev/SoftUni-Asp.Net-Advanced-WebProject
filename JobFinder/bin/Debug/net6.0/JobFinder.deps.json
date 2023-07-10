@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "JobFinder/1.0.0": {
         "dependencies": {
+          "JobFinder.Core": "1.0.0",
           "JobFinder.Data": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.6",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.6",
@@ -532,6 +533,14 @@
           }
         }
       },
+      "JobFinder.Core/1.0.0": {
+        "dependencies": {
+          "JobFinder.Data": "1.0.0"
+        },
+        "runtime": {
+          "JobFinder.Core.dll": {}
+        }
+      },
       "JobFinder.Data/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.6",
@@ -914,6 +923,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "JobFinder.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "JobFinder.Data/1.0.0": {
       "type": "project",

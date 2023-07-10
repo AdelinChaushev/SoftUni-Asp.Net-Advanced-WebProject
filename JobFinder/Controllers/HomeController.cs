@@ -6,22 +6,20 @@ namespace JobFinder.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        public HomeController(ILogger<HomeController> _logger) => this.logger = _logger;
 
         public IActionResult Index()
         {
+            if (User.IsInRole("Employer"))
+            {
+                return Redirect("/Employer/Home/Index");
+            }
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

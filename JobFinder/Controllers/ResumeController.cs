@@ -4,9 +4,9 @@ namespace JobFinder.Controllers
 {
     public class ResumeController : BaseController
     {
-        public Task<IActionResult> Upload()
-        {
-
-        }
+        //public async Task<IActionResult> Upload()
+        //{
+        //    return Ok();
+        //}
     }
 }

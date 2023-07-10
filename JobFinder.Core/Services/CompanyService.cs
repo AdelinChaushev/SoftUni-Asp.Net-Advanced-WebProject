@@ -13,20 +13,25 @@ namespace JobFinder.Core.Services
         {
             this.context = jobFinderDbContext;
         }
-        public async Task Add(Company company, string userId)
+        public async Task AddAsync(Company company, string userId)
         {
             company.OwnerId = userId;
             await context.AddAsync(company);
             await context.SaveChangesAsync();
         }
 
-        public async Task Delete(Guid id)
+        public async Task DeleteAsync(Guid id,string userId)
         {
+            var company = await GetCompanyById(id);
+            if(company.OwnerId != userId)
+            {
+                throw new InvalidOperationException();
+            }
             context.Remove(await GetCompanyById(id));
            await context.SaveChangesAsync();
         }
 
-        public async Task Edited(Guid id, Company editedEntity,string userId)
+        public async Task EditedAsync(Guid id, Company editedEntity,string userId)
         {
             if(editedEntity.OwnerId != userId)
             {
@@ -42,5 +47,8 @@ namespace JobFinder.Core.Services
 
         public async Task<Company> GetCompanyById(Guid id)
          => await context.Companies.FirstOrDefaultAsync(c => c.Id == id);
+
+        public async Task<Company> GetCompanyByuserId(string userId)
+        => await context.Companies.FirstOrDefaultAsync(c => c.OwnerId == userId);
     }
 }

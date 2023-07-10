@@ -4,6 +4,7 @@
 }
 
 <h1 class="text-center">@ViewBag.Title</h1>
+<h2 class="text-center">@ViewBag.Title</h2>
 <div class="border-5">
     
 <div class="row">
@@ -32,9 +33,15 @@
                 <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
             </div>
             <div class="text-center">
-                <button id="registerSubmit" type="submit" class="btn btn-primary">Register</button>
+                <button id="registerSubmit" type="submit" class="btn btn-success">Register</button>
+            </div>
+             <div class="text-center">
+                <a asp-controller="Areas/AccountController" asp-action="EmployerRegister" type="submit" class="btn btn-success">Employee register</a>
             </div>
         </form>
+
+        
+     
     </div>
 </div>
 

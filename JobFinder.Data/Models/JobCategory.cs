@@ -18,9 +18,7 @@ namespace JobFinder.Data.Models
         [MinLength(3)]
         [MaxLength(35)]
         public string Name { get; set; } = null!;
-        [MinLength(20)]
-        [MaxLength(270)]
-        public string CategoryDescription { get; set; } = null!;
+    
 
         public virtual IEnumerable<JobListing> JobListings { get; set; }
     }

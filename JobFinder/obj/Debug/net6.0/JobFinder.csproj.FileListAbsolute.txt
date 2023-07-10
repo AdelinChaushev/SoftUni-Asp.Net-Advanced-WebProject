@@ -72,4 +72,10 @@ C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Data.ru
 C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Data.exe
 C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Data.dll
 C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Data.pdb
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.deps.json
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.runtimeconfig.json
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.exe
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.dll
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.pdb
 C:\Users\Adi\source\repos\JobFinder\JobFinder\obj\Debug\net6.0\JobFinder.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Adi\source\repos\JobFinder\JobFinder\obj\Debug\net6.0\scopedcss\Areas\Employer\Views\Shared\_Layout.cshtml.rz.scp.css

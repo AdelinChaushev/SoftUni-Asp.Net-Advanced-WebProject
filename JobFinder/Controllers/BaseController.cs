@@ -5,6 +5,7 @@ using System.Security.Claims;
 namespace JobFinder.Controllers
 {
     [Authorize]
+    
     public class BaseController : Controller
     {
         protected string GetUserId()

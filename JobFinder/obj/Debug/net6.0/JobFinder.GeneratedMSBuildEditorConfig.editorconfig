@@ -15,6 +15,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Adi\source\repos\JobFinder\JobFinder
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/JobListing/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcSm9iTGlzdGluZ1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -25,6 +49,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Account/SelectAccountType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTZWxlY3RBY2NvdW50VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Company/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Home/Index.cshtml]
@@ -54,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1uqpmhk62r
 
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
