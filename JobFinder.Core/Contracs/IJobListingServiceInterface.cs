@@ -14,6 +14,7 @@ namespace JobFinder.Core.Contracs
 
         public Task EditAsync(Guid id, JobListing edited, string userId);
 
+       public Task<IEnumerable<JobListing>> GetAllByCompanyAsync(string userId);
         public Task<IEnumerable<JobCategory>> GetJobCategoriesAsync();
         public Task<IEnumerable<Schedule>> GetSchedulesAsync();
 

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<JobListingOutputViewModel>
+@{
+    ViewData["Title"] = "Here are all the products available";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+     @if(Model.Any())
+     {
+         foreach(var jobListing in Model)
+         {
+             <div class="col-sm-3">
+
+               <div class="card" style="width: 18rem;">
+                               
+                       <div class="card-body">
+                       <p class="mb-3">  @jobListing?.JobTitle</p> 
+                       <p class="mb-3"> Salary: @jobListing?.SalaryPerMonth</p> 
+                        <p class="mb-3"> Category: @jobListing?.JobCategory</p> 
+                         <p class="mb-3"> Schedule: @jobListing?.Schedule</p> 
+                       <a class="mb-3 btn btn-warning" asp-area="Employer"  asp-controller="JobListing" asp-action="Edit" asp-route-id="@jobListing.Id" >Edit</a>
+                       <a class="mb-3 btn btn-danger" asp-area="Employer" asp-controller="JobListing" asp-action="Delete" asp-route-id="@jobListing.Id">Delete </a>
+                       </div>
+               </div>
+             </div>
+         }
+     }
+    @if(!Model.Any())
+    {
+        <h2>No products yet.</h2>
+    }
+     
+</div>
+
+

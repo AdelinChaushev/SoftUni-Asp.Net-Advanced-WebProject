@@ -42,6 +42,7 @@ namespace JobFinder.Controllers
             if (result.Succeeded)
             {
                 await signInManager.SignInAsync(user,isPersistent:true);
+               await userManager.AddToRoleAsync(user,"User");
                 return RedirectToAction(nameof(SelectAccountType));
                 
             }
