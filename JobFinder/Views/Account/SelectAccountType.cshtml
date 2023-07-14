@@ -2,11 +2,11 @@
     ViewBag.Tile = "Select account type";
 }
 <h1 class="text-center"> @ViewBag.Title </h1>
-  <div class="col-md-4 offset-md-4">
-       <div class="text-center">
+  <div class="col-md-5 offset-md-4 border border-5 ">
+       <div class="text-center col-md-4 offset-md-4 mb-3">
          <a asp-area="" asp-controller="Home" asp-action="Index"  class="btn btn-success">Stay with an employee account</a>
      </div>
-     <div class="text-center">
+     <div class="text-center col-md-4 offset-md-4 ">
         <a  asp-controller="Company" asp-action="Create" class="btn btn-success">Make an employer account</a>
      </div>
   </div>

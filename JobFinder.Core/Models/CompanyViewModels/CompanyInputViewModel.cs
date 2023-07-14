@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace JobFinder.Models.CompanyViewModels
+namespace JobFinder.Core.Models.CompanyViewModels
 {
     public class CompanyInputViewModel
     {

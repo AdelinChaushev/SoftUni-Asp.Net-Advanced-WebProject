@@ -1,0 +1,9 @@
+﻿@model FileUploadViewModel
+<div class="text-center col-md-4 offset-md-4" >
+     <form asp-controller="Resume" asp-action="Upload" enctype="multipart/form-data" method="post">
+        <input class="form-control" type="file"  name="file" />
+
+        <button type="submit" value="Upload"  class="btn btn-success">Upload</button>
+     </form>
+ </div>
+

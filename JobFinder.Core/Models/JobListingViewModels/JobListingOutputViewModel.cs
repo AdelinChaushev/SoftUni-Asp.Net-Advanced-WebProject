@@ -1,5 +1,6 @@
-﻿namespace JobFinder.Models.JobListingViewModels
+﻿namespace JobFinder.Core.Models.JobListingViewModels
 {
+    using Enums;
     public class JobListingOutputViewModel
     {
         public Guid Id { get; set; }

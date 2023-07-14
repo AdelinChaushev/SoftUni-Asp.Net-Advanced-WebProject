@@ -1,9 +1,10 @@
-﻿using JobFinder.Areas.Employer.Models.JobListingViewModels;
+﻿using JobFinder.Core.Models.JobListingViewModels;
 using JobFinder.Core.Contracs;
 using JobFinder.Data.Models;
-using JobFinder.Models.JobListingViewModels;
+using JobFinder.Core.Models.JobListingViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using JobFinder.Core.Models.UserViewModels;
 
 namespace JobFinder.Areas.Employer.Controllers
 {
@@ -35,8 +36,6 @@ namespace JobFinder.Areas.Employer.Controllers
             }
           return View(viewModel);
         }
-
-
         
         [HttpPost]
         public async Task<IActionResult> Add(JobListingInputViewModel jobListingInputViewModel)
@@ -49,7 +48,7 @@ namespace JobFinder.Areas.Employer.Controllers
 
             await jobListingService.CreateAsync(jobListing,GetUserId());
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("CompanyJobListings");
             
         }
 
@@ -72,8 +71,6 @@ namespace JobFinder.Areas.Employer.Controllers
             return View(viewModel);
         }
 
-
-
         [HttpPost]
         public async Task<IActionResult> Edit(JobListingInputViewModel jobListingInputViewModel,Guid id)
         {
@@ -92,7 +89,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }
         
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("CompanyJobListings");
 
         }
         [HttpPost]
@@ -110,7 +107,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }
 
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("CompanyJobListings");
 
         }
         [HttpGet]
@@ -118,6 +115,13 @@ namespace JobFinder.Areas.Employer.Controllers
         {
             IEnumerable<JobListing> jobListings = await jobListingService.GetAllByCompanyAsync(GetUserId());
             IEnumerable<JobListingOutputViewModel> viewModel = ToDbModel(jobListings);
+            return View(viewModel);
+        }
+        [HttpGet]
+        public async Task<IActionResult> JobListingApplications(Guid id)
+        {
+            IEnumerable<ApplicationUser> applicationUsers = await jobListingService.GetJobApplicationsAsync(id);
+            IEnumerable<UserApplicationViewModel> viewModel = UserToViewModel(applicationUsers);
             return View(viewModel);
         }
         private IEnumerable<JobListingOutputViewModel> ToDbModel(IEnumerable<JobListing> dbCollection)
@@ -132,7 +136,16 @@ namespace JobFinder.Areas.Employer.Controllers
             Schedule = c.Schedule.WorkingSchedule,
             JobCategory = c.JobCategory.Name,
         }).ToList();
-            
+
+        private IEnumerable<UserApplicationViewModel> UserToViewModel(IEnumerable<ApplicationUser> userDbModel)
+        => userDbModel.Select(c => new UserApplicationViewModel()
+        {
+            Id = c.Id,
+            UserName = c.UserName,
+            Email = c.Email,
+            ResumeId = c.Resume.Id,
+        })
+        .ToList();
         private  JobListing ToDbModel(JobListingInputViewModel compnayViewModel)
         {
            return new JobListing()

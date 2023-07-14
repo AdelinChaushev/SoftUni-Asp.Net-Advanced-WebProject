@@ -1,0 +1,33 @@
+﻿@model IEnumerable<UserApplicationViewModel>
+@{
+
+}
+
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>      
+      <th scope="col">Email</th>
+      <th scope="col">UserName</th>
+      <th scope="col">Upload resume</th>
+      <th scope="col">Arrange interview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     @foreach (var item in Model)
+            {
+                int counter = 1;
+              <th> scope="row">@counter</th>
+             <td>@item.UserName</td>
+             <td>@item.Email</td>
+             <td> 
+              <a class="mb-3 btn btn-primary" asp-area="" asp-controller="Resume" asp-action="Download" asp-route-id="@item.Id">Download resume</a>
+             </td> 
+             <td> 
+              <a class="mb-3 btn btn-primary" asp-area="Employer" asp-controller="Interview" asp-action="ScheduleAnInterview" asp-route-id="@item.Id"></a>
+             </td>
+             counter++;
+            }
+    </tr>
+  </tbody>
+</table>

@@ -26,7 +26,6 @@ namespace JobFinder.Data
 
         public DbSet<Resume> Resumes { get; set; }
 
-        public DbSet<Review> Reviews { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

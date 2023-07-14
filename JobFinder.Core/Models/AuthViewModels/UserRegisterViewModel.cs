@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace JobFinder.Models.AuthViewModels
+namespace JobFinder.Core.Models.AuthViewModels
 {
     public class UserRegisterViewModel
     {

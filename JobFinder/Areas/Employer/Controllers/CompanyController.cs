@@ -1,6 +1,6 @@
 ﻿using JobFinder.Core.Contracs;
 using JobFinder.Data.Models;
-using JobFinder.Models.CompanyViewModels;
+using JobFinder.Core.Models.CompanyViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

@@ -28,6 +28,17 @@ namespace JobFinder.Core.Services
 
         }
 
+        public async Task DeleteResumeAsync(string userId)
+        {
+            Resume resume = await context.Resumes.FirstOrDefaultAsync(c => c.UserId == userId);
+            if(resume != null)
+            {
+                File.Delete(resume.ResumePath);
+                context.Remove(resume);
+                context.SaveChanges();
+            }
+        }      
+
         public async Task UploadPictureAsync(MemoryStream stream,Guid companyId)
         {
             string path = "C:/Users/Adi/Dropbox/Pictures" + $"/{GetCompanyName(companyId)}";
@@ -38,7 +49,8 @@ namespace JobFinder.Core.Services
             }
 
             var id = Guid.NewGuid();
-            using (FileStream fs = File.Create(path + id))
+            string filePath = Path.Combine(path, id.ToString());
+            using (FileStream fs = File.Create(filePath))
             {
                 StreamWriter sw = new StreamWriter(fs);
                 sw.Write(stream.ToArray());
@@ -46,7 +58,7 @@ namespace JobFinder.Core.Services
             Picture picture = new Picture()
             {
                 Id = id,
-                PicturePath = path + id,
+                PicturePath = filePath,
                 CompanyId = companyId
             };
 
@@ -64,15 +76,17 @@ namespace JobFinder.Core.Services
             }
 
             var id = Guid.NewGuid();
-            using (FileStream fs = File.Create(path + id))
+            string filePath = Path.Combine(path, id.ToString());
+            using (FileStream fs = File.Create(filePath))
             {
+                
                 StreamWriter sw = new StreamWriter(fs);
-                 sw.Write( stream.ToArray());
+                sw.Write(stream.ToArray());
             }
             Resume resume = new Resume()
             {
                 Id = id,
-                ResumePath = path + id,
+                ResumePath = filePath,
                 UserId = userId
             };
 

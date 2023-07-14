@@ -7,6 +7,10 @@
         public Task DeletePictureAsync(Guid id,string userId);
 
         public Task UploadResumeAsync(MemoryStream stream, string userId);
+
+        public Task DeleteResumeAsync( string userId);
+
+      
     }
 }
 

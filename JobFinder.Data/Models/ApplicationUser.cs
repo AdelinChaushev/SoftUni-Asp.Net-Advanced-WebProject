@@ -13,7 +13,7 @@ namespace JobFinder.Data.Models
 
         public List<Interview> Interviews { get; set; }
 
-        public List<Review> Reviews { get; set; }
+        
 
         public List<JobApplication> JobApplications { get; set; }
 

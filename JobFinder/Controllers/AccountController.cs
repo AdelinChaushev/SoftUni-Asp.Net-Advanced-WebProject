@@ -1,5 +1,5 @@
 ﻿using JobFinder.Data.Models;
-using JobFinder.Models.AuthViewModels;
+using JobFinder.Core.Models.AuthViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -98,8 +98,12 @@ namespace JobFinder.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult SelectAccountType()
+        public async Task<IActionResult> SelectAccountType()
         {
+            if( await userManager.IsInRoleAsync(await userManager.FindByIdAsync(GetUserId()), "Employer"))
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
         
@@ -112,7 +116,10 @@ namespace JobFinder.Controllers
 
 
         }
-
+        public IActionResult AccountSettings()
+        {
+            return View();
+        }
 
     }
 }

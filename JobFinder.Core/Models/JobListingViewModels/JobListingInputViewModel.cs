@@ -2,7 +2,7 @@
 using JobFinder.Data.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace JobFinder.Areas.Employer.Models.JobListingViewModels
+namespace JobFinder.Core.Models.JobListingViewModels
 {
     public class JobListingInputViewModel
     {

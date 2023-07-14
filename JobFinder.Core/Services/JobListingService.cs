@@ -1,7 +1,11 @@
 ﻿using JobFinder.Core.Contracs;
+using JobFinder.Core.Models.Enums;
+using JobFinder.Core.Models.JobListingViewModels;
 using JobFinder.Data;
 using JobFinder.Data.Models;
+
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace JobFinder.Core.Services
 {
@@ -71,6 +75,108 @@ namespace JobFinder.Core.Services
                 .ToListAsync();
         }
 
+        public async Task<IEnumerable<ApplicationUser>> GetJobApplicationsAsync(Guid id)
+          => await context.JobApplications
+            .Where(c => c.JobListingId == id)
+            .Include(c => c.User)
+            .ThenInclude(c => c.Resume)
+            .Select(c => new ApplicationUser()
+            {
+                Id = c.UserId,
+                UserName = c.User.UserName,
+                Email = c.User.Email,
+                Resume = c.User.Resume,
+
+            })
+            
+            .ToListAsync();
+
+        public async Task<AllJobListingOutputViewModel> SearchJobListings(AllJobListingOutputViewModel allJobListingOutputViewModel)
+        {
+            allJobListingOutputViewModel.JobLitings = await context.JobListings.Select(c => new JobListingOutputViewModel()
+            {
+                Id = c.Id,
+                JobTitle = c.JobTitle,
+                SalaryPerMonth = c.SalaryPerMonth,
+                VaccantionDays = c.VaccantionDays,
+                Description = c.Description,
+                Schedule = c.Schedule.WorkingSchedule,
+                JobCategory = c.JobCategory.Name,
+                CompanyId = c.CompanyId,
+            }).ToListAsync();
+            switch (allJobListingOutputViewModel.Category)
+            {
+                case "Farming":
+                    allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.JobCategory == "Farming");
+                    break;
+                case "Tech":
+                    allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.JobCategory == "Tech");
+                    break;
+                case "Architecture":
+                    allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.JobCategory == "Architecture");
+                    break;
+                case "Finnance":
+                    allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.JobCategory == "Finnance");
+                    break;              
+            }
+            switch (allJobListingOutputViewModel.Schedule)
+            {
+                case "Weekends":
+                    allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.Schedule == "Weekends");
+                    break;
+                case "9-5":
+                    allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.Schedule == "9-5");
+                    break;
+                case "4 hours a day":
+                    allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.Schedule == "4 hours a day");
+                    break;
+                case "full working week":
+                    allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.Schedule == "full working week");
+                    break;
+            }
+            if(allJobListingOutputViewModel.OrderBy == OrderBy.Ascending)
+            {
+                switch ((int)allJobListingOutputViewModel.JobListingSort)
+                {
+                    case 0:
+                        allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.OrderBy(c => c.SalaryPerMonth);
+                        break;
+                    case 1:
+                        allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.OrderBy(c => c.VaccantionDays);
+                        break;
+                }
+            }
+            else
+            {
+                switch ((int)allJobListingOutputViewModel.JobListingSort)
+                {
+                    case 0:
+                        allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.OrderByDescending(c => c.SalaryPerMonth);
+                        break;
+                    case 1:
+                        allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.OrderByDescending(c => c.VaccantionDays);
+                        break;
+                }
+            }
+
+           allJobListingOutputViewModel.MaxPages = allJobListingOutputViewModel.JobLitings.Count() / 8;
+            if (allJobListingOutputViewModel.MaxPages % 8 > 0)
+            {
+                allJobListingOutputViewModel.MaxPages++;
+            }
+
+            if (allJobListingOutputViewModel.Page < 1)
+            {
+                allJobListingOutputViewModel.Page = 1;
+            }
+            else if (allJobListingOutputViewModel.Page > allJobListingOutputViewModel.MaxPages)
+            {
+                allJobListingOutputViewModel.MaxPages = allJobListingOutputViewModel.MaxPages;
+            }
+
+            allJobListingOutputViewModel.JobLitings = JobListingPaginationFilter(allJobListingOutputViewModel);
+            return allJobListingOutputViewModel;
+        }
         public async Task<IEnumerable<JobCategory>> GetJobCategoriesAsync()
         => await context.JobCategories.ToListAsync();
 
@@ -83,5 +189,15 @@ namespace JobFinder.Core.Services
 
             return applicationUser.Company.Id;
         } 
+        private  IEnumerable<JobListingOutputViewModel> JobListingPaginationFilter(AllJobListingOutputViewModel jobListingOutputViewModels)
+        {
+            int itemsToSkip = (jobListingOutputViewModels.Page - 1) * 8;
+            int itemsLeft = jobListingOutputViewModels.JobLitings.Count() - itemsToSkip;
+            int itemsToTake = itemsLeft < 8
+                ? itemsLeft
+                : 8;
+
+            return  jobListingOutputViewModels.JobLitings.Skip(itemsToSkip).Take(itemsToTake);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using JobFinder.Data.Models;
+﻿using JobFinder.Core.Models.JobListingViewModels;
+using JobFinder.Data.Models;
 
 namespace JobFinder.Core.Contracs
 {
@@ -17,6 +18,10 @@ namespace JobFinder.Core.Contracs
        public Task<IEnumerable<JobListing>> GetAllByCompanyAsync(string userId);
         public Task<IEnumerable<JobCategory>> GetJobCategoriesAsync();
         public Task<IEnumerable<Schedule>> GetSchedulesAsync();
+
+        public Task<IEnumerable<ApplicationUser>> GetJobApplicationsAsync(Guid id);
+
+        public Task<AllJobListingOutputViewModel> SearchJobListings(AllJobListingOutputViewModel allJobListingOutputViewModel);
 
     }
 }

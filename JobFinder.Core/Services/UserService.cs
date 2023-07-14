@@ -12,11 +12,11 @@ namespace JobFinder.Core.Services
 
         public UserService(JobFinderDbContext jobFinderDbContext)
         {
-            this.context = jobFinderDbContext;
+            context = jobFinderDbContext;
         }
         public async Task<IEnumerable<Interview>> GetInterviewsAsync(string userId)
         {
-            return await context.Interviews.Where(c => c.UserId == userId).ToListAsync();
+            return await context.Interviews.Include(c => c.Company).Where(c => c.UserId == userId).ToListAsync();
         }
 
     }
