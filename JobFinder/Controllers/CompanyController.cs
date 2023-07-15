@@ -34,6 +34,7 @@ namespace JobFinder.Controllers
             return RedirectToAction("CreateEmployerAccount", "Account");
 
         }
+
         private Company ToDbModel(CompanyInputViewModel compnayViewModel)
         => new()
         {

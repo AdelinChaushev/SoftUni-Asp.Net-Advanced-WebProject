@@ -15,8 +15,38 @@ namespace JobFinder.Areas.Employer.Controllers
         {
             this.companyService = companyService;
         }
+        public async Task<IActionResult> Edit(Guid id)
+       => View(await companyService.GetCompanyById(id));
 
-       
+        public async Task<IActionResult> Edit(Guid id, CompanyInputViewModel compnayViewModel)
+        {
+            var company = ToDbModel(compnayViewModel);
+            try
+            {
+                await companyService.EditedAsync(id, company, GetUserId());
+            }
+            catch (Exception)
+            {
+
+                return BadRequest();
+            }
+            return RedirectToAction("CompanySettings");
+        }
+
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            try
+            {
+                await companyService.DeleteAsync(id,GetUserId());
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+            return Redirect("/Home/Index");
+        }
+       public async Task<IActionResult> CompanySettings(Guid id)
+       => View(await companyService.GetCompanyById(id));
 
         //private Task<CompanyOutputViewModel> ToViewModel(Company company)
         //{

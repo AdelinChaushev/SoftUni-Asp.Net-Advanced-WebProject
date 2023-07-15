@@ -1,7 +1,6 @@
 ﻿using JobFinder.Core.Models.JobListingViewModels;
 using JobFinder.Core.Contracs;
 using JobFinder.Data.Models;
-using JobFinder.Core.Models.JobListingViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using JobFinder.Core.Models.UserViewModels;
@@ -85,7 +84,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }
             catch (InvalidOperationException)
             {
-                return RedirectToAction("Index", "Home");
+                return BadRequest();
             }
         
 
@@ -103,7 +102,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }
             catch (InvalidOperationException)
             {
-                return RedirectToAction("Index", "Home");
+                return BadRequest();
             }
 
 

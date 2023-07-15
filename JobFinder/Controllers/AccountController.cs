@@ -102,17 +102,31 @@ namespace JobFinder.Controllers
         {
             if( await userManager.IsInRoleAsync(await userManager.FindByIdAsync(GetUserId()), "Employer"))
             {
-                return RedirectToAction("Index", "Home");
+                return BadRequest();
             }
             return View();
         }
         
         public async Task<IActionResult> CreateEmployerAccount()
         {
+            if (User.IsInRole("Employer"))
+            {
+                return BadRequest();
+            }
             ApplicationUser user = await userManager.FindByIdAsync(GetUserId()); 
             await userManager.AddToRoleAsync(user, "Employer");
 
             return Redirect("/Employer/Home/Index");
+
+
+        }
+        [Authorize(Roles = "Employer")]
+        public async Task<IActionResult> DeleteEmployerAccount()
+        {
+            ApplicationUser user = await userManager.FindByIdAsync(GetUserId());
+            await userManager.RemoveFromRoleAsync(user, "Employer");
+
+            return RedirectToAction("Home","Index");
 
 
         }

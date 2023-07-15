@@ -16,7 +16,7 @@ namespace JobFinder.Controllers
             this.jobListingService = jobListingService;
         }
 
-        public async Task<IActionResult> SearchForJobs(string category,string? schedule,int? jobListingSort, int? orderBy)
+        public async Task<IActionResult> SearchForJobs(string category,string? schedule,int? jobListingSort, int? orderBy,int page)
         {
             AllJobListingOutputViewModel allJobListingOutputViewModel = new AllJobListingOutputViewModel()
             {
@@ -24,6 +24,7 @@ namespace JobFinder.Controllers
                 Schedule = schedule,
                 JobListingSort = (JobListingSort)jobListingSort,
                 OrderBy = (OrderBy)jobListingSort,
+                Page = page
 
             };
             allJobListingOutputViewModel = await jobListingService.SearchJobListings(allJobListingOutputViewModel);
