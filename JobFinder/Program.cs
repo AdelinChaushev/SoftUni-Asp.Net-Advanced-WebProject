@@ -16,6 +16,7 @@ builder.Services.AddScoped<IJobListingServiceInterface, JobListingService>();
 builder.Services.AddScoped<IPictureServiceInterface, PictureService>();
 builder.Services.AddScoped<IResumeServiceInterface, ResumeService>();
 builder.Services.AddScoped<ICompanyServiceInterface, CompanyService>();
+builder.Services.AddScoped<IUserServiceInterface, UserService>();
 
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options =>

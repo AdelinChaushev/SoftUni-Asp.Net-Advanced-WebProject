@@ -37,6 +37,13 @@ namespace JobFinder.Controllers
 
         }
 
+        public async Task<IActionResult> CompanyIterviews()
+        {
+            var companyDbModel = await companyService.GetCompanyInterviewsAsync(GetUserId());
+           
+            return View(companyDbModel);
+        }
+
         private Company ToDbModel(CompanyInputViewModel compnayViewModel)
         => new()
         {
