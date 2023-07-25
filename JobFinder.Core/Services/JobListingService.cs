@@ -1,5 +1,6 @@
 ﻿using JobFinder.Core.Contracs;
 using JobFinder.Core.Models.Enums;
+using JobFinder.Core.Models.JobApplicationViewModels;
 using JobFinder.Core.Models.JobListingViewModels;
 using JobFinder.Data;
 using JobFinder.Data.Models;
@@ -75,14 +76,15 @@ namespace JobFinder.Core.Services
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<ApplicationUser>> GetJobApplicationsAsync(Guid id)
+        public async Task<IEnumerable<JobApplicationViewModel>> GetJobApplicationsAsync(Guid id)
           => await context.JobApplications           
-            .Select(c => new ApplicationUser()
+            .Select(c => new JobApplicationViewModel()
             {
-                Id = c.UserId,
-                UserName = c.User.UserName,
+                UserId = c.UserId,
+                Username = c.User.UserName,
                 Email = c.User.Email,
-                Resume = c.User.Resume,
+                ResumeId = c.User.Resume.Id,
+                JobListingId = c.JobListingId,
 
             })
             

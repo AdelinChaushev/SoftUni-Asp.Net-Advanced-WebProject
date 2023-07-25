@@ -1,6 +1,7 @@
 ﻿using JobFinder.Core.Contracs;
 using JobFinder.Core.Models.CompanyViewModels;
 using JobFinder.Core.Models.InterviewViewModel;
+using JobFinder.Core.Models.JobApplicationViewModels;
 using JobFinder.Data;
 using JobFinder.Data.Models;
 using Microsoft.EntityFrameworkCore;
@@ -65,10 +66,11 @@ namespace JobFinder.Core.Services
                     UserName = c.User.UserName,
                     Email = c.User.Email,
                     StartTime = c.InterviewStart,
-                    EndTime = c.InterviewEnd
-
-
-                }).ToListAsync();
+                    EndTime = c.InterviewEnd,
+                    JobTitle = c.JobTitle,
+                })
+                .OrderBy(c => c.StartTime)
+                .ToListAsync();
 
             return companyOutputViewModels;
 
@@ -76,6 +78,29 @@ namespace JobFinder.Core.Services
 
         }
 
-       
+    
+
+        public async Task ScheduleInterview(InterviewInputViewModel interviewInputViewModel, Guid jobId, string userId, string companyOwnerId)
+        {
+
+            var job = await context.JobListings.FirstOrDefaultAsync(c => c.Id == jobId);
+            var company = await context.Companies.FirstOrDefaultAsync(c => c.JobListings.Any(c => c.Id == jobId));
+            if(company.OwnerId != companyOwnerId || userId == companyOwnerId)
+            {
+                throw new InvalidOperationException();
+            }
+            Interview interview = new()
+            { 
+                CompanyId = company.Id,
+                UserId = userId,
+                JobTitle = job.JobTitle,
+                InterviewStart = interviewInputViewModel.StartTime,
+                InterviewEnd = interviewInputViewModel.EndTime,
+            };
+
+            await context.AddAsync(interview);
+            await context.SaveChangesAsync();
+
+        }
     }
 }

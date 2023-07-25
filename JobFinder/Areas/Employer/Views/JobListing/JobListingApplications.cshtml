@@ -1,4 +1,4 @@
-﻿@model IEnumerable<UserApplicationViewModel>
+﻿@model IEnumerable<JobApplicationViewModel>
 @{
     ViewBag.Tilte = "Job seekers applyed for your job";
 }
@@ -24,7 +24,7 @@
                 int counter = 1;
              <th scope="row">@counter</th>
              <td>@item.Email</td>
-             <td>@item.UserName</td>
+             <td>@item.Username</td>
              <td> 
                         @if(item.ResumeId != null)
                         {
@@ -33,7 +33,7 @@
                         }
              </td> 
              <td> 
-              <a class="mb-3 btn btn-primary" asp-area="Employer" asp-controller="Interview" asp-action="ScheduleAnInterview" asp-route-id="@item.Id">Arrange Interview</a>
+              <a class="mb-3 btn btn-primary" asp-area="Employer" asp-controller="Company" asp-action="ScheduleInterview" asp-route-userId="@item.UserId "asp-route-jobListingId="@item.JobListingId">Arrange Interview</a>
              </td>
              counter++;
             }

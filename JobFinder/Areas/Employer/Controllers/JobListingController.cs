@@ -3,7 +3,7 @@ using JobFinder.Core.Contracs;
 using JobFinder.Data.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using JobFinder.Core.Models.UserViewModels;
+using JobFinder.Core.Models.JobApplicationViewModels;
 
 namespace JobFinder.Areas.Employer.Controllers
 {
@@ -120,13 +120,12 @@ namespace JobFinder.Areas.Employer.Controllers
         public async Task<IActionResult> JobListingApplications(Guid id)
         {
 
-            IEnumerable<ApplicationUser> applicationUsers = await jobListingService.GetJobApplicationsAsync(id);
+            IEnumerable<JobApplicationViewModel> applicationUsers = await jobListingService.GetJobApplicationsAsync(id);
             if (applicationUsers.Count() == 0)
             {
                 return View();
-            }
-            IEnumerable<UserApplicationViewModel> viewModel = UserToViewModel(applicationUsers);
-            return View(viewModel);
+            }          
+            return View(applicationUsers);
         }
         private IEnumerable<JobListingOutputViewModel> ToDbModel(IEnumerable<JobListing> dbCollection)
         => dbCollection.Select(c => new JobListingOutputViewModel()
@@ -141,15 +140,7 @@ namespace JobFinder.Areas.Employer.Controllers
             JobCategory = c.JobCategory.Name,
         }).ToList();
 
-        private IEnumerable<UserApplicationViewModel> UserToViewModel(IEnumerable<ApplicationUser> userDbModel)
-        => userDbModel.Select(c => new UserApplicationViewModel()
-        {
-            Id = c.Id,
-            UserName = c.UserName,
-            Email = c.Email,
-            ResumeId = c.Resume?.Id,
-        })
-        .ToList();
+      
         private  JobListing ToDbModel(JobListingInputViewModel compnayViewModel)
         {
            return new JobListing()

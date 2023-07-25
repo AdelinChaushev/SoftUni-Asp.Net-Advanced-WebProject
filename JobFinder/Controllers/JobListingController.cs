@@ -64,7 +64,7 @@ namespace JobFinder.Controllers
             return View(jobListing);
         }
 
-        [HttpPost]
+        
         public async Task<IActionResult> ApplyForJob(Guid id)
         {
             try

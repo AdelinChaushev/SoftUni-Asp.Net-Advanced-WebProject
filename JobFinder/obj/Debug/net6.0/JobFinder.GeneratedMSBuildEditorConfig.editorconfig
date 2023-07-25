@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Adi\source\repos\JobFinder\JobFinder
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/CompanyInterviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxDb21wYW55SW50ZXJ2aWV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/ScheduleInterview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxTY2hlZHVsZUludGVydmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

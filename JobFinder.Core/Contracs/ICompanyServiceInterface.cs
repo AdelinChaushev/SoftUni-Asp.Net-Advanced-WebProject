@@ -1,5 +1,6 @@
 ﻿using JobFinder.Core.Models.CompanyViewModels;
 using JobFinder.Core.Models.InterviewViewModel;
+using JobFinder.Core.Models.JobApplicationViewModels;
 using JobFinder.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -18,5 +19,7 @@ namespace JobFinder.Core.Contracs
         public Task AddAsync(Company company,string userId);
         public Task DeleteAsync(string userId);
         public Task EditAsync( Company editedEntity, string userId);
+        public  Task ScheduleInterview(InterviewInputViewModel interviewInputViewModel,Guid jobId, string userId, string companyOwnerId);
+       
     }
 }
