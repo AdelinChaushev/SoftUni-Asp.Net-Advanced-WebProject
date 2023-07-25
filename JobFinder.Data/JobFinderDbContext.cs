@@ -88,7 +88,13 @@ namespace JobFinder.Data
             builder.Entity<JobApplication>()
                 .HasOne(k => k.JobListing)
                 .WithMany(k => k.UsersApplications)
-                .OnDelete(DeleteBehavior.Restrict); ;
+                .OnDelete(DeleteBehavior.Restrict);
+
+         builder.Entity<JobApplication>()
+         .HasOne(k => k.User)
+         .WithMany(k => k.JobApplications)
+         .OnDelete(DeleteBehavior.Restrict);
+
 
             builder.Entity<Resume>()
                 .HasOne(c => c.User)

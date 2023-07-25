@@ -1,9 +1,12 @@
 ﻿@model FileUploadViewModel
 <div class="text-center col-md-4 offset-md-4" >
-     <form asp-controller="Resume" asp-action="Upload" enctype="multipart/form-data" method="post">
-        <input class="form-control" type="file"  name="file" />
-
+     <form asp-controller="Resume" asp-action="Upload" enctype="multipart/form-data" method="post">         
+        <input asp-for="@Model.File" class="form-control" type="file"  name="file" />
         <button type="submit" value="Upload"  class="btn btn-success">Upload</button>
+         <span asp-validation-for="@Model.File" class="text-danger"></span>    
      </form>
+      <a class="btn btn-danger" asp-controller="Resume" asp-action="Delete">Delete Resume</a>
  </div>
-
+ @section Scripts {
+    <partial name="_ValidationScriptsPartial" />    
+}

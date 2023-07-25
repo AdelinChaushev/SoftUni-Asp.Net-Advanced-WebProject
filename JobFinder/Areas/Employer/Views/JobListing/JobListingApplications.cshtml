@@ -1,11 +1,16 @@
 ﻿@model IEnumerable<UserApplicationViewModel>
 @{
-
+    ViewBag.Tilte = "Job seekers applyed for your job";
 }
+<h1 class="text-center">@ViewBag.Tilte</h1>
+@if (Model != null)
+{
+    
 
 <table class="table table-hover table-dark">
   <thead>
     <tr>      
+      <th scope="col">Number</th>
       <th scope="col">Email</th>
       <th scope="col">UserName</th>
       <th scope="col">Upload resume</th>
@@ -17,17 +22,22 @@
      @foreach (var item in Model)
             {
                 int counter = 1;
-              <th> scope="row">@counter</th>
-             <td>@item.UserName</td>
+             <th scope="row">@counter</th>
              <td>@item.Email</td>
+             <td>@item.UserName</td>
              <td> 
-              <a class="mb-3 btn btn-primary" asp-area="" asp-controller="Resume" asp-action="Download" asp-route-id="@item.Id">Download resume</a>
+                        @if(item.ResumeId != null)
+                        {
+                            
+                        <a class="mb-3 btn btn-primary" asp-area="" asp-controller="Resume" asp-action="Download" asp-route-id="@item.ResumeId">Download resume</a>
+                        }
              </td> 
              <td> 
-              <a class="mb-3 btn btn-primary" asp-area="Employer" asp-controller="Interview" asp-action="ScheduleAnInterview" asp-route-id="@item.Id"></a>
+              <a class="mb-3 btn btn-primary" asp-area="Employer" asp-controller="Interview" asp-action="ScheduleAnInterview" asp-route-id="@item.Id">Arrange Interview</a>
              </td>
              counter++;
             }
     </tr>
   </tbody>
 </table>
+}

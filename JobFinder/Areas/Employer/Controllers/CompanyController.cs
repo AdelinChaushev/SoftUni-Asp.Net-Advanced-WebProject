@@ -15,15 +15,15 @@ namespace JobFinder.Areas.Employer.Controllers
         {
             this.companyService = companyService;
         }
-        public async Task<IActionResult> Edit(Guid id)
-       => View(await companyService.GetCompanyById(id));
+        public async Task<IActionResult> Edit()
+       => View(await companyService.GetCompanyByUserId(GetUserId()));
 
-        public async Task<IActionResult> Edit(Guid id, CompanyInputViewModel compnayViewModel)
+        public async Task<IActionResult> Edit(CompanyInputViewModel compnayViewModel)
         {
             var company = ToDbModel(compnayViewModel);
             try
             {
-                await companyService.EditedAsync(id, company, GetUserId());
+                await companyService.EditedAsync(company, GetUserId());
             }
             catch (Exception)
             {
@@ -33,11 +33,11 @@ namespace JobFinder.Areas.Employer.Controllers
             return RedirectToAction("CompanySettings");
         }
 
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> Delete()
         {
             try
             {
-                await companyService.DeleteAsync(id,GetUserId());
+                await companyService.DeleteAsync(GetUserId());
             }
             catch (Exception)
             {

@@ -1,4 +1,4 @@
-namespace JobFinder.Core.Models.Models
+namespace JobFinder.Core.Models
 {
     public class ErrorViewModel
     {

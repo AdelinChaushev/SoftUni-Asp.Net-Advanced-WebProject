@@ -76,10 +76,7 @@ namespace JobFinder.Core.Services
         }
 
         public async Task<IEnumerable<ApplicationUser>> GetJobApplicationsAsync(Guid id)
-          => await context.JobApplications
-            .Where(c => c.JobListingId == id)
-            .Include(c => c.User)
-            .ThenInclude(c => c.Resume)
+          => await context.JobApplications           
             .Select(c => new ApplicationUser()
             {
                 Id = c.UserId,
@@ -104,6 +101,10 @@ namespace JobFinder.Core.Services
                 JobCategory = c.JobCategory.Name,
                 CompanyId = c.CompanyId,
             }).ToListAsync();
+            if(allJobListingOutputViewModel.Keyword != null)
+            {
+                allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.JobTitle.Contains(allJobListingOutputViewModel.Keyword));
+            }
             switch (allJobListingOutputViewModel.Category)
             {
                 case "Farming":
@@ -159,8 +160,12 @@ namespace JobFinder.Core.Services
                 }
             }
 
-           allJobListingOutputViewModel.MaxPages = allJobListingOutputViewModel.JobLitings.Count() / 8;
-            if (allJobListingOutputViewModel.MaxPages % 8 > 0)
+           allJobListingOutputViewModel.MaxPages = allJobListingOutputViewModel.JobLitings.Count() / 10;
+            if(allJobListingOutputViewModel.MaxPages == 0)
+            {
+                allJobListingOutputViewModel.MaxPages = 1;
+            }
+           else if (allJobListingOutputViewModel.MaxPages % 8 > 0)
             {
                 allJobListingOutputViewModel.MaxPages++;
             }
@@ -189,6 +194,25 @@ namespace JobFinder.Core.Services
 
             return applicationUser.Company.Id;
         } 
+
+        public async Task ApplyForJob(Guid id, string userId)
+        {
+            if(await context.JobApplications.AnyAsync(c => c.UserId == userId && c.JobListingId == id) || 
+               await context.Companies.AnyAsync(c => c.OwnerId == userId))
+            {
+                throw new InvalidOperationException();
+            }
+            JobApplication jobApplication = new JobApplication()
+            {
+                UserId = userId,
+                JobListingId = id
+            };
+            await context.AddAsync(jobApplication);
+            await context.SaveChangesAsync();
+        }
+
+
+
         private  IEnumerable<JobListingOutputViewModel> JobListingPaginationFilter(AllJobListingOutputViewModel jobListingOutputViewModels)
         {
             int itemsToSkip = (jobListingOutputViewModels.Page - 1) * 8;
@@ -199,5 +223,6 @@ namespace JobFinder.Core.Services
 
             return  jobListingOutputViewModels.JobLitings.Skip(itemsToSkip).Take(itemsToTake);
         }
+
     }
 }

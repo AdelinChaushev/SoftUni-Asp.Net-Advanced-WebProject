@@ -13,7 +13,8 @@ builder.Services.AddDbContext<JobFinderDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddScoped<IJobListingServiceInterface, JobListingService>();
-builder.Services.AddScoped<IFileServiceInterface, FileService>();
+builder.Services.AddScoped<IPictureServiceInterface, PictureService>();
+builder.Services.AddScoped<IResumeServiceInterface, ResumeService>();
 builder.Services.AddScoped<ICompanyServiceInterface, CompanyService>();
 
 

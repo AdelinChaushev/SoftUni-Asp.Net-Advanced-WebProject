@@ -1,5 +1,5 @@
 ﻿using JobFinder.Core.Contracs;
-
+using JobFinder.Core.Models.InterviewViewModel;
 using JobFinder.Data;
 using JobFinder.Data.Models;
 using Microsoft.EntityFrameworkCore;
@@ -14,10 +14,24 @@ namespace JobFinder.Core.Services
         {
             context = jobFinderDbContext;
         }
-        public async Task<IEnumerable<Interview>> GetInterviewsAsync(string userId)
+        public async Task<IEnumerable<UserInterviewOutputViewModel>> GetInterviewsAsync(string userId)
         {
-            return await context.Interviews.Include(c => c.Company).Where(c => c.UserId == userId).ToListAsync();
+           var intervewsDb = await context.Interviews
+                .Where(c => c.UserId == userId)
+                .Select(c => new UserInterviewOutputViewModel()
+                {
+                    CompnayName = c.Company.CompanyName,
+                    StartTime = c.InterviewStart,
+                    EndTime = c.InterviewEnd,
+                })
+                .ToListAsync();
+
+            return intervewsDb;
+
+
+
         }
 
+        
     }
 }

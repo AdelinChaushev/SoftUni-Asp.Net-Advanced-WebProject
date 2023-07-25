@@ -129,6 +129,10 @@ namespace JobFinder.Data.Migrations
                     b.Property<DateTime>("InterviewStart")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("JobTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("CompanyId", "UserId");
 
                     b.HasIndex("UserId");
@@ -169,22 +173,22 @@ namespace JobFinder.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("007a9393-c864-4134-bc4b-1de9bc46d10d"),
+                            Id = new Guid("7478976e-95c8-4475-8773-9bf08ea4acbc"),
                             Name = "Tech"
                         },
                         new
                         {
-                            Id = new Guid("26751c0d-4a5b-401b-ad80-03f50f704ca9"),
+                            Id = new Guid("7e0687c1-d6ac-4864-a820-c20a5728c41e"),
                             Name = "Farming"
                         },
                         new
                         {
-                            Id = new Guid("5ab07bf9-845e-499c-944e-66612ed7c2b7"),
+                            Id = new Guid("86ab0e84-44d0-4d0b-8c02-77114cbf1e3a"),
                             Name = "Finnance"
                         },
                         new
                         {
-                            Id = new Guid("4031bfe0-7468-482d-80de-8ea9ce5d4bf5"),
+                            Id = new Guid("87ef6adc-c066-4d68-99e6-5d833ba3bcf7"),
                             Name = "Architecture"
                         });
                 });
@@ -273,39 +277,6 @@ namespace JobFinder.Data.Migrations
                     b.ToTable("Resumes");
                 });
 
-            modelBuilder.Entity("JobFinder.Data.Models.Review", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("AdditionalComment")
-                        .HasMaxLength(400)
-                        .HasColumnType("nvarchar(400)");
-
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<Guid>("CompanyId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("ReviewScore")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ReviewSumary")
-                        .IsRequired()
-                        .HasMaxLength(35)
-                        .HasColumnType("nvarchar(35)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ApplicationUserId");
-
-                    b.HasIndex("CompanyId");
-
-                    b.ToTable("Reviews");
-                });
-
             modelBuilder.Entity("JobFinder.Data.Models.Schedule", b =>
                 {
                     b.Property<Guid>("Id")
@@ -323,22 +294,22 @@ namespace JobFinder.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("746334c1-0f7a-4ef7-88a8-a7477b61d593"),
+                            Id = new Guid("1f31c461-f893-4764-9c32-71171abf5697"),
                             WorkingSchedule = "9-5"
                         },
                         new
                         {
-                            Id = new Guid("8cf6f986-690b-4936-8fdf-880359510b69"),
+                            Id = new Guid("a2c5e282-e2e5-47bf-a893-9cf2629baeaa"),
                             WorkingSchedule = "Weekends"
                         },
                         new
                         {
-                            Id = new Guid("4fb60442-4486-4215-b7d7-a89b3ad8b58d"),
+                            Id = new Guid("21ff82a9-03e9-43ff-8466-ba8b71632c76"),
                             WorkingSchedule = "4 hours a day"
                         },
                         new
                         {
-                            Id = new Guid("315387ad-38bd-452e-99e9-de62844ff896"),
+                            Id = new Guid("69d34e85-5964-4691-8e60-559e784be3f8"),
                             WorkingSchedule = "full working week"
                         });
                 });
@@ -521,7 +492,7 @@ namespace JobFinder.Data.Migrations
                     b.HasOne("JobFinder.Data.Models.ApplicationUser", "User")
                         .WithMany("JobApplications")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("JobListing");
@@ -576,21 +547,6 @@ namespace JobFinder.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("JobFinder.Data.Models.Review", b =>
-                {
-                    b.HasOne("JobFinder.Data.Models.ApplicationUser", null)
-                        .WithMany("Reviews")
-                        .HasForeignKey("ApplicationUserId");
-
-                    b.HasOne("JobFinder.Data.Models.Company", "Company")
-                        .WithMany("Reviews")
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Company");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -653,8 +609,6 @@ namespace JobFinder.Data.Migrations
                     b.Navigation("JobApplications");
 
                     b.Navigation("Resume");
-
-                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("JobFinder.Data.Models.Company", b =>
@@ -664,8 +618,6 @@ namespace JobFinder.Data.Migrations
                     b.Navigation("JobListings");
 
                     b.Navigation("Pictures");
-
-                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("JobFinder.Data.Models.JobCategory", b =>

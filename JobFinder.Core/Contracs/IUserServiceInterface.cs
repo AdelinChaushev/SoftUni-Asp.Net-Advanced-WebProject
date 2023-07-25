@@ -1,9 +1,10 @@
-﻿using JobFinder.Data.Models;
+﻿using JobFinder.Core.Models.InterviewViewModel;
+using JobFinder.Data.Models;
 namespace JobFinder.Core.Contracs
 {
     public interface IUserServiceInterface
     {
-        public Task<IEnumerable<Interview>> GetInterviewsAsync(string userId);
+        public Task<IEnumerable<UserInterviewOutputViewModel>> GetInterviewsAsync(string userId);
      
 
         

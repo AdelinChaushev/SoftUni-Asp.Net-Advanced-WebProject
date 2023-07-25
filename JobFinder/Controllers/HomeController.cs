@@ -1,5 +1,5 @@
 ﻿using JobFinder.Core.Models;
-using JobFinder.Core.Models.Models;
+using JobFinder.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

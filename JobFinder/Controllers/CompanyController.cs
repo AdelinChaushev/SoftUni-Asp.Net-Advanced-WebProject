@@ -2,6 +2,7 @@
 using JobFinder.Data.Models;
 using JobFinder.Core.Models.CompanyViewModels;
 using Microsoft.AspNetCore.Mvc;
+using JobFinder.Core.Models.JobListingViewModels;
 
 namespace JobFinder.Controllers
 {
@@ -16,8 +17,9 @@ namespace JobFinder.Controllers
 
         public async Task<IActionResult> CompanyInformation(Guid id)
         {
-            
-            return View();
+            Company companyDbModel = await companyService.GetCompanyById(id);
+            var companyViewModel = ToViewModel(companyDbModel);
+            return View(companyViewModel);
         }
         [HttpGet]
         public IActionResult Create()
@@ -41,5 +43,27 @@ namespace JobFinder.Controllers
             CompanyDescription = compnayViewModel.CompanyDescription,
             CompanyName = compnayViewModel.CompanyName,
         };
+
+        private CompanyOutputViewModel ToViewModel(Company dbModel)
+       => new()
+       {
+           Id = dbModel.Id,
+           JobListings = (List<JobListingOutputViewModel>)ToViewModelJobListings(dbModel.JobListings),
+           Pictures = dbModel.Pictures.Select(c => c.PicturePath).ToArray(),
+           Description = dbModel.CompanyDescription,
+           CompanyName = dbModel.CompanyName,
+       };
+        private IEnumerable<JobListingOutputViewModel> ToViewModelJobListings(IEnumerable<JobListing> dbCollection)
+        => dbCollection.Select(c => new JobListingOutputViewModel()
+        {
+            Id = c.Id,
+            JobTitle = c.JobTitle,
+            Description = c.Description,
+            SalaryPerMonth = c.SalaryPerMonth,
+            VaccantionDays = c.VaccantionDays,
+            CompanyId = c.CompanyId,
+            Schedule = c.Schedule.WorkingSchedule,
+            JobCategory = c.JobCategory.Name,
+        }).ToList();
     }
 }

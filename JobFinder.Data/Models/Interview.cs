@@ -12,6 +12,8 @@
 
         public Company Company { get; set; }
 
+        public string  JobTitle { get; set; }
+
         public DateTime InterviewStart { get; set; }
 
         public DateTime InterviewEnd { get; set; }

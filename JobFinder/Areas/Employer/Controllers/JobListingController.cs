@@ -119,7 +119,12 @@ namespace JobFinder.Areas.Employer.Controllers
         [HttpGet]
         public async Task<IActionResult> JobListingApplications(Guid id)
         {
+
             IEnumerable<ApplicationUser> applicationUsers = await jobListingService.GetJobApplicationsAsync(id);
+            if (applicationUsers.Count() == 0)
+            {
+                return View();
+            }
             IEnumerable<UserApplicationViewModel> viewModel = UserToViewModel(applicationUsers);
             return View(viewModel);
         }
@@ -142,7 +147,7 @@ namespace JobFinder.Areas.Employer.Controllers
             Id = c.Id,
             UserName = c.UserName,
             Email = c.Email,
-            ResumeId = c.Resume.Id,
+            ResumeId = c.Resume?.Id,
         })
         .ToList();
         private  JobListing ToDbModel(JobListingInputViewModel compnayViewModel)
