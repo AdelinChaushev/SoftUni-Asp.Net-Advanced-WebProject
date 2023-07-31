@@ -21,6 +21,7 @@ namespace JobFinder.Core.Services
                 .Select(c => new UserInterviewOutputViewModel()
                 {
                     CompnayName = c.Company.CompanyName,
+                    JobTitle = c.JobTitle,
                     StartTime = c.InterviewStart,
                     EndTime = c.InterviewEnd,
                 })

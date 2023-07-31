@@ -87,14 +87,6 @@ namespace JobFinder.Areas.Employer.Controllers
             return View(companyViewModel);
         }
 
-        //private Task<CompanyOutputViewModel> ToViewModel(Company company)
-        //{
-        //    CompanyInputViewModel companyViewModel = new CompanyInputViewModel();
-        //    companyViewModel.OwnerId = company.OwnerId;
-        //    companyViewModel.CompanyDescription = company.CompanyDescription;
-        //    companyViewModel.CompanyName = company.CompanyName;
-        //    companyViewModel.Id = company.Id;
-        //}
         private CompanyOutputViewModel ToViewModel(Company dbModel)
        => new()
        {

@@ -1,0 +1,34 @@
+﻿@model InterviewInputViewModel
+@{
+    ViewData["Title"] = "Create your Ad";
+}
+
+
+<h1  class="text-center">@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <section>
+            <form id="account" method="post">
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="text-center mb-3">
+                    <label asp-for="@Model.StartTime" class="form-label"></label>
+                    <input asp-for="@Model.StartTime" class="form-control"  aria-required="true" />
+                    <span asp-validation-for="@Model.StartTime" class="text-danger"></span>
+                </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="text-center mb-3">
+                    <label asp-for="@Model.EndTime" class="form-label"></label>
+                    <input asp-for="@Model.EndTime"  class="form-control" aria-required="true"></input>
+                    <span asp-validation-for="@Model.EndTime" class="text-danger"></span>
+                </div>                
+                <div class="text-center">
+                    <button  type="submit" class="btn btn-success">Create</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

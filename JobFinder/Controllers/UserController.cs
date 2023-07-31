@@ -12,9 +12,9 @@ namespace JobFinder.Controllers
             this.userService = userService;
         }
 
-        public async Task<IActionResult> Iterviews()
+        public async Task<IActionResult> Interviews()
         {
-            var models = userService.GetInterviewsAsync(GetUserId());
+            var models = await userService.GetInterviewsAsync(GetUserId());
             return View(models);
         }
 
