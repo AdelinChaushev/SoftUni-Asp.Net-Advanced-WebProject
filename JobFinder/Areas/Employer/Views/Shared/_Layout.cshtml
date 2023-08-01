@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/JobFinder.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+<body class="pbs-bg">
+    <header class="pbs-bg">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light pbs-bg border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="Employer" asp-controller="Home" asp-action="Index">JobFinder</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler pbs-bg" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,10 +27,7 @@
                         </li>  
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Employer" asp-controller="JobListing" asp-action="CompanyJobListings">Your job listings</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="JobListing" asp-action="SearchForJobs">Search For Job</a>
-                        </li>
+                        </li>     
                           <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Employer" asp-controller="Company" asp-action="CompanyInterviews">Interviews schedule</a>
                         </li>
@@ -54,4 +51,11 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<style>
+       .pbs-bg {
+            background-color: wheat
+        }
+
+      
+ </style>
 </html>
