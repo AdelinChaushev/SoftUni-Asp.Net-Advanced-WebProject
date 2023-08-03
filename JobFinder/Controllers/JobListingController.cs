@@ -1,5 +1,5 @@
 ﻿
-using JobFinder.Core.Contracs;
+using JobFinder.Core.Contracts;
 using JobFinder.Core.Models.Enums;
 using JobFinder.Core.Models.JobListingViewModels;
 using JobFinder.Core.Services;
@@ -21,6 +21,16 @@ namespace JobFinder.Controllers
         {
             List<JobCategory> jobCategories = (List<JobCategory>)(await jobListingService.GetJobCategoriesAsync());
             List<Schedule> schedules = (List<Schedule>)(await jobListingService.GetSchedulesAsync());
+            jobCategories.Insert(0, new JobCategory()
+            {
+                Id = Guid.NewGuid(),
+                Name = "None"
+            });
+            schedules.Insert(0, new Schedule()
+            {
+                Id = Guid.NewGuid(),
+                WorkingSchedule = "None"
+            });
             AllJobListingOutputViewModel allJobListingOutputViewModel = new AllJobListingOutputViewModel()
             {
                 Keyword = keyword,

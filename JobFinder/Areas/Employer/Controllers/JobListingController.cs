@@ -1,5 +1,5 @@
 ﻿using JobFinder.Core.Models.JobListingViewModels;
-using JobFinder.Core.Contracs;
+using JobFinder.Core.Contracts;
 using JobFinder.Data.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -91,7 +91,7 @@ namespace JobFinder.Areas.Employer.Controllers
             return RedirectToAction("CompanyJobListings");
 
         }
-        [HttpPost]
+        //[HttpPost]
         public async Task<IActionResult> Delete(Guid id)
         {
           

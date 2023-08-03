@@ -1,4 +1,4 @@
-﻿using JobFinder.Core.Contracs;
+﻿using JobFinder.Core.Contracts;
 using JobFinder.Core.Models.InterviewViewModel;
 using JobFinder.Data;
 using JobFinder.Data.Models;
@@ -20,6 +20,8 @@ namespace JobFinder.Core.Services
                 .Where(c => c.UserId == userId)
                 .Select(c => new UserInterviewOutputViewModel()
                 {
+                    UserId = c.UserId,
+                    CompanyId = c.CompanyId,
                     CompnayName = c.Company.CompanyName,
                     JobTitle = c.JobTitle,
                     StartTime = c.InterviewStart,

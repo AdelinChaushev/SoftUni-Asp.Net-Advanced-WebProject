@@ -1,4 +1,4 @@
-﻿using JobFinder.Core.Contracs;
+﻿using JobFinder.Core.Contracts;
 using JobFinder.Data;
 using JobFinder.Data.Models;
 using Microsoft.EntityFrameworkCore;

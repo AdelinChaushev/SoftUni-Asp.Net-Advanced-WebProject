@@ -1,4 +1,4 @@
-﻿using JobFinder.Core.Contracs;
+﻿using JobFinder.Core.Contracts;
 using JobFinder.Data.Models;
 using JobFinder.Core.Models.CompanyViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +14,7 @@ namespace JobFinder.Controllers
         {
             this.companyService = companyService;
         }
-
+        [HttpGet]
         public async Task<IActionResult> CompanyInformation(Guid id)
         {
             Company companyDbModel = await companyService.GetCompanyById(id);
@@ -24,6 +24,17 @@ namespace JobFinder.Controllers
         [HttpGet]
         public IActionResult Create()
        => View();
+
+        [HttpGet]
+        public async Task<IActionResult> SearchForCompanies(string keyword)
+        {
+            var company = await companyService.SerachForCompanies(keyword);
+            var companyViewModel = ToViewModelMany(company);
+            return View(companyViewModel);
+
+        }
+
+
 
         [HttpPost]
         public async Task<IActionResult> Create(CompanyInputViewModel compnay)
@@ -36,13 +47,7 @@ namespace JobFinder.Controllers
             return RedirectToAction("CreateEmployerAccount", "Account");
 
         }
-
-        public async Task<IActionResult> CompanyIterviews()
-        {
-            var companyDbModel = await companyService.GetCompanyInterviewsAsync(GetUserId());
-           
-            return View(companyDbModel);
-        }
+        
 
         private Company ToDbModel(CompanyInputViewModel compnayViewModel)
         => new()
@@ -50,7 +55,15 @@ namespace JobFinder.Controllers
             CompanyDescription = compnayViewModel.CompanyDescription,
             CompanyName = compnayViewModel.CompanyName,
         };
-
+        private IEnumerable<CompanyOutputViewModel> ToViewModelMany(IEnumerable<Company> dbModel)
+    => dbModel.Select(c => new CompanyOutputViewModel()
+    {
+        Id = c.Id,
+        JobListings = (List<JobListingOutputViewModel>)ToViewModelJobListings(c.JobListings),
+        Pictures = c.Pictures.Select(s => s.PicturePath).ToArray(),
+        Description = c.CompanyDescription,
+        CompanyName = c.CompanyName,
+    });
         private CompanyOutputViewModel ToViewModel(Company dbModel)
        => new()
        {

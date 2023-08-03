@@ -1,4 +1,4 @@
-﻿using JobFinder.Core.Contracs;
+﻿using JobFinder.Core.Contracts;
 using JobFinder.Core.Models.Enums;
 using JobFinder.Core.Models.JobApplicationViewModels;
 using JobFinder.Core.Models.JobListingViewModels;

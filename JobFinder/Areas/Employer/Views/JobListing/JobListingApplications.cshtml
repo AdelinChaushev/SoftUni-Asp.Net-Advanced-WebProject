@@ -3,10 +3,8 @@
     ViewBag.Tilte = "Job seekers applyed for your job";
 }
 <h1 class="text-center">@ViewBag.Tilte</h1>
-@if (Model != null)
+@if (@Model != null)
 {
-    
-
 <table class="table table-hover table-dark">
   <thead>
     <tr>      
@@ -22,20 +20,9 @@
      @foreach (var item in Model)
             {
                 int counter = 1;
-             <th scope="row">@counter</th>
-             <td>@item.Email</td>
-             <td>@item.Username</td>
-             <td> 
-                        @if(item.ResumeId != null)
-                        {
-                            
-                        <a class="mb-3 btn btn-primary" asp-area="" asp-controller="Resume" asp-action="Download" asp-route-id="@item.ResumeId">Download resume</a>
-                        }
-             </td> 
-             <td> 
-              <a class="mb-3 btn btn-primary" asp-area="Employer" asp-controller="Company" asp-action="ScheduleInterview" asp-route-userId="@item.UserId "asp-route-jobListingId="@item.JobListingId">Arrange Interview</a>
-             </td>
-             counter++;
+               <th scope="row">@counter</th>
+               <partial name="_JobListingApplication" model="@item"></partial>
+               counter++;
             }
     </tr>
   </tbody>

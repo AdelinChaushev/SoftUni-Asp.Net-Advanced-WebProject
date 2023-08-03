@@ -1,4 +1,4 @@
-﻿using JobFinder.Core.Contracs;
+﻿using JobFinder.Core.Contracts;
 using JobFinder.Data.Models;
 using JobFinder.Core.Models.CompanyViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -17,11 +17,26 @@ namespace JobFinder.Areas.Employer.Controllers
         {
             this.companyService = companyService;
         }
+        [HttpGet]
         public async Task<IActionResult> Edit()
-       => View(await companyService.GetCompanyByUserId(GetUserId()));
+        {
+            Company compamy = await companyService.GetCompanyByUserId(GetUserId());
+            CompanyInputViewModel companyOutputViewModel = new CompanyInputViewModel() 
+            { 
+                CompanyName = compamy.CompanyName,
+                CompanyDescription = compamy.CompanyDescription
+            };
 
+
+           return View(companyOutputViewModel);
+        }
+        [HttpPost]
         public async Task<IActionResult> Edit(CompanyInputViewModel compnayViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(compnayViewModel);
+            }
             var company = ToDbModel(compnayViewModel);
             try
             {
@@ -34,34 +49,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }
             return RedirectToAction("CompanySettings");
         }
-        [HttpGet]
-        public async Task<IActionResult> ScheduleInterview(string userId, Guid jobListingId)
-        => View();
-        [HttpPost]
-        public async Task<IActionResult> ScheduleInterview(InterviewInputViewModel interviewInputViewModel, string userId,Guid  jobListingId)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(interviewInputViewModel);
-            }
-            if(interviewInputViewModel.StartTime >= interviewInputViewModel.EndTime)
-            {
-                ModelState.AddModelError("", "End time can not be before or at the same time as the start start");
-                return View(interviewInputViewModel);
-            }
-            try
-            {
-                await companyService.ScheduleInterview(interviewInputViewModel, jobListingId, userId,GetUserId());
-            }
-            catch (Exception)
-            {
-
-                return RedirectToAction("CompanyInterviews");
-            }
-
-            return RedirectToAction("CompanyInterviews");
-
-        }
+       
         [HttpGet]
         public async Task<IActionResult> CompanyInterviews()
         {
@@ -78,12 +66,16 @@ namespace JobFinder.Areas.Employer.Controllers
             {
                 return BadRequest();
             }
-            return Redirect("/Home/Index");
+            return Redirect("/Account/DeleteEmployerAccount");
         }
-       public async Task<IActionResult> CompanySettings(Guid id)
+       public async Task<IActionResult> CompanySettings()
         {
-            Company companyDbModel = await companyService.GetCompanyById(id);
-            var companyViewModel = ToViewModel(companyDbModel);
+            Company companyDbModel = await companyService.GetCompanyByUserId(GetUserId());
+            var companyViewModel = new CompanySettingViewModel()
+            {
+                CompanyName = companyDbModel.CompanyName,
+                CompanyDescription = companyDbModel.CompanyDescription,
+            };
             return View(companyViewModel);
         }
 
@@ -97,7 +89,7 @@ namespace JobFinder.Areas.Employer.Controllers
            CompanyName = dbModel.CompanyName,
        };
         private Company ToDbModel(CompanyInputViewModel compnayViewModel)
-         => new()
+         => new ()
             {
                 CompanyDescription = compnayViewModel.CompanyDescription,
                 CompanyName = compnayViewModel.CompanyName,

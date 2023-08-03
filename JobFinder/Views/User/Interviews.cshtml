@@ -25,11 +25,7 @@
      @foreach (var item in Model)
             {
              int counter = 1;
-             <th scope="row">@counter</th>             
-             <td>@item.CompnayName</td>
-             <td>@item.JobTitle</td>
-             <td>@item.StartTime</td> 
-             <td>@item.EndTime</td>   
+             <partial name="_UserInterviewPartial" model="item"></partial>
              
              counter++;
             }

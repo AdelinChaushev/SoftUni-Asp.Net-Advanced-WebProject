@@ -1,5 +1,14 @@
-﻿@model CompanyOutputViewModel
-@*@{
-    ViewBag
+﻿@using System.Security.Claims
+@model CompanySettingViewModel
+@{
+    ViewBag.Title = "Company settings";
 }
-*@
+<h1 class="text-center">@ViewBag.Title</h1>
+<h4 class="text-center">
+   <p class="">Owner username : @User.FindFirstValue(ClaimTypes.Name)</p>
+   <p class="">Owner email : @User.FindFirstValue(ClaimTypes.Email)</p>
+   <p class="">Company name : @Model.CompanyName</p>
+   <p class="">Company Description : @Model.CompanyDescription</p>
+   <a class="btn btn-warning" asp-controller="Company" asp-action="Edit">Edit</a>
+   <a class="btn btn-danger" asp-controller="Company" asp-action="Delete">Delete</a>
+</h4>

@@ -16,6 +16,7 @@
       <th scope="col">Applyed for job</th>
       <th scope="col">Interview Start</th>
       <th scope="col">Interview End</th>
+      <th scope="col">Withdraw interview</th>
     </tr>
   </thead>
   <tbody>
@@ -23,12 +24,8 @@
      @foreach (var item in Model)
             {
                 int counter = 1;
-             <th scope="row">@counter</th>
-             <td>@item.Email</td>
-             <td>@item.UserName</td>
-             <td>@item.JobTitle</td>
-             <td>@item.StartTime</td> 
-             <td>@item.EndTime</td>             
+                <td>counter</td>
+             <partial name="_CompanyInterviewPartial" model="item"></partial>          
              counter++;
             }
     </tr>

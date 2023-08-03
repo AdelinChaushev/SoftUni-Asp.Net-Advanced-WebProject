@@ -1,4 +1,4 @@
-using JobFinder.Core.Contracs;
+using JobFinder.Core.Contracts;
 using JobFinder.Core.Services;
 using JobFinder.Data;
 using JobFinder.Data.Models;
@@ -13,6 +13,7 @@ builder.Services.AddDbContext<JobFinderDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddScoped<IJobListingServiceInterface, JobListingService>();
+builder.Services.AddScoped<IInterviewServiceInterface, InterviewService>();
 builder.Services.AddScoped<IPictureServiceInterface, PictureService>();
 builder.Services.AddScoped<IResumeServiceInterface, ResumeService>();
 builder.Services.AddScoped<ICompanyServiceInterface, CompanyService>();

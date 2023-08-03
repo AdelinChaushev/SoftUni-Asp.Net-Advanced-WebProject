@@ -74,21 +74,8 @@
         <h4 class="text-center">Jobs</h4>
            @foreach(var jobListing in Model.JobLitings)
             {
-             <div class="col-sm-3">
-
-               <div class="card" style="width: 18rem;">
-                               
-                    <div class="card-body">
-                       <p class="mb-3">  @jobListing?.JobTitle</p> 
-                       <p class="mb-3"> Salary: @jobListing?.SalaryPerMonth</p> 
-                        <p class="mb-3"> Category: @jobListing?.JobCategory</p> 
-                         <p class="mb-3"> Schedule: @jobListing?.Schedule</p> 
-                       <a class="mb-3 btn btn-primary" asp-area=""  asp-controller="JobListing" asp-action="JobListingFullInformation" asp-route-id="@jobListing.Id" >Job full info</a>
-                       <a class="mb-3 btn btn-primary" asp-area="" asp-controller="JobListing" asp-action="ApplyForJob" asp-route-id="@jobListing.Id">Apply for job</a>                       
-                    </div>
-               </div>
-            </div>
-         }
+                <partial name="_SearchJobListingPartial" model="jobListing"></partial>           
+            }
 
           
     </div>

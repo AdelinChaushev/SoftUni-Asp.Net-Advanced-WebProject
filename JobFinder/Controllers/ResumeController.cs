@@ -1,4 +1,4 @@
-﻿using JobFinder.Core.Contracs;
+﻿using JobFinder.Core.Contracts;
 using JobFinder.Core.Models.FileViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
@@ -35,6 +35,7 @@ namespace JobFinder.Controllers
             
             return RedirectToAction("AccountSettings","Account");
         }
+
         public async Task<IActionResult> Download(Guid? id)
         {
             string path = await fileService.GetResumePathByIdAsync(id);
