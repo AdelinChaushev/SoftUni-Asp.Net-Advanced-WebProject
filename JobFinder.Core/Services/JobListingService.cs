@@ -66,15 +66,6 @@ namespace JobFinder.Core.Services
         {
             return await context.JobListings.ToListAsync();
         }
-        public async Task<IEnumerable<JobListing>> GetAllByCompanyAsync(string userId)
-        {
-            Guid companyId = await GetCompanyId(userId);
-            return await context.JobListings
-                .Include(j => j.JobCategory)
-                .Include(j => j.Schedule)
-                .Where(j => j.CompanyId == companyId)
-                .ToListAsync();
-        }
 
         public async Task<IEnumerable<JobApplicationViewModel>> GetJobApplicationsAsync(Guid id)
           => await context.JobApplications           

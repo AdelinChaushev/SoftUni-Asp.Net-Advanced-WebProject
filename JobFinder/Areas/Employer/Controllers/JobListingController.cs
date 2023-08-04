@@ -91,7 +91,7 @@ namespace JobFinder.Areas.Employer.Controllers
             return RedirectToAction("CompanyJobListings");
 
         }
-        //[HttpPost]
+        
         public async Task<IActionResult> Delete(Guid id)
         {
           
@@ -109,13 +109,7 @@ namespace JobFinder.Areas.Employer.Controllers
             return RedirectToAction("CompanyJobListings");
 
         }
-        [HttpGet]
-        public  async Task<IActionResult> CompanyJobListings()
-        {
-            IEnumerable<JobListing> jobListings = await jobListingService.GetAllByCompanyAsync(GetUserId());
-            IEnumerable<JobListingOutputViewModel> viewModel = ToDbModel(jobListings);
-            return View(viewModel);
-        }
+        
         [HttpGet]
         public async Task<IActionResult> JobListingApplications(Guid id)
         {
@@ -127,7 +121,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }          
             return View(applicationUsers);
         }
-        private IEnumerable<JobListingOutputViewModel> ToDbModel(IEnumerable<JobListing> dbCollection)
+        private IEnumerable<JobListingOutputViewModel> ToViewModel(IEnumerable<JobListing> dbCollection)
         => dbCollection.Select(c => new JobListingOutputViewModel()
         {
             Id = c.Id,

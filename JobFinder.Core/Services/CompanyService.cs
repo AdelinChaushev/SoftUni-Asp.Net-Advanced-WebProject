@@ -80,12 +80,28 @@ namespace JobFinder.Core.Services
 
        
 
-        public async Task<IEnumerable<Company>> SerachForCompanies(string keyword)
-        
-           => await context.Companies.Include(c => c.JobListings).ThenInclude(c =>  c.JobCategory).Include(c => c.JobListings).ThenInclude(c => c.Schedule).Include(c => c.Pictures).Where(c => c.CompanyName.Contains(keyword)).ToListAsync();
-           
+        public async Task<IEnumerable<Company>> SearchForCompanies(string keyword)        
+        => await context.Companies
+            .Include(c => c.JobListings)
+            .ThenInclude(c =>  c.JobCategory)
+            .Include(c => c.JobListings)
+            .ThenInclude(c => c.Schedule)
+            .Include(c => c.Pictures)
+            .Where(c => c.CompanyName.ToLower().Contains(keyword.ToLower()))
+            .ToListAsync();
 
-        
-      
+
+        public async Task<IEnumerable<JobListing>> GetAllByJobListingsAsync(string userId)
+        {
+            var company = await GetCompanyByUserId(userId);
+            Guid companyId = company.Id;
+            return await context.JobListings
+                .Include(j => j.JobCategory)
+                .Include(j => j.Schedule)
+                .Where(j => j.CompanyId == companyId)
+                .ToListAsync();
+        }
+
+
     }
 }

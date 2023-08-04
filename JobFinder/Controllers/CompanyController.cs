@@ -28,7 +28,7 @@ namespace JobFinder.Controllers
         [HttpGet]
         public async Task<IActionResult> SearchForCompanies(string keyword)
         {
-            var company = await companyService.SerachForCompanies(keyword);
+            var company = await companyService.SearchForCompanies(keyword);
             var companyViewModel = ToViewModelMany(company);
             return View(companyViewModel);
 

@@ -107,6 +107,12 @@ namespace JobFinder.Areas.Employer.Controllers
             Schedule = c.Schedule.WorkingSchedule,
             JobCategory = c.JobCategory.Name,
         }).ToList();
-
+        [HttpGet]
+        public async Task<IActionResult> CompanyJobListings()
+        {
+            IEnumerable<JobListing> jobListings = await companyService.GetAllByJobListingsAsync(GetUserId());
+            IEnumerable<JobListingOutputViewModel> viewModel = ToViewModelJobListings(jobListings);
+            return View(viewModel);
+        }
     }
 }
