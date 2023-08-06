@@ -68,7 +68,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }
             return Redirect("/Account/DeleteEmployerAccount");
         }
-       public async Task<IActionResult> CompanySettings()
+        public async Task<IActionResult> CompanySettings()
         {
             Company companyDbModel = await companyService.GetCompanyByUserId(GetUserId());
             var companyViewModel = new CompanySettingViewModel()
@@ -79,12 +79,17 @@ namespace JobFinder.Areas.Employer.Controllers
             return View(companyViewModel);
         }
 
+        public async Task<IActionResult> CompanyPictures()
+        {
+            var pictures = await companyService.GetCompanyPictures(GetUserId());
+            return View(pictures);
+        }
+
         private CompanyOutputViewModel ToViewModel(Company dbModel)
        => new()
        {
            Id = dbModel.Id,
-           JobListings = (List<JobListingOutputViewModel>)ToViewModelJobListings(dbModel.JobListings),
-           Pictures = dbModel.Pictures.Select(c => c.PicturePath).ToArray(),
+          
            Description = dbModel.CompanyDescription,
            CompanyName = dbModel.CompanyName,
        };

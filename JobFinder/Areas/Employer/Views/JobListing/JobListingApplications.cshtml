@@ -20,7 +20,7 @@
      @foreach (var item in Model)
             {
                 int counter = 1;
-               <th scope="row">@counter</th>
+               <td scope="col">@counter</td>
                <partial name="_JobListingApplication" model="@item"></partial>
                counter++;
             }

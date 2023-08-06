@@ -7,8 +7,7 @@ namespace JobFinder.Core.Models.CompanyViewModels
         public string  CompanyName { get; set; }
         public string  Description { get; set; }
 
-        public string[] Pictures { get; set; }
-
-        public List<JobListingOutputViewModel> JobListings { get; set; }
+        public int Page { get; set; }
+        public int Pages { get; set; }
     }
 }

@@ -59,8 +59,7 @@ namespace JobFinder.Controllers
     => dbModel.Select(c => new CompanyOutputViewModel()
     {
         Id = c.Id,
-        JobListings = (List<JobListingOutputViewModel>)ToViewModelJobListings(c.JobListings),
-        Pictures = c.Pictures.Select(s => s.PicturePath).ToArray(),
+       
         Description = c.CompanyDescription,
         CompanyName = c.CompanyName,
     });
@@ -68,8 +67,7 @@ namespace JobFinder.Controllers
        => new()
        {
            Id = dbModel.Id,
-           JobListings = (List<JobListingOutputViewModel>)ToViewModelJobListings(dbModel.JobListings),
-           Pictures = dbModel.Pictures.Select(c => c.PicturePath).ToArray(),
+           
            Description = dbModel.CompanyDescription,
            CompanyName = dbModel.CompanyName,
        };

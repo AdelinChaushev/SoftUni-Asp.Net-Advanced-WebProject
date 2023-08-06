@@ -32,8 +32,8 @@ namespace JobFinder.Core.Services
         public async Task UploadPictureAsync(byte[] stream,string userId)
         {
             Guid companyId = await GetCompanyIdByUserIdAsync(userId);
-            string path = "C:/Users/Adi/Dropbox/Pictures" + $"/{GetCompanyName(companyId)}";
-            if (Directory.Exists(path))
+            string path = "C:/Users/Adi/Dropbox/Pictures" + $"/{await GetCompanyName(companyId)}";
+            if (!Directory.Exists(path))
             {
              Directory.CreateDirectory(path);
 
@@ -41,7 +41,7 @@ namespace JobFinder.Core.Services
 
           
             var id = Guid.NewGuid();
-            string filePath = Path.Combine(path, id.ToString());
+            string filePath = path + $"/{id}";
             using (File.Create(filePath))
             {
 

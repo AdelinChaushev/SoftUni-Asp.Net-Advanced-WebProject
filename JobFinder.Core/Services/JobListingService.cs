@@ -1,4 +1,5 @@
 ﻿using JobFinder.Core.Contracts;
+using JobFinder.Core.Helpers;
 using JobFinder.Core.Models.Enums;
 using JobFinder.Core.Models.JobApplicationViewModels;
 using JobFinder.Core.Models.JobListingViewModels;
@@ -59,7 +60,7 @@ namespace JobFinder.Core.Services
 
         public async Task<JobListing> FindByIdAsync(Guid id)
         {
-            return await context.JobListings.Include(c => c.Company).FirstOrDefaultAsync(c => c.Id == id);
+            return await context.JobListings.Include(c => c.Schedule).Include(c => c.JobCategory).Include(c => c.Company).FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<IEnumerable<JobListing>> GetAllAsync()
@@ -172,7 +173,7 @@ namespace JobFinder.Core.Services
                 allJobListingOutputViewModel.MaxPages = allJobListingOutputViewModel.MaxPages;
             }
 
-            allJobListingOutputViewModel.JobLitings = JobListingPaginationFilter(allJobListingOutputViewModel);
+            allJobListingOutputViewModel.JobLitings = PaginationHelper.JobListingPaginationFilter(allJobListingOutputViewModel);
             return allJobListingOutputViewModel;
         }
         public async Task<IEnumerable<JobCategory>> GetJobCategoriesAsync()
@@ -206,16 +207,7 @@ namespace JobFinder.Core.Services
 
 
 
-        private  IEnumerable<JobListingOutputViewModel> JobListingPaginationFilter(AllJobListingOutputViewModel jobListingOutputViewModels)
-        {
-            int itemsToSkip = (jobListingOutputViewModels.Page - 1) * 8;
-            int itemsLeft = jobListingOutputViewModels.JobLitings.Count() - itemsToSkip;
-            int itemsToTake = itemsLeft < 8
-                ? itemsLeft
-                : 8;
-
-            return  jobListingOutputViewModels.JobLitings.Skip(itemsToSkip).Take(itemsToTake);
-        }
+        
 
     }
 }

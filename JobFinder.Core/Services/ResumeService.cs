@@ -25,7 +25,7 @@ namespace JobFinder.Core.Services
             }
 
             var id = Guid.NewGuid();
-            string filePath = Path.Combine(path, id.ToString());
+            string filePath = path + $"/{id}";
             using (File.Create(filePath))
             {
 

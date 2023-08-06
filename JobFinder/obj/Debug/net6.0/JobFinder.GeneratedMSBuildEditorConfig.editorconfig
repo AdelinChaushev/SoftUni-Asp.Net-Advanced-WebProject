@@ -23,6 +23,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxDb21wYW55Sm9iTGlzdGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/CompanyPictures.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxDb21wYW55UGljdHVyZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/CompanySettings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxDb21wYW55U2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -113,6 +117,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/JobListing/JobListingFullInformation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iTGlzdGluZ1xKb2JMaXN0aW5nRnVsbEluZm9ybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/JobListing/SearchForJobs.cshtml]

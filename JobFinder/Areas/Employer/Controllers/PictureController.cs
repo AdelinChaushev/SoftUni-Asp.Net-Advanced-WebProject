@@ -14,33 +14,29 @@ namespace JobFinder.Areas.Employer.Controllers
             this.pictureService = pictureServiceInterface;
         }
 
-        public async Task<IActionResult> Upload(FileUploadViewModel file)
+        public async Task<IActionResult> Upload(IFormFile file)
         {
             if (!ModelState.IsValid)
             {
-                return View();
-            }
-            if (User.IsInRole("Employer"))
-            {
-                return RedirectToAction("AccountSettings", "Account");
-            }
-            byte[] bytes = new byte[file.File.Length];
+                return RedirectToAction("CompanyPictures", "Company");
+            }            
+            byte[] bytes = new byte[file.Length];
             using (MemoryStream ms = new MemoryStream())
             {
-                await file.File.CopyToAsync(ms);
+                await file.CopyToAsync(ms);
                 bytes = ms.ToArray();
 
             }
             await pictureService.UploadPictureAsync(bytes, GetUserId());
 
-            return RedirectToAction("AccountSettings", "Account");
+            return RedirectToAction("CompanyPictures", "Company");
         }
       
 
         public async Task<IActionResult> Delete(Guid id)
         {
             await pictureService.DeletePictureAsync(id,GetUserId());
-            return RedirectToAction("AccountSettings", "Account");
+            return RedirectToAction("CompanyPictures", "Company");
         }
     }
 }

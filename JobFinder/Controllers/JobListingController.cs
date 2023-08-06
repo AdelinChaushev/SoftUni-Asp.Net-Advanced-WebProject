@@ -71,7 +71,18 @@ namespace JobFinder.Controllers
         public async Task<IActionResult> JobListingFullInformation(Guid id)
         {
             var jobListing = await jobListingService.FindByIdAsync(id);
-            return View(jobListing);
+            var jobListingViewModel = new JobListingOutputViewModel()
+            {
+                Id = jobListing.Id,
+                CompanyId = jobListing.CompanyId,
+                SalaryPerMonth = jobListing.SalaryPerMonth,
+                Schedule = jobListing.Schedule.WorkingSchedule,
+                JobCategory = jobListing.JobCategory.Name,
+                JobTitle = jobListing.JobTitle,
+                Description = jobListing.Description,
+                VaccantionDays = jobListing.VaccantionDays,
+            };
+            return View(jobListingViewModel);
         }
 
         

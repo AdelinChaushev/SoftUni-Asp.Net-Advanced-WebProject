@@ -2,6 +2,7 @@
 using JobFinder.Core.Models.CompanyViewModels;
 using JobFinder.Core.Models.InterviewViewModel;
 using JobFinder.Core.Models.JobApplicationViewModels;
+using JobFinder.Core.Models.PictureViewModel;
 using JobFinder.Data;
 using JobFinder.Data.Models;
 using Microsoft.EntityFrameworkCore;
@@ -46,10 +47,10 @@ namespace JobFinder.Core.Services
         }
 
         public async Task<Company> GetCompanyById(Guid id)
-         => await context.Companies.Include(c => c.JobListings).Include(c => c.Pictures).FirstOrDefaultAsync(c => c.Id == id);
+         => await context.Companies.FirstOrDefaultAsync(c => c.Id == id);
 
         public async Task<Company> GetCompanyByUserId(string userId)
-        => await context.Companies.Include(c => c.JobListings).Include(c => c.Pictures).FirstOrDefaultAsync(c => c.OwnerId == userId);
+        => await context.Companies.FirstOrDefaultAsync(c => c.OwnerId == userId);
 
        
         public async Task<IEnumerable<CompanyInterviewOutputViewModel>> GetCompanyInterviewsAsync(string userId)
@@ -81,12 +82,7 @@ namespace JobFinder.Core.Services
        
 
         public async Task<IEnumerable<Company>> SearchForCompanies(string keyword)        
-        => await context.Companies
-            .Include(c => c.JobListings)
-            .ThenInclude(c =>  c.JobCategory)
-            .Include(c => c.JobListings)
-            .ThenInclude(c => c.Schedule)
-            .Include(c => c.Pictures)
+        => await context.Companies            
             .Where(c => c.CompanyName.ToLower().Contains(keyword.ToLower()))
             .ToListAsync();
 
@@ -102,6 +98,42 @@ namespace JobFinder.Core.Services
                 .ToListAsync();
         }
 
+        public async Task<IEnumerable<JobListing>> GetAllByJobListingsAsync(Guid id)
+        {
+            var company = await GetCompanyById(id);
+            Guid companyId = company.Id;
+            return await context.JobListings
+                .Include(j => j.JobCategory)
+                .Include(j => j.Schedule)
+                .Where(j => j.CompanyId == companyId)
+                .ToListAsync();
+        }
 
+        public  async Task<IEnumerable<PictureOutputViewModel>> GetCompanyPictures(string userId)
+        {
+            var company = await GetCompanyByUserId(userId);
+            return await context.Pictures
+                .Where(c => c.CompanyId == company.Id)
+                .Select(c => new PictureOutputViewModel()
+                {
+                    Id = c.Id,
+                    Path = c.PicturePath,
+                })
+                .ToArrayAsync();
+
+
+        }
+
+        public async Task<IEnumerable<PictureOutputViewModel>> GetCompanyPictures(Guid id)
+           => await context.Pictures
+                .Where(c => c.CompanyId == id)
+               .Select(c => new PictureOutputViewModel()
+               {
+                   Id = c.Id,
+                   Path = c.PicturePath,
+               })
+                .ToArrayAsync();
+
+        
     }
 }
