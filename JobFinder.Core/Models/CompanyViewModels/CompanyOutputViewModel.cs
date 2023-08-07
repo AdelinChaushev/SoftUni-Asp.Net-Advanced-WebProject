@@ -1,4 +1,6 @@
 ﻿using JobFinder.Core.Models.JobListingViewModels;
+using JobFinder.Core.Models.PictureViewModel;
+
 namespace JobFinder.Core.Models.CompanyViewModels
 {
     public class CompanyOutputViewModel
@@ -7,7 +9,7 @@ namespace JobFinder.Core.Models.CompanyViewModels
         public string  CompanyName { get; set; }
         public string  Description { get; set; }
 
-        public int Page { get; set; }
-        public int Pages { get; set; }
+        public IEnumerable<PictureOutputViewModel> Pictures { get; set; }
+
     }
 }

@@ -3,6 +3,7 @@ using JobFinder.Data.Models;
 using JobFinder.Core.Models.CompanyViewModels;
 using Microsoft.AspNetCore.Mvc;
 using JobFinder.Core.Models.JobListingViewModels;
+using JobFinder.Core.Models.PictureViewModel;
 
 namespace JobFinder.Controllers
 {
@@ -19,6 +20,8 @@ namespace JobFinder.Controllers
         {
             Company companyDbModel = await companyService.GetCompanyById(id);
             var companyViewModel = ToViewModel(companyDbModel);
+            companyViewModel.Pictures = await companyService.GetCompanyPictures(id);
+
             return View(companyViewModel);
         }
         [HttpGet]
@@ -33,8 +36,7 @@ namespace JobFinder.Controllers
             return View(companyViewModel);
 
         }
-
-
+        
 
         [HttpPost]
         public async Task<IActionResult> Create(CompanyInputViewModel compnay)
@@ -47,7 +49,15 @@ namespace JobFinder.Controllers
             return RedirectToAction("CreateEmployerAccount", "Account");
 
         }
-        
+
+        [HttpGet]
+        public async Task<IActionResult> CompanyJobListings(Guid id)
+        {
+            IEnumerable<JobListing> jobListings = await companyService.GetAllByJobListingsAsync(id);
+            IEnumerable<JobListingOutputViewModel> viewModel = ToViewModelJobListings(jobListings);
+            return View(viewModel);
+        }
+
 
         private Company ToDbModel(CompanyInputViewModel compnayViewModel)
         => new()

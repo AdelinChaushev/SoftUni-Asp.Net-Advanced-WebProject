@@ -79,12 +79,21 @@ namespace JobFinder.Core.Services
 
         }
 
-       
 
-        public async Task<IEnumerable<Company>> SearchForCompanies(string keyword)        
-        => await context.Companies            
-            .Where(c => c.CompanyName.ToLower().Contains(keyword.ToLower()))
+
+        public async Task<IEnumerable<Company>> SearchForCompanies(string keyword)
+        {
+            List<Company>? companies = await context.Companies           
             .ToListAsync();
+            if(keyword != null)
+            {
+
+             companies =  companies
+                .Where(c => c.CompanyName.ToLower().Contains(keyword.ToLower()))
+                .ToList();
+            }
+            return companies;
+        }
 
 
         public async Task<IEnumerable<JobListing>> GetAllByJobListingsAsync(string userId)
@@ -114,12 +123,13 @@ namespace JobFinder.Core.Services
             var company = await GetCompanyByUserId(userId);
             return await context.Pictures
                 .Where(c => c.CompanyId == company.Id)
-                .Select(c => new PictureOutputViewModel()
+                .Select(  c => new PictureOutputViewModel()
                 {
                     Id = c.Id,
-                    Path = c.PicturePath,
+                    Base64 = $"data:image/png;base64,{Convert.ToBase64String(File.ReadAllBytes(c.PicturePath))}",
+                   
                 })
-                .ToArrayAsync();
+                .ToListAsync();
 
 
         }
@@ -130,7 +140,7 @@ namespace JobFinder.Core.Services
                .Select(c => new PictureOutputViewModel()
                {
                    Id = c.Id,
-                   Path = c.PicturePath,
+                   Base64 = $"data:image/png;base64,{Convert.ToBase64String(File.ReadAllBytes(c.PicturePath))}",
                })
                 .ToArrayAsync();
 

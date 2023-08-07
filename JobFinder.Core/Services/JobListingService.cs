@@ -22,7 +22,13 @@ namespace JobFinder.Core.Services
 
         public async Task CreateAsync(JobListing jobListing, string userId)
         {
+           
+            
             Guid companyId = await GetCompanyId(userId);
+            if(companyId == Guid.Empty)
+            {
+                throw new InvalidOperationException(nameof(companyId));
+            }
             jobListing.CompanyId = companyId;
             await context.AddAsync(jobListing);
             await context.SaveChangesAsync();
@@ -97,7 +103,7 @@ namespace JobFinder.Core.Services
             }).ToListAsync();
             if(allJobListingOutputViewModel.Keyword != null)
             {
-                allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.JobTitle.Contains(allJobListingOutputViewModel.Keyword));
+                allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.JobTitle.ToLower().Contains(allJobListingOutputViewModel.Keyword.ToLower()));
             }
             switch (allJobListingOutputViewModel.Category)
             {
@@ -186,7 +192,7 @@ namespace JobFinder.Core.Services
         {
             ApplicationUser applicationUser = await context.Users.Include(c => c.Company).FirstOrDefaultAsync(c => c.Id == userId);
 
-            return applicationUser.Company.Id;
+            return applicationUser?.Company?.Id ?? Guid.Empty;
         } 
 
         public async Task ApplyForJob(Guid id, string userId)

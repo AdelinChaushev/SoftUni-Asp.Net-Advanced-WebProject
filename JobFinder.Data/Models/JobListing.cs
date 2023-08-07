@@ -18,7 +18,7 @@ namespace JobFinder.Data.Models
         [MinLength(30)]
         [MaxLength(500)]
         public string Description { get; set; } = null!;
-        [Range(0,double.MaxValue)]
+        [Range(0,10_000_000_000)]
         public decimal SalaryPerMonth { get; set; }
         [Range(1,100)]
         public int VaccantionDays { get; set; }
