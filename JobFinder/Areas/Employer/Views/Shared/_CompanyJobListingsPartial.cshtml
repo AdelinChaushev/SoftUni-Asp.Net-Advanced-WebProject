@@ -1,0 +1,18 @@
+﻿@model JobListingOutputViewModel
+
+  <div class="col-sm-3">
+
+              <div class="card" style="width: 18rem;">
+                               
+                       <div class="card-body">
+                       <p class="mb-3">  @Model?.JobTitle</p> 
+                       <p class="mb-3"> Salary: @Model?.SalaryPerMonth</p> 
+                        <p class="mb-3"> Category: @Model?.JobCategory</p> 
+                         <p class="mb-3"> Schedule: @Model?.Schedule</p> 
+                       <a class="mb-3 btn btn-warning" asp-area="Employer"  asp-controller="JobListing" asp-action="Edit" asp-route-id="@Model.Id" >Edit</a>
+                       <a class="mb-3 btn btn-danger" asp-area="Employer" asp-controller="JobListing" asp-action="Delete" asp-route-id="@Model.Id">Delete </a>  
+                       <a class="mb-3 btn btn-primary" asp-area="Employer" asp-controller="JobListing" asp-action="JobListingApplications" asp-route-id="@Model.Id">See job applications</a>  
+                       </div>
+              </div>
+  </div>
+

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<JobListingOutputViewModel>
+@{
+    ViewData["Title"] = "Here are your job listings";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+     @if(Model.Any())
+     {
+         foreach(var jobListing in Model)
+         {
+              <partial name="_SearchJobListingPartial" model="jobListing"></partial>    
+         }
+     }
+    @if(!Model.Any())
+    {
+        <h2>No products yet.</h2>
+    }
+     
+</div>

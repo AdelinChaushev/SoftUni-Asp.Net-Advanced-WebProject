@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CompanyOutputViewModel>
+
+@{
+    ViewBag.Title = "Search for a company";
+}
+
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<div asp-validation-summary="ModelOnly" class="text-danger text-center"></div>
+
+
+<div class="row-10">
+    <div class="align-items-baseline">
+        <section class="s">
+        <form class="input-group-sm col-10 form-inline row gy-2 gx-3 align-items-center" method="get" asp-area="" asp-controller="Company" asp-action="SearchForCompanies">          
+            <div>
+                <div class="row-10 offset-4">
+                    <div>
+                     <div class="text-center mb-3">
+                    <input type="text" name="keyword" class="form-control" aria-required="true" />
+                    <input class="btn btn-primary" type="submit" value="Search" />
+                    
+                </div>                     
+                <div>              
+           
+
+        </form>
+        </section>
+
+    </div>
+    @if(Model.Any())
+    {
+
+    <div class="col-lg-9 col-md-6">
+        <h4 class="text-center">Companies</h4>
+           @foreach(var jobListing in Model)
+            {
+                <partial name="_SearchForCompaniesPartial" model="jobListing"></partial>           
+            }
+    </div>
+    }
+</div>

@@ -5,9 +5,10 @@ using JobFinder.Core.Models.JobApplicationViewModels;
 using JobFinder.Core.Models.JobListingViewModels;
 using JobFinder.Data;
 using JobFinder.Data.Models;
+using static JobFinder.Common.OtherConsts.PaginationFilter;
 
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
+
 
 namespace JobFinder.Core.Services
 {
@@ -165,7 +166,7 @@ namespace JobFinder.Core.Services
             {
                 allJobListingOutputViewModel.MaxPages = 1;
             }
-           else if (allJobListingOutputViewModel.MaxPages % 8 > 0)
+           else if (allJobListingOutputViewModel.MaxPages % ItemsPerPage > 0)
             {
                 allJobListingOutputViewModel.MaxPages++;
             }

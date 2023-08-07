@@ -1,0 +1,6 @@
+﻿@model UserInterviewOutputViewModel           
+<td>@Model.CompnayName</td>
+<td>@Model.JobTitle</td>
+<td>@Model.StartTime</td> 
+<td>@Model.EndTime</td>   
+<td><a class="btn btn-danger" asp-route-userId="@Model.UserId" asp-route-companyId="@Model.CompanyId" asp-controller="Interview" asp-action="Delete" ></a></td> 

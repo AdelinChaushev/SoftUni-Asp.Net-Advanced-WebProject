@@ -1,0 +1,13 @@
+﻿@model CompanyOutputViewModel
+    <div class="col-sm-3">
+
+               <div class="card" style="width: 18rem;">
+                               
+                    <div class="card-body">
+                       <p class="mb-3"> Name :  @Model?.CompanyName</p> 
+                       <p class="mb-3"> Description: @Model?.Description</p> 
+                       <a class="mb-3 btn btn-primary" asp-area=""  asp-controller="Company" asp-action="CompanyInformation" asp-route-id="@Model.Id" >Company full info</a>         
+                       <a class="mb-3 btn btn-primary" asp-area=""  asp-controller="Company" asp-action="CompanyJobListings" asp-route-id="@Model.Id" >Company job listings</a>
+                    </div>
+               </div>
+            </div>

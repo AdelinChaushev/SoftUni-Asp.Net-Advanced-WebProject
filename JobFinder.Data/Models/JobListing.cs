@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+
+using static JobFinder.Common.DataValidationConstants.JobListing;
 
 namespace JobFinder.Data.Models
 {
@@ -12,15 +11,15 @@ namespace JobFinder.Data.Models
     {
         public Guid Id { get; set; }
 
-        [MinLength(3)]
-        [MaxLength(35)]
+        [MinLength(NameMinLenght)]
+        [MaxLength(NameMaxLenght)]
         public string JobTitle { get; set; } = null!;
-        [MinLength(30)]
-        [MaxLength(500)]
+        [MinLength(DescriptionMinLenght)]
+        [MaxLength(DescriptionMaxLenght)]
         public string Description { get; set; } = null!;
-        [Range(0,10_000_000_000)]
+        [Range(MinSalaryPerMonth,MaxSalaryPerMonth)]
         public decimal SalaryPerMonth { get; set; }
-        [Range(1,100)]
+        [Range(MinVaccaintionDays,MaxVaccaintionDays)]
         public int VaccantionDays { get; set; }
         [ForeignKey(nameof(JobCategory))]
         public Guid JobCategoryId { get; set; }

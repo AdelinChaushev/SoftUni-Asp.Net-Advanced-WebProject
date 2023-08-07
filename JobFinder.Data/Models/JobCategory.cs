@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+
+using static JobFinder.Common.DataValidationConstants.JobCategory;
+
 
 namespace JobFinder.Data.Models
 {
@@ -15,8 +13,8 @@ namespace JobFinder.Data.Models
         }
 
         public Guid Id { get; set; }
-        [MinLength(3)]
-        [MaxLength(35)]
+        [MinLength(NameMinLenght)]
+        [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = null!;
     
 

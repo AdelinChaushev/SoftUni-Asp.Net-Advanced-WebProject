@@ -767,6 +767,16 @@
             "rid": "win"
           }
         }
+      },
+      "JobFinder.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/JobFinder.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JobFinder.Common.dll": {}
+        }
       }
     }
   },
@@ -2257,10 +2267,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "JobFinder.Common/1.0.0": {
+      "type": "project",
+      "path": "../JobFinder.Common/JobFinder.Common.csproj",
+      "msbuildProject": "../JobFinder.Common/JobFinder.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "JobFinder.Common >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.6",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.6",
@@ -2294,7 +2310,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Common\\JobFinder.Common.csproj": {
+              "projectPath": "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Common\\JobFinder.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,17 @@
+﻿@model CompanyOutputViewModel
+
+@{
+    ViewBag.Title = "Company settings";
+}
+<h1 class="text-center">@ViewBag.Title</h1>
+<h4 class="text-center"> 
+   <p class="">Company name : @Model.CompanyName</p>
+   <p class="">Company Description : @Model.Description</p>
+</h4>
+<a class="mb-3 btn btn-primary offset-5" asp-area=""  asp-controller="Company" asp-action="CompanyJobListings" asp-route-id="@Model.Id" >Company job listings</a>
+<h2 class="text-center">Company pictures</h2>
+@foreach (var picture in @Model.Pictures)
+{
+    <partial name="_CompanyPicturePartial" model="picture"></partial>
+}
+

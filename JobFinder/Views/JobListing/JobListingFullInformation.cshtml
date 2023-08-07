@@ -1,0 +1,16 @@
+﻿@model JobListingOutputViewModel
+@{
+    ViewBag.Title = "Full information about the job";
+}
+
+<h1 class="text-center">@ViewBag.Title</h1>
+<h4 class="text-center">
+   <p class="">Job title : @Model.JobTitle</p>
+   <p class="">Job title descriptipn: @Model.Description</p>
+   <p class="">Job salary per month : @Model.SalaryPerMonth</p>
+   <p class="">Job vaccantion days : @Model.VaccantionDays</p>
+   <p class="">Job schedule : @Model.Schedule</p>
+   <p class="">Job category : @Model.JobCategory</p>
+   <a class="btn btn-primary" asp-controller="JobListing" asp-action="ApplyForJob">Apply for job</a>
+   <a class="btn btn-warning" asp-controller="Company" asp-action="CompanyInformation" asp-route-id="@Model.CompanyId">More information about the employer</a>
+</h4>

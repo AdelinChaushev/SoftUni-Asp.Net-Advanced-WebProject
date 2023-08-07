@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using static JobFinder.Common.DataValidationConstants.Company;
 
 namespace JobFinder.Data.Models
 {
@@ -13,12 +10,12 @@ namespace JobFinder.Data.Models
         [Key]
         public Guid Id { get; set; }
         [Required]
-        [MaxLength(35)]
-        [MinLength(3)]
+        [MaxLength(NameMinLenght)]
+        [MinLength(NameMaxLenght)]
         public string CompanyName { get; set; }
         [Required]
-        [MinLength(25)]
-        [MaxLength(800)]
+        [MinLength(DescriptionMinLenght)]
+        [MaxLength(DescriptionMinLenght)]
         public string CompanyDescription { get; set; }
 
         [ForeignKey(nameof(ApplicationUser))]

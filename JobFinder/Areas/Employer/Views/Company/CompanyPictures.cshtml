@@ -1,0 +1,21 @@
+﻿@model IEnumerable<PictureOutputViewModel>
+@{
+    ViewBag.Tiltle = "Your pictures";
+}
+
+<h1 class="text-center">@ViewBag.Tiltle</h1>
+<div class="text-center col-md-4 offset-md-4" >
+     <form asp-area="Employer" asp-controller="Picture" asp-action="Upload" enctype="multipart/form-data" method="post">
+        <input class="form-control" type="file"  name="file" />
+
+        <button type="submit" value="Upload"  class="btn btn-success">Upload</button>
+     </form>
+ </div>
+ 
+@foreach(var picture in Model)
+{
+  <partial name="_CompanyPicturePartial" model="@picture"></partial>
+}   
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />    
+}

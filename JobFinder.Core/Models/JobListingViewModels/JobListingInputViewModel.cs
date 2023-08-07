@@ -1,20 +1,22 @@
 ﻿
 using JobFinder.Data.Models;
 using System.ComponentModel.DataAnnotations;
+using static JobFinder.Common.DataValidationConstants.JobListing;
+
 
 namespace JobFinder.Core.Models.JobListingViewModels
 {
     public class JobListingInputViewModel
     {
-        [MinLength(3)]
-        [MaxLength(35)]
+        [MinLength(NameMinLenght)]
+        [MaxLength(NameMaxLenght)]
         public string JobTitle { get; set; } = null!;
-        [MinLength(30)]
-        [MaxLength(500)]
+        [MinLength(DescriptionMinLenght)]
+        [MaxLength(DescriptionMaxLenght)]
         public string Description { get; set; } = null!;
-        [Range(0, double.MaxValue)]
+        [Range(MinSalaryPerMonth, MaxSalaryPerMonth)]
         public decimal SalaryPerMonth { get; set; }
-        [Range(1, 100)]
+        [Range(MinVaccaintionDays, MaxVaccaintionDays)]
         public int VaccantionDays { get; set; }
         public Guid ScheduleId { get; set; }
         public List<Schedule>? Schedules { get; set; }

@@ -1,0 +1,16 @@
+﻿@model PictureOutputViewModel
+
+ <div class="col-sm-3">
+
+              <div class="card" style="width: 18rem;">
+              
+                        <img class="card-image-top" src="@Model.Base64"></img>
+                       
+                       <div class="card-body">
+                       
+                       
+                       <a class="mb-3 btn btn-danger" asp-area="Employer" asp-controller="Picture" asp-action="Delete" asp-route-id="@Model.Id">Delete </a>  
+                       
+                       </div>
+              </div>
+  </div>
