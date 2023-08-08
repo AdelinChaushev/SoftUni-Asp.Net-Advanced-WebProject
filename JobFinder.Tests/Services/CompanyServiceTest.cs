@@ -11,7 +11,7 @@ namespace JobFinder.Tests
     {
         private  List<Company> companies;
         private  ICompanyServiceInterface companyService;
-        
+       
         private  JobFinderDbContext context;
 
         private string userId1 = "1";
@@ -19,9 +19,9 @@ namespace JobFinder.Tests
         private string userId3 = "3";
         private string userId4 = "4";
 
-        private Guid  spaceXId = Guid.NewGuid();
-        private Guid appleId = Guid.NewGuid();
-        private Guid nikeId = Guid.NewGuid();
+        private string  spaceXId = "b7795c10-296b-407d-9645-3048eae835ff";
+        private string appleId = "0ae89d35-00d0-4a43-95af-c154c6eeb37e";
+        private string nikeId = "ae7af307-ffe6-4720-a2c1-ccf89cfff46c";
 
         private Guid jobCategoryId = Guid.NewGuid();
         private Guid jobSchedule = Guid.NewGuid();
@@ -37,13 +37,13 @@ namespace JobFinder.Tests
         public  void Setup()
         {
             this.companies = new List<Company>() {
-            new (){ Id = spaceXId, CompanyName = "SpaceX", CompanyDescription = "SpaceX is an inovative company that studies the space" ,OwnerId = userId1},
-            new (){ Id = appleId, CompanyName = "Apple", CompanyDescription = "Apple is one of the largest companies in the word that is know for making high end smartphones,laptops....etc." ,OwnerId = userId2 , JobListings = new List<JobListing>()},
-            new (){ Id = nikeId, CompanyName = "Nike", CompanyDescription = "Nike is one the leading brands in the cloting industry" , OwnerId = userId3 }
+            new (){ Id = Guid.Parse(spaceXId), CompanyName = "SpaceX", CompanyDescription = "SpaceX is an inovative company that studies the space" ,OwnerId = userId1},
+            new (){ Id = Guid.Parse(appleId), CompanyName = "Apple", CompanyDescription = "Apple is one of the largest companies in the word that is know for making high end smartphones,laptops....etc." ,OwnerId = userId2},
+            new (){ Id = Guid.Parse(nikeId), CompanyName = "Nike", CompanyDescription = "Nike is one the leading brands in the cloting industry" , OwnerId = userId3 }
             };
             Interview interview = new Interview()
             {
-                CompanyId = appleId,
+                CompanyId = Guid.Parse(appleId),
                 UserId = userId4,
                 JobTitle = "Enginner",
                 InterviewStart = DateTime.Now.AddDays(2),
@@ -73,7 +73,7 @@ namespace JobFinder.Tests
             JobListing jobListing = new()
             {
                 Id = jobListingGuid,
-                CompanyId = appleId,
+                CompanyId = Guid.Parse(appleId),
                 Company = companies[1],
                 JobCategoryId = jobCategoryId,
                 ScheduleId = jobSchedule,
@@ -88,15 +88,17 @@ namespace JobFinder.Tests
             {
                 Id = pictureId,
                 PicturePath = picturePath,
-                CompanyId = spaceXId
+                CompanyId = Guid.Parse(spaceXId)
 
             };
-            companies[1].JobListings.Add(jobListing);
+            
             var options = new DbContextOptionsBuilder<JobFinderDbContext>()
             .UseInMemoryDatabase(databaseName: "JobFinderDbContext") // Use an in-memory DB
             .Options;
 
             this.context = new JobFinderDbContext(options);
+            context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
             this.context.AddRange(this.companies); // Add data to the DB
             this.context.Add(user);
             this.context.Add(jobCategory);
@@ -113,11 +115,11 @@ namespace JobFinder.Tests
         [Test]
         public async Task Test_Company_GetCompany_By_Id()
         {
-           Company company = await companyService.GetCompanyById(spaceXId);
+           Company company = await companyService.GetCompanyById(Guid.Parse(spaceXId));
 
-            Assert.That(company.CompanyDescription == companies[0].CompanyDescription);
-            Assert.That(company.CompanyName == companies[0].CompanyName);
-            Assert.That(company.Id == companies[0].Id);
+            Assert.That(company.CompanyDescription == "SpaceX is an inovative company that studies the space");
+            Assert.That(company.CompanyName == "SpaceX");
+            Assert.That(company.Id == Guid.Parse(spaceXId));
         }
 
         [Test]
@@ -125,9 +127,9 @@ namespace JobFinder.Tests
         {
             Company company = await companyService.GetCompanyByUserId(userId1);
 
-            Assert.That(company.CompanyDescription == companies[0].CompanyDescription);
-            Assert.That(company.CompanyName == companies[0].CompanyName);
-            Assert.That(company.Id == companies[0].Id);
+            Assert.That(company.CompanyDescription == "SpaceX is an inovative company that studies the space");
+            Assert.That(company.CompanyName == "SpaceX");
+            Assert.That(company.Id == Guid.Parse(spaceXId));
         }
 
         [Test]
@@ -172,7 +174,7 @@ namespace JobFinder.Tests
         {
           var interviews =   await companyService.GetCompanyInterviewsAsync(userId2);
             Assert.That(interviews.Count() == 1);
-            Assert.That(interviews.First().CompanyId == appleId);
+            Assert.That(interviews.First().CompanyId == Guid.Parse(appleId));
             Assert.That(interviews.First().UserId == userId4);
         }
         [Test]
@@ -180,15 +182,15 @@ namespace JobFinder.Tests
         {
             var companies = await companyService.SearchForCompanies("a");
             Assert.That(companies.Count() == 2);
-            Assert.That(companies.Any(c => c.Id == spaceXId));
-            Assert.That(companies.Any(c => c.Id == appleId));
+            Assert.That(companies.Any(c => c.Id == Guid.Parse(spaceXId)));
+            Assert.That(companies.Any(c => c.Id == Guid.Parse(appleId)));
         }
 
         [Test]
         public async Task Test_Company_CompanyJobListings()
         {
             var jobLisitingsByUserId = await companyService.GetAllByJobListingsAsync(userId2);
-            var jobLisitingsById = await companyService.GetAllByJobListingsAsync(appleId);
+            var jobLisitingsById = await companyService.GetAllByJobListingsAsync(Guid.Parse(appleId));
             Assert.That(jobLisitingsByUserId.Count() == 1);
             Assert.That(jobLisitingsByUserId.Any(c => c.Id == jobListingGuid));
             Assert.That(jobLisitingsById.Count() == 1);
@@ -199,14 +201,15 @@ namespace JobFinder.Tests
         public async Task Test_Company_GetCompanyPictures()
         {
             var picturesByUserId = await companyService.GetCompanyPictures(userId1);
-            var picturesById = await companyService.GetCompanyPictures(spaceXId);
 
             Assert.That(picturesByUserId.Count() == 1);
-            Assert.That(picturesByUserId.Any(c => c.Base64 == picturePath));
+            Assert.That(picturesByUserId.Any(c => c.Base64 == $"data:image/png;base64,{Convert.ToBase64String(File.ReadAllBytes(picturePath))}"));
             Assert.That(picturesByUserId.Any(c => c.Id == pictureId));
 
+            var picturesById = await companyService.GetCompanyPictures(Guid.Parse(spaceXId));
+
             Assert.That(picturesById.Count() == 1);
-            Assert.That(picturesById.Any(c => c.Base64 == picturePath));
+            Assert.That(picturesById.Any(c => c.Base64 == $"data:image/png;base64,{Convert.ToBase64String(File.ReadAllBytes(picturePath))}"));
             Assert.That(picturesByUserId.Any(c => c.Id == pictureId));
 
         }

@@ -8,7 +8,7 @@ namespace JobFinder.Core.Contracts
     {
 
         public Task<JobListing> FindByIdAsync(Guid id);
-        public Task<IEnumerable<JobListing>> GetAllAsync();
+        
 
         public Task CreateAsync(JobListing jobListing,string userId);
 

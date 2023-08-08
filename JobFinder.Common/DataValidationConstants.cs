@@ -42,6 +42,9 @@ namespace JobFinder.Common
 
         }
 
+        public static void Main()
+        {
 
+        }
     }
 }

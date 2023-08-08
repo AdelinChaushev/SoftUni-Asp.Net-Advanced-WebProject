@@ -1204,8 +1204,14 @@
           "JobFinder.dll": {}
         }
       },
+      "JobFinder.Common/1.0.0": {
+        "runtime": {
+          "JobFinder.Common.dll": {}
+        }
+      },
       "JobFinder.Core/1.0.0": {
         "dependencies": {
+          "JobFinder.Common": "1.0.0",
           "JobFinder.Data": "1.0.0"
         },
         "runtime": {
@@ -1214,6 +1220,7 @@
       },
       "JobFinder.Data/1.0.0": {
         "dependencies": {
+          "JobFinder.Common": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.6",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.6",
           "Microsoft.AspNetCore.Identity.UI": "6.0.6",
@@ -1911,6 +1918,11 @@
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
     "JobFinder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JobFinder.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

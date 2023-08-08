@@ -3,11 +3,7 @@ using JobFinder.Core.Models.InterviewViewModel;
 using JobFinder.Data;
 using JobFinder.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace JobFinder.Core.Services
 {
@@ -36,7 +32,9 @@ namespace JobFinder.Core.Services
 
             var job = await context.JobListings.FirstOrDefaultAsync(c => c.Id == jobId);
             var company = await context.Companies.FirstOrDefaultAsync(c => c.JobListings.Any(c => c.Id == jobId));
-            if (company.OwnerId != companyOwnerId || userId == companyOwnerId)
+            if (company.OwnerId != companyOwnerId 
+                || userId == companyOwnerId 
+                ||await  context.Interviews.AnyAsync(c => c.UserId == userId && c.CompanyId == company.Id))
             {
                 throw new InvalidOperationException();
             }

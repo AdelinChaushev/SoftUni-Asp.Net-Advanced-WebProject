@@ -34,7 +34,7 @@ namespace JobFinder.Core.Services
 
 
         }
-
+        
         
     }
 }

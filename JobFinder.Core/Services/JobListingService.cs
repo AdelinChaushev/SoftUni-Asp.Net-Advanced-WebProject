@@ -70,10 +70,7 @@ namespace JobFinder.Core.Services
             return await context.JobListings.Include(c => c.Schedule).Include(c => c.JobCategory).Include(c => c.Company).FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public async Task<IEnumerable<JobListing>> GetAllAsync()
-        {
-            return await context.JobListings.ToListAsync();
-        }
+       
 
         public async Task<IEnumerable<JobApplicationViewModel>> GetJobApplicationsAsync(Guid id)
           => await context.JobApplications           

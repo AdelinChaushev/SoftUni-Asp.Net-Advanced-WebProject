@@ -70,9 +70,14 @@ namespace JobFinder.Tests.Services
         public void Setup()
         {
             Company company = new Company()
-            { Id = appleId, CompanyName = "Apple"
-            , CompanyDescription = "Apple is one of the largest companies in the word that is know for making high end smartphones,laptops....etc."
-            , OwnerId = userId1 };
+            {
+                Id = appleId,
+                CompanyName = "Apple"
+            ,
+                CompanyDescription = "Apple is one of the largest companies in the word that is know for making high end smartphones,laptops....etc."
+            ,
+                OwnerId = userId1
+            };
             this.jobListings = new List<JobListing>() {
             new (){  Id = jobListingGuid1, Company = company,JobCategoryId = jobCategoryId1, ScheduleId = jobSchedule1, JobTitle = jobTitle1,Description = jobDescription1,SalaryPerMonth = 10000,VaccantionDays = 20},
             new (){  Id = jobListingGuid2, Company = company,JobCategoryId = jobCategoryId2, ScheduleId = jobSchedule2, JobTitle = jobTitle2,Description = jobDescription2,SalaryPerMonth = 12000,VaccantionDays = 20},
@@ -153,6 +158,8 @@ namespace JobFinder.Tests.Services
             .UseInMemoryDatabase(databaseName: "JobFinderDbContext") // Use an in-memory DB
             .Options;
             context = new JobFinderDbContext(options);
+            context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
             context.AddRange(this.jobListings); // Add data to the DB
             context.Add(user1);
             context.Add(user2);
@@ -198,21 +205,14 @@ namespace JobFinder.Tests.Services
 
         }
 
-        [Test]
+        
 
-        public async Task Test_JobListing_GetAllAsync()
-        {
-            var result = await jobListingService.GetAllAsync();
-            Assert.That(result.Count() == 3);
-            Assert.That(result.Any(c => c.Id == jobListingGuid1));
-            Assert.That(result.Any(c => c.Id == jobListingGuid2));
-            Assert.That(result.Any(c => c.Id == jobListingGuid3));
-        }
+       
         [Test]
         public async Task Test_JobListing_Delete_Positive()
         {
             await jobListingService.DeleteAsync(jobListingGuid1, userId1);
-            Assert.That(context.JobListings.Count() == 2);
+            Assert.That(context.JobListings.Count() == 3);
             Assert.That(!context.JobListings.Any(c => c.Id == jobListingGuid1));
         }
         [Test]
@@ -324,19 +324,22 @@ namespace JobFinder.Tests.Services
             Assert.That(jobListings1.JobLitings.ToList()[0].Id == jobListingGuid3);
             Assert.That(jobListings1.JobLitings.ToList()[1].Id == jobListingGuid4);
             Assert.That(jobListings1.JobLitings.ToList()[2].Id == jobListingGuid2);
+            Assert.That(allJobListingOutputViewModel1.Page == 1);
             Assert.True(allJobListingOutputViewModel1.MaxPages == 1);
 
             AllJobListingOutputViewModel allJobListingOutputViewModel2 = new()
             {
 
-                OrderBy = (OrderBy)0,
-                JobListingSort = (JobListingSort)1,
+                OrderBy = (OrderBy)1,
+                JobListingSort = (JobListingSort)0,
                 Category = jobCategoryName1,
                 Schedule = jobScheduleName1
             };
             var jobListings2 = await jobListingService.SearchJobListings(allJobListingOutputViewModel2);
             Assert.That(jobListings2.JobLitings.Count() == 1);
             Assert.That(jobListings2.JobLitings.ToList()[0].Id == jobListingGuid1);
+            Assert.That(allJobListingOutputViewModel1.Page == 1);
+            Assert.True(allJobListingOutputViewModel1.MaxPages == 1);
 
             AllJobListingOutputViewModel allJobListingOutputViewModel3 = new()
             {
@@ -349,18 +352,22 @@ namespace JobFinder.Tests.Services
             var jobListings3 = await jobListingService.SearchJobListings(allJobListingOutputViewModel3);
             Assert.That(jobListings3.JobLitings.Count() == 1);
             Assert.That(jobListings3.JobLitings.ToList()[0].Id == jobListingGuid2);
+            Assert.That(allJobListingOutputViewModel1.Page == 1);
+            Assert.True(allJobListingOutputViewModel1.MaxPages == 1);
 
             AllJobListingOutputViewModel allJobListingOutputViewModel4 = new()
             {
 
-                OrderBy = (OrderBy)0,
-                JobListingSort = (JobListingSort)1,
+                OrderBy = (OrderBy)1,
+                JobListingSort = (JobListingSort)0,
                 Category = jobCategoryName3,
                 Schedule = jobScheduleName3
             };
             var jobListings4 = await jobListingService.SearchJobListings(allJobListingOutputViewModel4);
             Assert.That(jobListings4.JobLitings.Count() == 1);
             Assert.That(jobListings4.JobLitings.ToList()[0].Id == jobListingGuid3);
+            Assert.That(allJobListingOutputViewModel1.Page == 1);
+            Assert.True(allJobListingOutputViewModel1.MaxPages == 1);
 
             AllJobListingOutputViewModel allJobListingOutputViewModel5 = new()
             {
@@ -373,8 +380,24 @@ namespace JobFinder.Tests.Services
             var jobListings5 = await jobListingService.SearchJobListings(allJobListingOutputViewModel5);
             Assert.That(jobListings5.JobLitings.Count() == 1);
             Assert.That(jobListings5.JobLitings.ToList()[0].Id == jobListingGuid4);
+            Assert.That(allJobListingOutputViewModel1.Page == 1);
+            Assert.True(allJobListingOutputViewModel1.MaxPages == 1);
 
-
+            AllJobListingOutputViewModel allJobListingOutputViewModel6 = new()
+            {
+                Keyword = "M",
+                OrderBy = (OrderBy)0,
+                JobListingSort = (JobListingSort)1,
+                Category = "None",
+                Schedule = "None"
+            };
+            var jobListings6 = await jobListingService.SearchJobListings(allJobListingOutputViewModel1);
+            Assert.That(jobListings1.JobLitings.Count() == 3);
+            Assert.That(jobListings1.JobLitings.ToList()[0].Id == jobListingGuid3);
+            Assert.That(jobListings1.JobLitings.ToList()[1].Id == jobListingGuid4);
+            Assert.That(jobListings1.JobLitings.ToList()[2].Id == jobListingGuid2);
+            Assert.That(allJobListingOutputViewModel1.Page == 1);
+            Assert.True(allJobListingOutputViewModel1.MaxPages == 1);
         }
 
         [Test]
@@ -394,5 +417,5 @@ namespace JobFinder.Tests.Services
 
 
     }
-    
+
 }

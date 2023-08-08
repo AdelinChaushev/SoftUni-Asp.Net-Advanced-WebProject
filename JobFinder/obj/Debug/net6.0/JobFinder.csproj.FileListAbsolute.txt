@@ -77,5 +77,11 @@ C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.ru
 C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.exe
 C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.dll
 C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Core.pdb
-C:\Users\Adi\source\repos\JobFinder\JobFinder\obj\Debug\net6.0\JobFinder.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Adi\source\repos\JobFinder\JobFinder\obj\Debug\net6.0\scopedcss\Areas\Employer\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\CoverletSourceRootsMapping_JobFinder
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Common.deps.json
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Common.runtimeconfig.json
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Common.exe
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Common.dll
+C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Common.pdb
+C:\Users\Adi\source\repos\JobFinder\JobFinder\obj\Debug\net6.0\scopedcss\Areas\Administration\Views\Shared\_Layout.cshtml.rz.scp.css

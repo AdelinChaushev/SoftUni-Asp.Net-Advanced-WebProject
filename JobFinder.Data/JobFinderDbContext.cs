@@ -37,51 +37,51 @@ namespace JobFinder.Data
                 .WithMany(k => k.Interviews)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder
-               .Entity<JobCategory>()
-               .HasData(new JobCategory()
-               {
-                   Id = Guid.NewGuid(),
-                   Name = "Tech"
-               },
-               new JobCategory()
-               {
-                   Id = Guid.NewGuid(),
-                   Name = "Farming"
-               },
-               new JobCategory()
-               {
-                   Id = Guid.NewGuid(),
-                   Name = "Finnance"
-               },
-               new JobCategory()
-               {
-                   Id = Guid.NewGuid(),
-                   Name = "Architecture"
-               });
+            //builder
+            //   .Entity<JobCategory>()
+            //   .HasData(new JobCategory()
+            //   {
+            //       Id = Guid.NewGuid(),
+            //       Name = "Tech"
+            //   },
+            //   new JobCategory()
+            //   {
+            //       Id = Guid.NewGuid(),
+            //       Name = "Farming"
+            //   },
+            //   new JobCategory()
+            //   {
+            //       Id = Guid.NewGuid(),
+            //       Name = "Finnance"
+            //   },
+            //   new JobCategory()
+            //   {
+            //       Id = Guid.NewGuid(),
+            //       Name = "Architecture"
+            //   });
 
-            builder
-             .Entity<Schedule>()
-             .HasData(new Schedule()
-             {
-                 Id = Guid.NewGuid(),
-                 WorkingSchedule = "9-5"
-             },
-             new Schedule()
-             {
-                 Id = Guid.NewGuid(),
-                 WorkingSchedule = "Weekends"
-             },
-             new Schedule()
-             {
-                 Id = Guid.NewGuid(),
-                 WorkingSchedule = "4 hours a day"
-             },
-             new Schedule()
-             {
-                 Id = Guid.NewGuid(),
-                 WorkingSchedule = "full working week"
-             });
+            //builder
+            // .Entity<Schedule>()
+            // .HasData(new Schedule()
+            // {
+            //     Id = Guid.NewGuid(),
+            //     WorkingSchedule = "9-5"
+            // },
+            // new Schedule()
+            // {
+            //     Id = Guid.NewGuid(),
+            //     WorkingSchedule = "Weekends"
+            // },
+            // new Schedule()
+            // {
+            //     Id = Guid.NewGuid(),
+            //     WorkingSchedule = "4 hours a day"
+            // },
+            // new Schedule()
+            // {
+            //     Id = Guid.NewGuid(),
+            //     WorkingSchedule = "full working week"
+            // });
 
             builder.Entity<JobApplication>().HasKey(k => new { k.JobListingId, k.UserId });
 

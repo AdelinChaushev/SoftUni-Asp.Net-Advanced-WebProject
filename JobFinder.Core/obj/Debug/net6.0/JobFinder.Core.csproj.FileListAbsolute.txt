@@ -59,3 +59,8 @@ C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\obj\Debug\net6.0\refint\JobFi
 C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\obj\Debug\net6.0\JobFinder.Core.pdb
 C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\obj\Debug\net6.0\JobFinder.Core.genruntimeconfig.cache
 C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\obj\Debug\net6.0\ref\JobFinder.Core.dll
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\bin\Debug\net6.0\JobFinder.Common.deps.json
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\bin\Debug\net6.0\JobFinder.Common.runtimeconfig.json
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\bin\Debug\net6.0\JobFinder.Common.exe
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\bin\Debug\net6.0\JobFinder.Common.dll
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Core\bin\Debug\net6.0\JobFinder.Common.pdb
