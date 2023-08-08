@@ -1,0 +1,15 @@
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\JobFinder.Common.csproj.AssemblyReference.cache
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\JobFinder.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\JobFinder.Common.AssemblyInfoInputs.cache
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\JobFinder.Common.AssemblyInfo.cs
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\JobFinder.Common.csproj.CoreCompileInputs.cache
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\bin\Debug\net6.0\JobFinder.Common.exe
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\bin\Debug\net6.0\JobFinder.Common.deps.json
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\bin\Debug\net6.0\JobFinder.Common.runtimeconfig.json
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\bin\Debug\net6.0\JobFinder.Common.dll
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\bin\Debug\net6.0\JobFinder.Common.pdb
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\JobFinder.Common.dll
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\refint\JobFinder.Common.dll
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\JobFinder.Common.pdb
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\JobFinder.Common.genruntimeconfig.cache
+C:\Users\Adi\source\repos\JobFinder\JobFinder.Common\obj\Debug\net6.0\ref\JobFinder.Common.dll
