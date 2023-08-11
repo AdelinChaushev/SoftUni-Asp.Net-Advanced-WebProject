@@ -5,9 +5,8 @@
 @if (User?.Identity?.IsAuthenticated ?? false)
 {
    
-      <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action = "AccountSettings">Account settings</a>
-    </li>
+     
+
         <li class="nav-item">
         <a class="nav-link text-dark" asp-area="Employer" asp-controller="Company" asp-action = "CompanySettings">Company Settings</a>
         </li>
