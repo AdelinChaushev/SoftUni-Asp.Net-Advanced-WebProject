@@ -19,9 +19,13 @@ namespace JobFinder.Core.Contracts
         public Task<IEnumerable<CompanyInterviewOutputViewModel>> GetCompanyInterviewsAsync(string userId);
         public Task AddAsync(Company company,string userId);
         public Task DeleteAsync(string userId);
+
+        public Task DeleteAsyncById(Guid Id);
         public Task EditAsync( Company editedEntity, string userId);
 
         public Task<IEnumerable<Company>> SearchForCompanies(string keyword);
+
+         
 
         public Task<IEnumerable<JobListing>> GetAllByJobListingsAsync(string userId);
 

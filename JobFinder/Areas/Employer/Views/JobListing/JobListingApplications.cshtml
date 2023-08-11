@@ -11,19 +11,23 @@
       <th scope="col">Number</th>
       <th scope="col">Email</th>
       <th scope="col">UserName</th>
-      <th scope="col">Upload resume</th>
+      <th scope="col">Resume</th>
       <th scope="col">Arrange interview</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-     @foreach (var item in Model)
-            {
-                int counter = 1;
-               <td scope="col">@counter</td>
-               <partial name="_JobListingApplication" model="@item"></partial>
-               counter++;
-            }
+           @if(Model.Any())
+           {
+                    
+              @foreach (var item in Model)
+              {
+              int counter = 1;
+              <td scope="col">@counter</td>
+              <partial name="_JobListingApplication" model="@item"></partial>
+              counter++;
+               }
+           }
     </tr>
   </tbody>
 </table>

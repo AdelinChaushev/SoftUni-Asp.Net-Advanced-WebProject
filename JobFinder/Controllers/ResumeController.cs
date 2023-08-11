@@ -20,7 +20,7 @@ namespace JobFinder.Controllers
             {
                 return View();
             }
-            if (User.IsInRole("Employer"))
+            if (User.IsInRole("Employer") )
             {
                 return RedirectToAction("AccountSettings", "Account");
             }
@@ -39,10 +39,6 @@ namespace JobFinder.Controllers
         public async Task<IActionResult> Download(Guid? id)
         {
             string path = await fileService.GetResumePathByIdAsync(id);
-            string fileName = Path.GetFileName(path);
-
-            
-            new FileExtensionContentTypeProvider().TryGetContentType(path,out string contentType);
             return PhysicalFile(path, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
 
             //"application/msword"

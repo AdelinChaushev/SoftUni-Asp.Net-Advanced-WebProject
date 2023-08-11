@@ -19,8 +19,8 @@ namespace JobFinder.Controllers
         [HttpGet]
         public async Task<IActionResult> SearchForJobs(string? keyword, string? category,string? schedule,int jobListingSort, int orderBy,int page)
         {
-            List<JobCategory> jobCategories = (List<JobCategory>)(await jobListingService.GetJobCategoriesAsync());
-            List<Schedule> schedules = (List<Schedule>)(await jobListingService.GetSchedulesAsync());
+            var jobCategories = (List<JobCategory>)(await jobListingService.GetJobCategoriesAsync());
+            var schedules = (List<Schedule>)(await jobListingService.GetSchedulesAsync());
             jobCategories.Insert(0, new JobCategory()
             {
                 Id = Guid.NewGuid(),
@@ -103,18 +103,7 @@ namespace JobFinder.Controllers
         }
          
 
-        private IEnumerable<JobListingOutputViewModel> ToDbModel(IEnumerable<JobListing> dbCollection)
-        => dbCollection.Select(c => new JobListingOutputViewModel()
-        {
-            Id = c.Id,
-            JobTitle = c.JobTitle,
-            Description = c.Description,
-            SalaryPerMonth = c.SalaryPerMonth,
-            VaccantionDays = c.VaccantionDays,
-            CompanyId = c.CompanyId,
-            Schedule = c.Schedule.WorkingSchedule,
-            JobCategory = c.JobCategory.Name,
-        }).ToList();
+       
     }
    
 }

@@ -4,8 +4,11 @@
         <input asp-for="@Model.File" class="form-control" type="file"  name="file" />
         <button type="submit" value="Upload"  class="btn btn-success">Upload</button>
          <span asp-validation-for="@Model.File" class="text-danger"></span>    
+          <a class="btn btn-danger" asp-controller="Resume" asp-action="Delete">Delete Resume</a>
+          
+          <a class="btn btn-warning" asp-controller="Resume" asp-action="Download">Download Resume</a>
      </form>
-      <a class="btn btn-danger" asp-controller="Resume" asp-action="Delete">Delete Resume</a>
+      
  </div>
  @section Scripts {
     <partial name="_ValidationScriptsPartial" />    

@@ -17,6 +17,7 @@ namespace JobFinder.Controllers
             var models = await userService.GetInterviewsAsync(GetUserId());
             return View(models);
         }
+         
 
 
     }

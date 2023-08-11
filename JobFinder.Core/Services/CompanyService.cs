@@ -31,7 +31,11 @@ namespace JobFinder.Core.Services
             {
                 throw new InvalidOperationException();
             }
-            context.Remove(await GetCompanyByUserId(userId));
+            var companyApplications = context.JobApplications.Where(c => c.JobListing.CompanyId == company.Id);
+            var companyListings = context.JobListings.Where(c => c.CompanyId == company.Id);
+            context.RemoveRange(companyApplications);
+            context.RemoveRange(companyListings);
+            context.Remove(company);
            await context.SaveChangesAsync();
         }
 
@@ -85,7 +89,7 @@ namespace JobFinder.Core.Services
         {
             List<Company>? companies = await context.Companies           
             .ToListAsync();
-            if(keyword != null)
+            if(!string.IsNullOrWhiteSpace(keyword))
             {
 
              companies =  companies
@@ -144,6 +148,15 @@ namespace JobFinder.Core.Services
                })
                 .ToArrayAsync();
 
-        
+        public async Task DeleteAsyncById(Guid Id)
+        {
+         var company =   await GetCompanyById(Id);
+            if(company == null)
+            {
+                throw new InvalidOperationException();
+            }
+             context.Remove(company);
+            await context.SaveChangesAsync();
+        }
     }
 }

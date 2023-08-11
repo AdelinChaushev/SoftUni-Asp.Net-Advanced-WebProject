@@ -76,10 +76,10 @@ namespace JobFinder.Controllers
         private CompanyOutputViewModel ToViewModel(Company dbModel)
        => new()
        {
-           Id = dbModel.Id,
+           Id = dbModel?.Id ?? Guid.Empty,
            
-           Description = dbModel.CompanyDescription,
-           CompanyName = dbModel.CompanyName,
+           Description = dbModel?.CompanyDescription,
+           CompanyName = dbModel?.CompanyName,
        };
         private IEnumerable<JobListingOutputViewModel> ToViewModelJobListings(IEnumerable<JobListing> dbCollection)
         => dbCollection.Select(c => new JobListingOutputViewModel()

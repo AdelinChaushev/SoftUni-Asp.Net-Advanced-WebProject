@@ -10,7 +10,7 @@ namespace JobFinder.Core.Models.JobApplicationViewModels
     {
         public string UserId { get; set; }
 
-        public Guid ResumeId { get; set; }
+        public Guid? ResumeId { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
 

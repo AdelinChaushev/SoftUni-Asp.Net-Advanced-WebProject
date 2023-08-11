@@ -40,7 +40,7 @@ namespace JobFinder.Core.Services
         {
             JobListing jobListing = await FindByIdAsync(id);
             Guid companyId = await GetCompanyId(userId);
-            if(jobListing.CompanyId != companyId)
+            if(jobListing.CompanyId != companyId && !await context.UserRoles.AnyAsync( c => c.UserId == userId && c.RoleId ==  context.Roles.FirstOrDefault(c => c.NormalizedName == "ADMIN").Id))
             {
                 throw new InvalidOperationException();
             }
@@ -79,7 +79,7 @@ namespace JobFinder.Core.Services
                 UserId = c.UserId,
                 Username = c.User.UserName,
                 Email = c.User.Email,
-                ResumeId = c.User.Resume.Id,
+                ResumeId = c.User.Resume.Id ,
                 JobListingId = c.JobListingId,
 
             })
@@ -99,7 +99,7 @@ namespace JobFinder.Core.Services
                 JobCategory = c.JobCategory.Name,
                 CompanyId = c.CompanyId,
             }).ToListAsync();
-            if(allJobListingOutputViewModel.Keyword != null)
+            if(!string.IsNullOrWhiteSpace(allJobListingOutputViewModel.Keyword))
             {
                 allJobListingOutputViewModel.JobLitings = allJobListingOutputViewModel.JobLitings.Where(c => c.JobTitle.ToLower().Contains(allJobListingOutputViewModel.Keyword.ToLower()));
             }

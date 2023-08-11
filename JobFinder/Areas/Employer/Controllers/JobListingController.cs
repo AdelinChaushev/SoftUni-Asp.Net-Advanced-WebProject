@@ -9,7 +9,7 @@ namespace JobFinder.Areas.Employer.Controllers
 {
     [Authorize(Roles = "Employer")]
     [Area("Employer")]
-    public class JobListingController : BaseController
+    public class JobListingController : EmployerBaseController
     {
         private readonly IJobListingServiceInterface jobListingService;
 
@@ -29,10 +29,7 @@ namespace JobFinder.Areas.Employer.Controllers
             viewModel.JobCategories = jobCategories;
             viewModel.Schedules = schedules;
             
-            if(!viewModel.Schedules.Any() || !viewModel.JobCategories.Any())
-            {
-                return View("Error");   
-            }
+            
           return View(viewModel);
         }
         
@@ -47,7 +44,7 @@ namespace JobFinder.Areas.Employer.Controllers
 
             await jobListingService.CreateAsync(jobListing,GetUserId());
 
-            return RedirectToAction("CompanyJobListings");
+            return RedirectToAction("CompanyJobListings","Company");
             
         }
 
@@ -61,8 +58,8 @@ namespace JobFinder.Areas.Employer.Controllers
                 Description = jobLisitng.Description,
                 SalaryPerMonth = jobLisitng.SalaryPerMonth,
                 VaccantionDays = jobLisitng.VaccantionDays,
-                ScheduleId = jobLisitng.ScheduleId,
-                JobCategoryId = jobLisitng.JobCategoryId,
+                Schedule = jobLisitng.ScheduleId,
+                JobCategory = jobLisitng.JobCategoryId,
                 JobCategories = (List<JobCategory>)await jobListingService.GetJobCategoriesAsync(),
                 Schedules = (List<Schedule>)await jobListingService.GetSchedulesAsync(),
 
@@ -88,7 +85,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }
         
 
-            return RedirectToAction("CompanyJobListings");
+            return RedirectToAction("CompanyJobListings","Company");
 
         }
         
@@ -106,7 +103,7 @@ namespace JobFinder.Areas.Employer.Controllers
             }
 
 
-            return RedirectToAction("CompanyJobListings");
+            return RedirectToAction("CompanyJobListings","Company");
 
         }
         
@@ -115,24 +112,10 @@ namespace JobFinder.Areas.Employer.Controllers
         {
 
             IEnumerable<JobApplicationViewModel> applicationUsers = await jobListingService.GetJobApplicationsAsync(id);
-            if (applicationUsers.Count() == 0)
-            {
-                return View();
-            }          
+             
             return View(applicationUsers);
         }
-        private IEnumerable<JobListingOutputViewModel> ToViewModel(IEnumerable<JobListing> dbCollection)
-        => dbCollection.Select(c => new JobListingOutputViewModel()
-        {
-            Id = c.Id,
-            JobTitle = c.JobTitle,
-            Description = c.Description,
-            SalaryPerMonth = c.SalaryPerMonth,
-            VaccantionDays = c.VaccantionDays,
-            CompanyId = c.CompanyId,
-            Schedule = c.Schedule.WorkingSchedule,
-            JobCategory = c.JobCategory.Name,
-        }).ToList();
+        
 
       
         private  JobListing ToDbModel(JobListingInputViewModel compnayViewModel)
@@ -143,8 +126,8 @@ namespace JobFinder.Areas.Employer.Controllers
                 Description = compnayViewModel.Description,
                 SalaryPerMonth = compnayViewModel.SalaryPerMonth,
                 VaccantionDays = compnayViewModel.VaccantionDays,
-                JobCategoryId = compnayViewModel.JobCategoryId,
-                ScheduleId = compnayViewModel.ScheduleId,
+                JobCategoryId = compnayViewModel.JobCategory,
+                ScheduleId = compnayViewModel.Schedule,
             };
         }
          

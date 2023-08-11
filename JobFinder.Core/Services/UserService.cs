@@ -1,5 +1,6 @@
 ﻿using JobFinder.Core.Contracts;
 using JobFinder.Core.Models.InterviewViewModel;
+using JobFinder.Core.Models.UserViewModels;
 using JobFinder.Data;
 using JobFinder.Data.Models;
 using Microsoft.EntityFrameworkCore;
@@ -34,7 +35,37 @@ namespace JobFinder.Core.Services
 
 
         }
-        
-        
+
+        public async Task<IEnumerable<UserOutputViewModel>> SearchForUser(string keyword)
+        {
+            List<UserOutputViewModel>? companies = await context.Users
+             .Select(c => new UserOutputViewModel
+             {
+                 Id = c.Id,
+                 Email = c.Email,
+                 UserName = c.UserName
+                 
+             })
+            .ToListAsync();
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+
+                companies = companies
+                   .Where(c => c.UserName.ToLower().Contains(keyword.ToLower()))
+                   .ToList();
+            }
+            return companies;
+        }
+
+        public async Task<bool> UserHasCompany(string userId)
+        {
+            var company = await context.Companies.FirstOrDefaultAsync(c => c.OwnerId == userId);
+            if(company == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }

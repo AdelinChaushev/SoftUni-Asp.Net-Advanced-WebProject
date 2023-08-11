@@ -18,9 +18,9 @@ namespace JobFinder.Core.Models.JobListingViewModels
         public decimal SalaryPerMonth { get; set; }
         [Range(MinVaccaintionDays, MaxVaccaintionDays)]
         public int VaccantionDays { get; set; }
-        public Guid ScheduleId { get; set; }
+        public Guid Schedule { get; set; }
         public List<Schedule>? Schedules { get; set; }
-        public Guid JobCategoryId { get; set; }
+        public Guid JobCategory { get; set; }
 
         public List<JobCategory>? JobCategories { get; set; }
     }

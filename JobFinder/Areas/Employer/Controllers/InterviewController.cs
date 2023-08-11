@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using JobFinder.Core.Contracts;
 namespace JobFinder.Areas.Employer.Controllers
 {
-    public class InterviewController : BaseController
+    public class InterviewController : EmployerBaseController
     {
         private readonly IInterviewServiceInterface interviewService;
 
@@ -21,14 +21,15 @@ namespace JobFinder.Areas.Employer.Controllers
             {
                 return View(interviewInputViewModel);
             }
-            if (interviewInputViewModel.StartTime >= interviewInputViewModel.EndTime)
+            if (interviewInputViewModel.StartTime > interviewInputViewModel.EndTime 
+                || interviewInputViewModel.StartTime.ToString() == interviewInputViewModel.EndTime.ToString())
             {
                 ModelState.AddModelError("", "End time can not be before or at the same time as the start time.");
                 return View(interviewInputViewModel);
             }
-            if (interviewInputViewModel.StartTime <= DateTime.Now)
+            if (interviewInputViewModel.StartTime < DateTime.Now)
             {
-                ModelState.AddModelError("", "The interview start must be in the future.");
+                ModelState.AddModelError("", "The interview start date must be future date.");
                 return View(interviewInputViewModel);
             }
             try
@@ -38,7 +39,7 @@ namespace JobFinder.Areas.Employer.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CompanyInterviews","Company");
+                return BadRequest();
             }
 
             return RedirectToAction("CompanyInterviews", "Company");

@@ -11,11 +11,12 @@
         <button type="submit" value="Upload"  class="btn btn-success">Upload</button>
      </form>
  </div>
- 
-@foreach(var picture in Model)
-{
-  <partial name="_CompanyPicturePartial" model="@picture"></partial>
-}   
+
+   @foreach(var picture in Model)
+   {
+     <partial name="_CompanyPicturePartial" model="@picture"></partial>
+   }   
+
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />    
 }

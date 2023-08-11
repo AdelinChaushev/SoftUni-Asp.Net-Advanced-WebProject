@@ -5,9 +5,8 @@ using System.Diagnostics;
 
 namespace JobFinder.Areas.Employer.Controllers
 {
-    [Authorize(Roles = "Employer")]
-    [Area("Employer")]
-    public class HomeController : BaseController
+    
+    public class HomeController : EmployerBaseController
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -23,10 +22,6 @@ namespace JobFinder.Areas.Employer.Controllers
 
 
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+       
     }
 }

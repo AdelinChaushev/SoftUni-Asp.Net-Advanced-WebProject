@@ -32,24 +32,24 @@
                     <span asp-validation-for="@Model.VaccantionDays" class="text-danger"></span>
                 </div>
                  <div class="text-center mb-3">
-                    <label asp-for="@Model.ScheduleId" class="form-label"></label>
-                    <select asp-for="@Model.ScheduleId" class="form-control" aria-required="true">
+                    <label asp-for="@Model.Schedule" class="form-label"></label>
+                    <select asp-for="@Model.Schedule" class="form-control" aria-required="true">
                     @foreach (var type in Model.Schedules)
                     {
                         <option value="@type.Id">@type.WorkingSchedule</option>
                     }
                 </select>
-                    <span asp-validation-for="@Model.ScheduleId" class="text-danger"></span>
+                    <span asp-validation-for="@Model.Schedule" class="text-danger"></span>
                 </div>
                    <div class="text-center mb-3">
-                    <label asp-for="@Model.JobCategoryId" class="form-label"></label>
-                    <select asp-for="@Model.JobCategoryId" class="form-control" aria-required="true">
+                    <label asp-for="@Model.JobCategory" class="form-label"></label>
+                    <select asp-for="@Model.JobCategory" class="form-control" aria-required="true">
                     @foreach (var type in Model.JobCategories)
                     {
                         <option value="@type.Id">@type.Name</option>
                     }
                      </select> 
-                    <span asp-validation-for="@Model.JobCategoryId" class="text-danger"></span>
+                    <span asp-validation-for="@Model.JobCategory" class="text-danger"></span>
                     </div>
 
                 <div class="text-center">

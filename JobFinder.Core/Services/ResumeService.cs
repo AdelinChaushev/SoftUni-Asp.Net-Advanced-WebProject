@@ -65,5 +65,11 @@ namespace JobFinder.Core.Services
          var resume = await context.Resumes.FirstOrDefaultAsync(c => c.Id == id);
             return resume.ResumePath;
         }
+
+        public async Task<string> GetResumePathByUserIdAsync(string id)
+        {
+            var resume = await context.Resumes.FirstOrDefaultAsync(c => c.UserId == id);
+            return resume.ResumePath;
+        }
     }
 }

@@ -3,6 +3,7 @@ using JobFinder.Core.Models.AuthViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using JobFinder.Core.Contracts;
 
 namespace JobFinder.Controllers
 {
@@ -10,12 +11,16 @@ namespace JobFinder.Controllers
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly IUserServiceInterface userService;
      
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+       
+
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IUserServiceInterface userService)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.userService = userService;
         }
 
         [AllowAnonymous]
@@ -38,12 +43,13 @@ namespace JobFinder.Controllers
                 Email = userViewModel.Email,
             };
 
-         var result =  await userManager.CreateAsync(user,userViewModel.Password);
+            var result =  await userManager.CreateAsync(user,userViewModel.Password);
             if (result.Succeeded)
             {
                 await signInManager.SignInAsync(user,isPersistent:true);
                await userManager.AddToRoleAsync(user,"User");
                 return RedirectToAction(nameof(SelectAccountType));
+                
                 
             }
           
@@ -113,7 +119,11 @@ namespace JobFinder.Controllers
             {
                 return BadRequest();
             }
-            ApplicationUser user = await userManager.FindByIdAsync(GetUserId()); 
+            ApplicationUser user = await userManager.FindByIdAsync(GetUserId());
+            if(!await userService.UserHasCompany(GetUserId())) 
+            { 
+                return BadRequest(); 
+            }
             await userManager.AddToRoleAsync(user, "Employer");
 
             return Redirect("/Employer/Home/Index");
@@ -126,7 +136,7 @@ namespace JobFinder.Controllers
             ApplicationUser user = await userManager.FindByIdAsync(GetUserId());
             await userManager.RemoveFromRoleAsync(user, "Employer");
 
-            return RedirectToAction("Home","Index");
+            return RedirectToAction("Index", "Home");
 
 
         }
@@ -134,6 +144,13 @@ namespace JobFinder.Controllers
         {
             return View();
         }
+        public async Task<IActionResult> DeleteAccount()
+        {
+            ApplicationUser user = await userManager.FindByIdAsync(GetUserId());
 
+            await signInManager.SignOutAsync();
+            await userManager.DeleteAsync(user);
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

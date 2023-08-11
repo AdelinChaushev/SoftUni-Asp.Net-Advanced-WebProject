@@ -9,7 +9,7 @@ using JobFinder.Core.Models.JobListingViewModels;
 namespace JobFinder.Areas.Employer.Controllers
 {
     [Area("Employer")]
-    public class CompanyController : BaseController
+    public class CompanyController : EmployerBaseController
     { 
         private readonly ICompanyServiceInterface companyService;
 
@@ -38,15 +38,10 @@ namespace JobFinder.Areas.Employer.Controllers
                 return View(compnayViewModel);
             }
             var company = ToDbModel(compnayViewModel);
-            try
-            {
-                await companyService.EditAsync(company, GetUserId());
-            }
-            catch (Exception)
-            {
-
-                return BadRequest();
-            }
+         
+           await companyService.EditAsync(company, GetUserId());
+            
+           
             return RedirectToAction("CompanySettings");
         }
        
@@ -58,14 +53,8 @@ namespace JobFinder.Areas.Employer.Controllers
         }
         public async Task<IActionResult> Delete()
         {
-            try
-            {
-                await companyService.DeleteAsync(GetUserId());
-            }
-            catch (Exception)
-            {
-                return BadRequest();
-            }
+        
+            await companyService.DeleteAsync(GetUserId());
             return Redirect("/Account/DeleteEmployerAccount");
         }
         public async Task<IActionResult> CompanySettings()
@@ -85,14 +74,7 @@ namespace JobFinder.Areas.Employer.Controllers
             return View(pictures);
         }
 
-        private CompanyOutputViewModel ToViewModel(Company dbModel)
-       => new()
-       {
-           Id = dbModel.Id,
-          
-           Description = dbModel.CompanyDescription,
-           CompanyName = dbModel.CompanyName,
-       };
+         
         private Company ToDbModel(CompanyInputViewModel compnayViewModel)
          => new ()
             {

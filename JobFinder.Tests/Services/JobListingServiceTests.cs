@@ -104,6 +104,14 @@ namespace JobFinder.Tests.Services
 
 
             };
+            Resume resume = new()
+            {
+                Id = Guid.NewGuid(),
+                ResumePath = "",
+                UserId = userId2
+                
+            };
+          
             jobCategories = new List<JobCategory>()
             {
               new()
@@ -163,6 +171,7 @@ namespace JobFinder.Tests.Services
             context.AddRange(this.jobListings); // Add data to the DB
             context.Add(user1);
             context.Add(user2);
+            context.Add(resume);
             context.AddRange(jobCategories);
             context.AddRange(schedules);
             context.Add(company);
@@ -413,6 +422,14 @@ namespace JobFinder.Tests.Services
             await jobListingService.ApplyForJob(jobListingGuid2, userId2);
             Assert.ThrowsAsync<InvalidOperationException>(async () => await jobListingService.ApplyForJob(jobListingGuid2, userId2));
             Assert.ThrowsAsync<InvalidOperationException>(async () => await jobListingService.ApplyForJob(jobListingGuid2, userId1));
+        }
+        [Test]
+        public async Task Test_JobListing_GetJobApplications()
+        {
+            await jobListingService.ApplyForJob(jobListingGuid2, userId2);
+            var result = await jobListingService.GetJobApplicationsAsync(jobListingGuid2);
+            Assert.That(result.Count() == 1);
+            Assert.That(result.Any(c => c.UserId == userId2 && c.JobListingId == jobListingGuid2));
         }
 
 

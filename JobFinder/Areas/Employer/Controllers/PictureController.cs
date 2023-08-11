@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.StaticFiles;
 
 namespace JobFinder.Areas.Employer.Controllers
 {
-    public class PictureController : BaseController
+    public class PictureController : EmployerBaseController
     {
         private readonly IPictureServiceInterface pictureService;
 

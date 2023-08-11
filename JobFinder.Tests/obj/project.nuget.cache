@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QZ0Lk/uIJoQK/mc4OSU+2pdvqwy/O0XLgxdMgf8vBrfvkcbIhPMiAT4uyVsCaxRGfSAvtz02SYzLPE418/xcwA==",
+  "dgSpecHash": "cDW/LRVQy5X9wgZPRC+1dTxVle5O2fsHXuLgy5+JyBMV6HBEW0nqnrnupb9JY6NdRmnFNh0b1HBJtIswO8ruoA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Adi\\source\\repos\\JobFinder\\JobFinder.Tests\\JobFinder.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Adi\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.6\\microsoft.aspnetcore.cryptography.internal.6.0.6.nupkg.sha512",
@@ -49,6 +50,7 @@
     "C:\\Users\\Adi\\.nuget\\packages\\microsoft.testplatform.testhost\\17.1.0\\microsoft.testplatform.testhost.17.1.0.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Adi\\.nuget\\packages\\moq\\4.20.2\\moq.4.20.2.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
@@ -59,6 +61,7 @@
     "C:\\Users\\Adi\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",
+    "C:\\Users\\Adi\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\system.diagnostics.tools\\4.0.1\\system.diagnostics.tools.4.0.1.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\Adi\\.nuget\\packages\\system.dynamic.runtime\\4.0.11\\system.dynamic.runtime.4.0.11.nupkg.sha512",
