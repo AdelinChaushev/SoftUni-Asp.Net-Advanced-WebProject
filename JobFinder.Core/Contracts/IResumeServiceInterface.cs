@@ -13,5 +13,7 @@ namespace JobFinder.Core.Contracts
         public Task DeleteResumeAsync(string userId);
 
         public Task<string> GetResumePathByIdAsync(Guid? id);
+
+        public  Task<string> GetResumePathByUserIdAsync(string id);
     }
 }

@@ -120,13 +120,15 @@ namespace JobFinder.Controllers
                 return BadRequest();
             }
             ApplicationUser user = await userManager.FindByIdAsync(GetUserId());
-            if(!await userService.UserHasCompany(GetUserId())) 
-            { 
-                return BadRequest(); 
+            if (!await userService.UserHasCompany(GetUserId()))
+            {
+                return BadRequest();
             }
             await userManager.AddToRoleAsync(user, "Employer");
+            await signInManager.SignInAsync(user, isPersistent: true);
 
             return Redirect("/Employer/Home/Index");
+
 
 
         }
@@ -135,7 +137,7 @@ namespace JobFinder.Controllers
         {
             ApplicationUser user = await userManager.FindByIdAsync(GetUserId());
             await userManager.RemoveFromRoleAsync(user, "Employer");
-
+            await signInManager.SignInAsync(user, isPersistent: true);
             return RedirectToAction("Index", "Home");
 
 

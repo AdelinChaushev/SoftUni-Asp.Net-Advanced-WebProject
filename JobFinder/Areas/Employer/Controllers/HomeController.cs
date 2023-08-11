@@ -17,7 +17,7 @@ namespace JobFinder.Areas.Employer.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("CompanyJobListings", "Company");
         }
 
 

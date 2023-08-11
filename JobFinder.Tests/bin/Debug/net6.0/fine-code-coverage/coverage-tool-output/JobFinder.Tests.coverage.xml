@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.6202000000000001" branch-rate="0.1306" version="1.9" timestamp="1691766499" lines-covered="949" lines-valid="1530" branches-covered="93" branches-valid="712">
+<coverage line-rate="0.5998" branch-rate="0.12029999999999999" version="1.9" timestamp="1691789096" lines-covered="994" lines-valid="1657" branches-covered="103" branches-valid="856">
   <sources>
     <source>C:\Users\Adi\source\repos\JobFinder\</source>
   </sources>
   <packages>
-    <package name="JobFinder.Core" line-rate="0.8622" branch-rate="0.8170000000000001" complexity="190">
+    <package name="JobFinder.Core" line-rate="0.9079" branch-rate="0.8222" complexity="196">
       <classes>
         <class name="Program" filename="JobFinder.Core\Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -526,107 +526,106 @@
           <methods>
             <method name="&lt;SearchJobListings&gt;b__7_2" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="109" hits="17" branch="False" />
+                <line number="110" hits="17" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_3" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="112" hits="17" branch="False" />
+                <line number="113" hits="17" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_4" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="115" hits="17" branch="False" />
+                <line number="116" hits="17" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_5" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="118" hits="17" branch="False" />
+                <line number="119" hits="17" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_6" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="124" hits="5" branch="False" />
+                <line number="125" hits="5" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_7" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="127" hits="5" branch="False" />
+                <line number="128" hits="5" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_8" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="130" hits="5" branch="False" />
+                <line number="131" hits="5" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_9" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="133" hits="5" branch="False" />
+                <line number="134" hits="5" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_10" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="141" hits="0" branch="False" />
+                <line number="142" hits="0" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_11" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="144" hits="4" branch="False" />
+                <line number="145" hits="4" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_12" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="153" hits="24" branch="False" />
+                <line number="154" hits="24" branch="False" />
               </lines>
             </method>
             <method name="&lt;SearchJobListings&gt;b__7_13" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="156" hits="0" branch="False" />
+                <line number="157" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="109" hits="17" branch="False" />
-            <line number="112" hits="17" branch="False" />
-            <line number="115" hits="17" branch="False" />
-            <line number="118" hits="17" branch="False" />
-            <line number="124" hits="5" branch="False" />
-            <line number="127" hits="5" branch="False" />
-            <line number="130" hits="5" branch="False" />
-            <line number="133" hits="5" branch="False" />
-            <line number="141" hits="0" branch="False" />
-            <line number="144" hits="4" branch="False" />
-            <line number="153" hits="24" branch="False" />
-            <line number="156" hits="0" branch="False" />
+            <line number="110" hits="17" branch="False" />
+            <line number="113" hits="17" branch="False" />
+            <line number="116" hits="17" branch="False" />
+            <line number="119" hits="17" branch="False" />
+            <line number="125" hits="5" branch="False" />
+            <line number="128" hits="5" branch="False" />
+            <line number="131" hits="5" branch="False" />
+            <line number="134" hits="5" branch="False" />
+            <line number="142" hits="0" branch="False" />
+            <line number="145" hits="4" branch="False" />
+            <line number="154" hits="24" branch="False" />
+            <line number="157" hits="0" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;&gt;c__DisplayClass7_0" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="&lt;SearchJobListings&gt;b__0" signature="(JobFinder.Core.Models.JobListingViewModels.JobListingOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="104" hits="50" branch="False" />
+                <line number="105" hits="50" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="104" hits="50" branch="False" />
+            <line number="105" hits="50" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;ApplyForJob&gt;d__11" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="197" hits="5" branch="False" />
-                <line number="198" hits="5" branch="True" condition-coverage="100% (4/4)">
+                <line number="198" hits="5" branch="False" />
+                <line number="199" hits="5" branch="True" condition-coverage="100% (4/4)">
                   <conditions>
                     <condition number="423" type="jump" coverage="100%" />
                     <condition number="676" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="199" hits="5" branch="False" />
-                <line number="200" hits="2" branch="False" />
+                <line number="200" hits="5" branch="False" />
                 <line number="201" hits="2" branch="False" />
-                <line number="203" hits="3" branch="False" />
+                <line number="202" hits="2" branch="False" />
                 <line number="204" hits="3" branch="False" />
                 <line number="205" hits="3" branch="False" />
                 <line number="206" hits="3" branch="False" />
@@ -634,21 +633,21 @@
                 <line number="208" hits="3" branch="False" />
                 <line number="209" hits="3" branch="False" />
                 <line number="210" hits="3" branch="False" />
+                <line number="211" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="197" hits="5" branch="False" />
-            <line number="198" hits="5" branch="True" condition-coverage="100% (4/4)">
+            <line number="198" hits="5" branch="False" />
+            <line number="199" hits="5" branch="True" condition-coverage="100% (4/4)">
               <conditions>
                 <condition number="423" type="jump" coverage="100%" />
                 <condition number="676" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="199" hits="5" branch="False" />
-            <line number="200" hits="2" branch="False" />
+            <line number="200" hits="5" branch="False" />
             <line number="201" hits="2" branch="False" />
-            <line number="203" hits="3" branch="False" />
+            <line number="202" hits="2" branch="False" />
             <line number="204" hits="3" branch="False" />
             <line number="205" hits="3" branch="False" />
             <line number="206" hits="3" branch="False" />
@@ -656,6 +655,7 @@
             <line number="208" hits="3" branch="False" />
             <line number="209" hits="3" branch="False" />
             <line number="210" hits="3" branch="False" />
+            <line number="211" hits="3" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;CreateAsync&gt;d__2" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="2">
@@ -694,24 +694,26 @@
             <line number="37" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="JobFinder.Core.Services.JobListingService/&lt;DeleteAsync&gt;d__3" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="4">
+        <class name="JobFinder.Core.Services.JobListingService/&lt;DeleteAsync&gt;d__3" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="6">
               <lines>
                 <line number="40" hits="2" branch="False" />
                 <line number="41" hits="2" branch="False" />
                 <line number="42" hits="2" branch="False" />
-                <line number="43" hits="2" branch="True" condition-coverage="100% (4/4)">
+                <line number="43" hits="2" branch="True" condition-coverage="100% (6/6)">
                   <conditions>
-                    <condition number="415" type="jump" coverage="100%" />
-                    <condition number="931" type="jump" coverage="100%" />
+                    <condition number="402" type="jump" coverage="100%" />
+                    <condition number="453" type="jump" coverage="100%" />
+                    <condition number="981" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="44" hits="1" branch="False" />
+                <line number="44" hits="2" branch="False" />
                 <line number="45" hits="1" branch="False" />
-                <line number="47" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
                 <line number="48" hits="1" branch="False" />
                 <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
@@ -719,112 +721,113 @@
             <line number="40" hits="2" branch="False" />
             <line number="41" hits="2" branch="False" />
             <line number="42" hits="2" branch="False" />
-            <line number="43" hits="2" branch="True" condition-coverage="100% (4/4)">
+            <line number="43" hits="2" branch="True" condition-coverage="100% (6/6)">
               <conditions>
-                <condition number="415" type="jump" coverage="100%" />
-                <condition number="931" type="jump" coverage="100%" />
+                <condition number="402" type="jump" coverage="100%" />
+                <condition number="453" type="jump" coverage="100%" />
+                <condition number="981" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="44" hits="1" branch="False" />
+            <line number="44" hits="2" branch="False" />
             <line number="45" hits="1" branch="False" />
-            <line number="47" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
             <line number="48" hits="1" branch="False" />
             <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;EditAsync&gt;d__4" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="52" hits="2" branch="False" />
                 <line number="53" hits="2" branch="False" />
-                <line number="54" hits="2" branch="True" condition-coverage="100% (2/2)">
+                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="186" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="55" hits="1" branch="False" />
                 <line number="56" hits="1" branch="False" />
-                <line number="59" hits="1" branch="False" />
+                <line number="57" hits="1" branch="False" />
                 <line number="60" hits="1" branch="False" />
                 <line number="61" hits="1" branch="False" />
                 <line number="62" hits="1" branch="False" />
                 <line number="63" hits="1" branch="False" />
-                <line number="65" hits="1" branch="False" />
+                <line number="64" hits="1" branch="False" />
                 <line number="66" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="52" hits="2" branch="False" />
             <line number="53" hits="2" branch="False" />
-            <line number="54" hits="2" branch="True" condition-coverage="100% (2/2)">
+            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="186" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="55" hits="1" branch="False" />
             <line number="56" hits="1" branch="False" />
-            <line number="59" hits="1" branch="False" />
+            <line number="57" hits="1" branch="False" />
             <line number="60" hits="1" branch="False" />
             <line number="61" hits="1" branch="False" />
             <line number="62" hits="1" branch="False" />
             <line number="63" hits="1" branch="False" />
-            <line number="65" hits="1" branch="False" />
+            <line number="64" hits="1" branch="False" />
             <line number="66" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;FindByIdAsync&gt;d__5" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="69" hits="5" branch="False" />
                 <line number="70" hits="5" branch="False" />
                 <line number="71" hits="5" branch="False" />
+                <line number="72" hits="5" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="69" hits="5" branch="False" />
             <line number="70" hits="5" branch="False" />
             <line number="71" hits="5" branch="False" />
+            <line number="72" hits="5" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;GetCompanyId&gt;d__10" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="0.8332999999999999" complexity="6">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="0.8332999999999999" complexity="6">
               <lines>
-                <line number="190" hits="4" branch="False" />
                 <line number="191" hits="4" branch="False" />
-                <line number="193" hits="4" branch="True" condition-coverage="83.33% (5/6)">
+                <line number="192" hits="4" branch="False" />
+                <line number="194" hits="4" branch="True" condition-coverage="83.33% (5/6)">
                   <conditions>
                     <condition number="364" type="jump" coverage="50%" />
                     <condition number="385" type="jump" coverage="100%" />
                     <condition number="419" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="194" hits="4" branch="False" />
+                <line number="195" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="190" hits="4" branch="False" />
             <line number="191" hits="4" branch="False" />
-            <line number="193" hits="4" branch="True" condition-coverage="83.33% (5/6)">
+            <line number="192" hits="4" branch="False" />
+            <line number="194" hits="4" branch="True" condition-coverage="83.33% (5/6)">
               <conditions>
                 <condition number="364" type="jump" coverage="50%" />
                 <condition number="385" type="jump" coverage="100%" />
                 <condition number="419" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="194" hits="4" branch="False" />
+            <line number="195" hits="4" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;GetJobApplicationsAsync&gt;d__6" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="76" hits="1" branch="False" />
                 <line number="77" hits="1" branch="False" />
                 <line number="78" hits="1" branch="False" />
                 <line number="79" hits="1" branch="False" />
@@ -836,11 +839,11 @@
                 <line number="85" hits="1" branch="False" />
                 <line number="86" hits="1" branch="False" />
                 <line number="87" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="76" hits="1" branch="False" />
             <line number="77" hits="1" branch="False" />
             <line number="78" hits="1" branch="False" />
             <line number="79" hits="1" branch="False" />
@@ -852,37 +855,37 @@
             <line number="85" hits="1" branch="False" />
             <line number="86" hits="1" branch="False" />
             <line number="87" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;GetJobCategoriesAsync&gt;d__8" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="184" hits="1" branch="False" />
+                <line number="185" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="184" hits="1" branch="False" />
+            <line number="185" hits="1" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;GetSchedulesAsync&gt;d__9" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="187" hits="1" branch="False" />
+                <line number="188" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="187" hits="1" branch="False" />
+            <line number="188" hits="1" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.JobListingService/&lt;SearchJobListings&gt;d__7" filename="JobFinder.Core\Services\JobListingService.cs" line-rate="0.8392000000000001" branch-rate="0.8332999999999999" complexity="36">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0.8392000000000001" branch-rate="0.8332999999999999" complexity="36">
               <lines>
-                <line number="90" hits="6" branch="False" />
                 <line number="91" hits="6" branch="False" />
                 <line number="92" hits="6" branch="False" />
                 <line number="93" hits="6" branch="False" />
@@ -894,14 +897,15 @@
                 <line number="99" hits="6" branch="False" />
                 <line number="100" hits="6" branch="False" />
                 <line number="101" hits="6" branch="False" />
-                <line number="102" hits="6" branch="True" condition-coverage="100% (2/2)">
+                <line number="102" hits="6" branch="False" />
+                <line number="103" hits="6" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="709" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="103" hits="2" branch="False" />
-                <line number="105" hits="2" branch="False" />
-                <line number="106" hits="6" branch="True" condition-coverage="100% (8/8)">
+                <line number="104" hits="2" branch="False" />
+                <line number="106" hits="2" branch="False" />
+                <line number="107" hits="6" branch="True" condition-coverage="100% (8/8)">
                   <conditions>
                     <condition number="814" type="jump" coverage="100%" />
                     <condition number="828" type="jump" coverage="100%" />
@@ -909,11 +913,11 @@
                     <condition number="859" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="110" hits="1" branch="False" />
-                <line number="113" hits="1" branch="False" />
-                <line number="116" hits="1" branch="False" />
-                <line number="119" hits="1" branch="False" />
-                <line number="121" hits="6" branch="True" condition-coverage="100% (8/8)">
+                <line number="111" hits="1" branch="False" />
+                <line number="114" hits="1" branch="False" />
+                <line number="117" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="122" hits="6" branch="True" condition-coverage="100% (8/8)">
                   <conditions>
                     <condition number="1212" type="jump" coverage="100%" />
                     <condition number="1226" type="jump" coverage="100%" />
@@ -921,76 +925,75 @@
                     <condition number="1257" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="125" hits="1" branch="False" />
-                <line number="128" hits="1" branch="False" />
-                <line number="131" hits="1" branch="False" />
-                <line number="134" hits="1" branch="False" />
-                <line number="136" hits="6" branch="True" condition-coverage="100% (2/2)">
+                <line number="126" hits="1" branch="False" />
+                <line number="129" hits="1" branch="False" />
+                <line number="132" hits="1" branch="False" />
+                <line number="135" hits="1" branch="False" />
+                <line number="137" hits="6" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="1587" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="137" hits="2" branch="False" />
-                <line number="138" hits="2" branch="True" condition-coverage="75% (3/4)">
+                <line number="138" hits="2" branch="False" />
+                <line number="139" hits="2" branch="True" condition-coverage="75% (3/4)">
                   <conditions>
                     <condition number="1629" type="jump" coverage="50%" />
                     <condition number="1636" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="142" hits="0" branch="False" />
-                <line number="145" hits="2" branch="False" />
-                <line number="147" hits="2" branch="False" />
-                <line number="149" hits="4" branch="False" />
-                <line number="150" hits="4" branch="True" condition-coverage="50% (2/4)">
+                <line number="143" hits="0" branch="False" />
+                <line number="146" hits="2" branch="False" />
+                <line number="148" hits="2" branch="False" />
+                <line number="150" hits="4" branch="False" />
+                <line number="151" hits="4" branch="True" condition-coverage="50% (2/4)">
                   <conditions>
                     <condition number="1828" type="jump" coverage="50%" />
                     <condition number="1835" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="154" hits="4" branch="False" />
-                <line number="157" hits="0" branch="False" />
-                <line number="159" hits="4" branch="False" />
-                <line number="161" hits="6" branch="False" />
-                <line number="162" hits="6" branch="True" condition-coverage="50% (1/2)">
+                <line number="155" hits="4" branch="False" />
+                <line number="158" hits="0" branch="False" />
+                <line number="160" hits="4" branch="False" />
+                <line number="162" hits="6" branch="False" />
+                <line number="163" hits="6" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="2049" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="163" hits="6" branch="False" />
                 <line number="164" hits="6" branch="False" />
                 <line number="165" hits="6" branch="False" />
-                <line number="166" hits="0" branch="True" condition-coverage="50% (1/2)">
+                <line number="166" hits="6" branch="False" />
+                <line number="167" hits="0" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="2098" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="167" hits="0" branch="False" />
                 <line number="168" hits="0" branch="False" />
                 <line number="169" hits="0" branch="False" />
-                <line number="171" hits="6" branch="True" condition-coverage="100% (2/2)">
+                <line number="170" hits="0" branch="False" />
+                <line number="172" hits="6" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="2154" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="172" hits="5" branch="False" />
                 <line number="173" hits="5" branch="False" />
                 <line number="174" hits="5" branch="False" />
-                <line number="175" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="175" hits="5" branch="False" />
+                <line number="176" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="2216" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="176" hits="0" branch="False" />
                 <line number="177" hits="0" branch="False" />
                 <line number="178" hits="0" branch="False" />
-                <line number="180" hits="6" branch="False" />
+                <line number="179" hits="0" branch="False" />
                 <line number="181" hits="6" branch="False" />
                 <line number="182" hits="6" branch="False" />
+                <line number="183" hits="6" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="90" hits="6" branch="False" />
             <line number="91" hits="6" branch="False" />
             <line number="92" hits="6" branch="False" />
             <line number="93" hits="6" branch="False" />
@@ -1002,14 +1005,15 @@
             <line number="99" hits="6" branch="False" />
             <line number="100" hits="6" branch="False" />
             <line number="101" hits="6" branch="False" />
-            <line number="102" hits="6" branch="True" condition-coverage="100% (2/2)">
+            <line number="102" hits="6" branch="False" />
+            <line number="103" hits="6" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="709" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="103" hits="2" branch="False" />
-            <line number="105" hits="2" branch="False" />
-            <line number="106" hits="6" branch="True" condition-coverage="100% (8/8)">
+            <line number="104" hits="2" branch="False" />
+            <line number="106" hits="2" branch="False" />
+            <line number="107" hits="6" branch="True" condition-coverage="100% (8/8)">
               <conditions>
                 <condition number="814" type="jump" coverage="100%" />
                 <condition number="828" type="jump" coverage="100%" />
@@ -1017,11 +1021,11 @@
                 <condition number="859" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="110" hits="1" branch="False" />
-            <line number="113" hits="1" branch="False" />
-            <line number="116" hits="1" branch="False" />
-            <line number="119" hits="1" branch="False" />
-            <line number="121" hits="6" branch="True" condition-coverage="100% (8/8)">
+            <line number="111" hits="1" branch="False" />
+            <line number="114" hits="1" branch="False" />
+            <line number="117" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="122" hits="6" branch="True" condition-coverage="100% (8/8)">
               <conditions>
                 <condition number="1212" type="jump" coverage="100%" />
                 <condition number="1226" type="jump" coverage="100%" />
@@ -1029,71 +1033,71 @@
                 <condition number="1257" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="125" hits="1" branch="False" />
-            <line number="128" hits="1" branch="False" />
-            <line number="131" hits="1" branch="False" />
-            <line number="134" hits="1" branch="False" />
-            <line number="136" hits="6" branch="True" condition-coverage="100% (2/2)">
+            <line number="126" hits="1" branch="False" />
+            <line number="129" hits="1" branch="False" />
+            <line number="132" hits="1" branch="False" />
+            <line number="135" hits="1" branch="False" />
+            <line number="137" hits="6" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="1587" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="137" hits="2" branch="False" />
-            <line number="138" hits="2" branch="True" condition-coverage="75% (3/4)">
+            <line number="138" hits="2" branch="False" />
+            <line number="139" hits="2" branch="True" condition-coverage="75% (3/4)">
               <conditions>
                 <condition number="1629" type="jump" coverage="50%" />
                 <condition number="1636" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="142" hits="0" branch="False" />
-            <line number="145" hits="2" branch="False" />
-            <line number="147" hits="2" branch="False" />
-            <line number="149" hits="4" branch="False" />
-            <line number="150" hits="4" branch="True" condition-coverage="50% (2/4)">
+            <line number="143" hits="0" branch="False" />
+            <line number="146" hits="2" branch="False" />
+            <line number="148" hits="2" branch="False" />
+            <line number="150" hits="4" branch="False" />
+            <line number="151" hits="4" branch="True" condition-coverage="50% (2/4)">
               <conditions>
                 <condition number="1828" type="jump" coverage="50%" />
                 <condition number="1835" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="154" hits="4" branch="False" />
-            <line number="157" hits="0" branch="False" />
-            <line number="159" hits="4" branch="False" />
-            <line number="161" hits="6" branch="False" />
-            <line number="162" hits="6" branch="True" condition-coverage="50% (1/2)">
+            <line number="155" hits="4" branch="False" />
+            <line number="158" hits="0" branch="False" />
+            <line number="160" hits="4" branch="False" />
+            <line number="162" hits="6" branch="False" />
+            <line number="163" hits="6" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="2049" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="163" hits="6" branch="False" />
             <line number="164" hits="6" branch="False" />
             <line number="165" hits="6" branch="False" />
-            <line number="166" hits="0" branch="True" condition-coverage="50% (1/2)">
+            <line number="166" hits="6" branch="False" />
+            <line number="167" hits="0" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="2098" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="167" hits="0" branch="False" />
             <line number="168" hits="0" branch="False" />
             <line number="169" hits="0" branch="False" />
-            <line number="171" hits="6" branch="True" condition-coverage="100% (2/2)">
+            <line number="170" hits="0" branch="False" />
+            <line number="172" hits="6" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="2154" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="172" hits="5" branch="False" />
             <line number="173" hits="5" branch="False" />
             <line number="174" hits="5" branch="False" />
-            <line number="175" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="175" hits="5" branch="False" />
+            <line number="176" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="2216" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="176" hits="0" branch="False" />
             <line number="177" hits="0" branch="False" />
             <line number="178" hits="0" branch="False" />
-            <line number="180" hits="6" branch="False" />
+            <line number="179" hits="0" branch="False" />
             <line number="181" hits="6" branch="False" />
             <line number="182" hits="6" branch="False" />
+            <line number="183" hits="6" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.PictureService" filename="JobFinder.Core\Services\PictureService.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -1114,40 +1118,40 @@
             <line number="16" hits="3" branch="False" />
           </lines>
         </class>
-        <class name="JobFinder.Core.Services.PictureService/&lt;DeletePictureAsync&gt;d__2" filename="JobFinder.Core\Services\PictureService.cs" line-rate="0.7777" branch-rate="0.5" complexity="2">
+        <class name="JobFinder.Core.Services.PictureService/&lt;DeletePictureAsync&gt;d__2" filename="JobFinder.Core\Services\PictureService.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0.7777" branch-rate="0.5" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="18" hits="1" branch="False" />
-                <line number="19" hits="1" branch="False" />
-                <line number="20" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="18" hits="3" branch="False" />
+                <line number="19" hits="3" branch="False" />
+                <line number="20" hits="3" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="409" type="jump" coverage="50%" />
+                    <condition number="409" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="24" hits="1" branch="False" />
-                <line number="25" hits="1" branch="False" />
-                <line number="26" hits="1" branch="False" />
-                <line number="29" hits="1" branch="False" />
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="24" hits="2" branch="False" />
+                <line number="25" hits="2" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="29" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="18" hits="1" branch="False" />
-            <line number="19" hits="1" branch="False" />
-            <line number="20" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="18" hits="3" branch="False" />
+            <line number="19" hits="3" branch="False" />
+            <line number="20" hits="3" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="409" type="jump" coverage="50%" />
+                <condition number="409" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="24" hits="1" branch="False" />
-            <line number="25" hits="1" branch="False" />
-            <line number="26" hits="1" branch="False" />
-            <line number="29" hits="1" branch="False" />
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="25" hits="2" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="29" hits="2" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.PictureService/&lt;GetCompanyIdByUserIdAsync&gt;d__4" filename="JobFinder.Core\Services\PictureService.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -1207,15 +1211,15 @@
                 <line number="46" hits="3" branch="False" />
                 <line number="48" hits="3" branch="False" />
                 <line number="51" hits="3" branch="False" />
-                <line number="52" hits="2" branch="False" />
-                <line number="53" hits="2" branch="False" />
-                <line number="54" hits="2" branch="False" />
-                <line number="55" hits="2" branch="False" />
-                <line number="56" hits="2" branch="False" />
-                <line number="57" hits="2" branch="False" />
-                <line number="59" hits="2" branch="False" />
-                <line number="60" hits="2" branch="False" />
-                <line number="61" hits="2" branch="False" />
+                <line number="52" hits="3" branch="False" />
+                <line number="53" hits="3" branch="False" />
+                <line number="54" hits="3" branch="False" />
+                <line number="55" hits="3" branch="False" />
+                <line number="56" hits="3" branch="False" />
+                <line number="57" hits="3" branch="False" />
+                <line number="59" hits="3" branch="False" />
+                <line number="60" hits="3" branch="False" />
+                <line number="61" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
@@ -1237,165 +1241,207 @@
             <line number="46" hits="3" branch="False" />
             <line number="48" hits="3" branch="False" />
             <line number="51" hits="3" branch="False" />
-            <line number="52" hits="2" branch="False" />
-            <line number="53" hits="2" branch="False" />
-            <line number="54" hits="2" branch="False" />
-            <line number="55" hits="2" branch="False" />
-            <line number="56" hits="2" branch="False" />
-            <line number="57" hits="2" branch="False" />
-            <line number="59" hits="2" branch="False" />
-            <line number="60" hits="2" branch="False" />
-            <line number="61" hits="2" branch="False" />
+            <line number="52" hits="3" branch="False" />
+            <line number="53" hits="3" branch="False" />
+            <line number="54" hits="3" branch="False" />
+            <line number="55" hits="3" branch="False" />
+            <line number="56" hits="3" branch="False" />
+            <line number="57" hits="3" branch="False" />
+            <line number="59" hits="3" branch="False" />
+            <line number="60" hits="3" branch="False" />
+            <line number="61" hits="3" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.ResumeService" filename="JobFinder.Core\Services\ResumeService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="(JobFinder.Data.JobFinderDbContext)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="2" branch="False" />
-                <line number="15" hits="2" branch="False" />
-                <line number="16" hits="2" branch="False" />
-                <line number="17" hits="2" branch="False" />
+                <line number="14" hits="4" branch="False" />
+                <line number="15" hits="4" branch="False" />
+                <line number="16" hits="4" branch="False" />
+                <line number="17" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="14" hits="2" branch="False" />
-            <line number="15" hits="2" branch="False" />
-            <line number="16" hits="2" branch="False" />
-            <line number="17" hits="2" branch="False" />
+            <line number="14" hits="4" branch="False" />
+            <line number="15" hits="4" branch="False" />
+            <line number="16" hits="4" branch="False" />
+            <line number="17" hits="4" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.ResumeService/&lt;DeleteResumeAsync&gt;d__3" filename="JobFinder.Core\Services\ResumeService.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="53" hits="0" branch="False" />
-                <line number="54" hits="0" branch="False" />
-                <line number="55" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="0" branch="False" />
+                <line number="59" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="313" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="56" hits="0" branch="False" />
-                <line number="57" hits="0" branch="False" />
-                <line number="58" hits="0" branch="False" />
-                <line number="59" hits="0" branch="False" />
                 <line number="60" hits="0" branch="False" />
                 <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="53" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
-            <line number="55" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="0" branch="False" />
+            <line number="59" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="313" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="56" hits="0" branch="False" />
-            <line number="57" hits="0" branch="False" />
-            <line number="58" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
             <line number="60" hits="0" branch="False" />
             <line number="61" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="JobFinder.Core.Services.ResumeService/&lt;GetResumePathByIdAsync&gt;d__4" filename="JobFinder.Core\Services\ResumeService.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="64" hits="0" branch="False" />
-                <line number="65" hits="0" branch="False" />
-                <line number="66" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
             <line number="64" hits="0" branch="False" />
             <line number="65" hits="0" branch="False" />
-            <line number="66" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="JobFinder.Core.Services.ResumeService/&lt;GetResumePathByUserIdAsync&gt;d__5" filename="JobFinder.Core\Services\ResumeService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="JobFinder.Core.Services.ResumeService/&lt;GetResumePathByIdAsync&gt;d__4" filename="JobFinder.Core\Services\ResumeService.cs" line-rate="0.7142000000000001" branch-rate="0.5" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="0.7142000000000001" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="70" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="70" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="JobFinder.Core.Services.ResumeService/&lt;UploadResumeAsync&gt;d__2" filename="JobFinder.Core\Services\ResumeService.cs" line-rate="0" branch-rate="0" complexity="2">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
-              <lines>
-                <line number="19" hits="0" branch="False" />
-                <line number="20" hits="0" branch="False" />
-                <line number="21" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="68" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
+                <line number="71" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="81" type="jump" coverage="0%" />
+                    <condition number="334" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="49" hits="0" branch="False" />
-                <line number="50" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
+                <line number="73" hits="0" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="19" hits="0" branch="False" />
-            <line number="20" hits="0" branch="False" />
-            <line number="21" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="68" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
+            <line number="71" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="81" type="jump" coverage="0%" />
+                <condition number="334" type="jump" coverage="50%" />
               </conditions>
             </line>
+            <line number="72" hits="0" branch="False" />
+            <line number="73" hits="0" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="JobFinder.Core.Services.ResumeService/&lt;GetResumePathByUserIdAsync&gt;d__5" filename="JobFinder.Core\Services\ResumeService.cs" line-rate="0.7142000000000001" branch-rate="0.5" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.7142000000000001" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="79" hits="1" branch="False" />
+                <line number="80" hits="1" branch="False" />
+                <line number="81" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="303" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="82" hits="0" branch="False" />
+                <line number="83" hits="0" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="79" hits="1" branch="False" />
+            <line number="80" hits="1" branch="False" />
+            <line number="81" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="303" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="82" hits="0" branch="False" />
+            <line number="83" hits="0" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="JobFinder.Core.Services.ResumeService/&lt;UploadResumeAsync&gt;d__2" filename="JobFinder.Core\Services\ResumeService.cs" line-rate="0.7916" branch-rate="0.5" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.7916" branch-rate="0.5" complexity="4">
+              <lines>
+                <line number="19" hits="1" branch="False" />
+                <line number="20" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="313" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="24" hits="1" branch="False" />
+                <line number="25" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="366" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="1" branch="False" />
+            <line number="20" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="313" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="False" />
             <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="25" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="366" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="26" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="49" hits="0" branch="False" />
-            <line number="50" hits="0" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.UserService" filename="JobFinder.Core\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -1420,12 +1466,12 @@
           <methods>
             <method name="&lt;SearchForUser&gt;b__0" signature="(JobFinder.Core.Models.UserViewModels.UserOutputViewModel)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="2" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.UserService/&lt;GetInterviewsAsync&gt;d__2" filename="JobFinder.Core\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -1482,17 +1528,17 @@
                 <line number="47" hits="2" branch="False" />
                 <line number="48" hits="2" branch="False" />
                 <line number="49" hits="2" branch="False" />
-                <line number="50" hits="2" branch="True" condition-coverage="100% (2/2)">
+                <line number="51" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="429" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="51" hits="1" branch="False" />
-                <line number="53" hits="1" branch="False" />
-                <line number="55" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
                 <line number="56" hits="1" branch="False" />
-                <line number="57" hits="2" branch="False" />
+                <line number="57" hits="1" branch="False" />
                 <line number="58" hits="2" branch="False" />
+                <line number="59" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
@@ -1507,49 +1553,49 @@
             <line number="47" hits="2" branch="False" />
             <line number="48" hits="2" branch="False" />
             <line number="49" hits="2" branch="False" />
-            <line number="50" hits="2" branch="True" condition-coverage="100% (2/2)">
+            <line number="51" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="429" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="51" hits="1" branch="False" />
-            <line number="53" hits="1" branch="False" />
-            <line number="55" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
             <line number="56" hits="1" branch="False" />
-            <line number="57" hits="2" branch="False" />
+            <line number="57" hits="1" branch="False" />
             <line number="58" hits="2" branch="False" />
+            <line number="59" hits="2" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Services.UserService/&lt;UserHasCompany&gt;d__4" filename="JobFinder.Core\Services\UserService.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="61" hits="2" branch="False" />
                 <line number="62" hits="2" branch="False" />
-                <line number="63" hits="2" branch="True" condition-coverage="100% (2/2)">
+                <line number="63" hits="2" branch="False" />
+                <line number="64" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="303" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="64" hits="1" branch="False" />
                 <line number="65" hits="1" branch="False" />
-                <line number="68" hits="1" branch="False" />
-                <line number="69" hits="2" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="70" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="61" hits="2" branch="False" />
             <line number="62" hits="2" branch="False" />
-            <line number="63" hits="2" branch="True" condition-coverage="100% (2/2)">
+            <line number="63" hits="2" branch="False" />
+            <line number="64" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="303" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="64" hits="1" branch="False" />
             <line number="65" hits="1" branch="False" />
-            <line number="68" hits="1" branch="False" />
-            <line number="69" hits="2" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="70" hits="2" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Models.ErrorViewModel" filename="JobFinder.Core\Models\ErrorViewModel.cs" line-rate="0" branch-rate="1" complexity="2">
@@ -1930,16 +1976,16 @@
             <line number="14" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="JobFinder.Core.Models.FileViewModel.FileUploadViewModel" filename="JobFinder.Core\Models\FileViewModel\FileUploadViewModel.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="JobFinder.Core.Models.FileViewModel.FileUploadViewModel" filename="JobFinder.Core\Models\FileViewModel\FileUploadViewModel.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
-            <method name="get_File" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="get_File" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="5" branch="False" />
+                <line number="7" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="7" hits="5" branch="False" />
+            <line number="7" hits="0" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Core.Models.CompanyViewModels.CompanyInputViewModel" filename="JobFinder.Core\Models\CompanyViewModels\CompanyInputViewModel.cs" line-rate="1" branch-rate="1" complexity="2">
@@ -2098,42 +2144,42 @@
           <methods>
             <method name="get_Companies" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="67" branch="False" />
+                <line number="17" hits="69" branch="False" />
               </lines>
             </method>
             <method name="get_Interviews" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="44" branch="False" />
+                <line number="18" hits="46" branch="False" />
               </lines>
             </method>
             <method name="get_JobApplications" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="20" hits="44" branch="False" />
+                <line number="20" hits="46" branch="False" />
               </lines>
             </method>
             <method name="get_JobCategories" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="37" branch="False" />
+                <line number="22" hits="39" branch="False" />
               </lines>
             </method>
             <method name="get_JobListings" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="56" branch="False" />
+                <line number="24" hits="58" branch="False" />
               </lines>
             </method>
             <method name="get_Pictures" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="25" hits="43" branch="False" />
+                <line number="25" hits="49" branch="False" />
               </lines>
             </method>
             <method name="get_Resumes" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="36" branch="False" />
+                <line number="27" hits="43" branch="False" />
               </lines>
             </method>
             <method name="get_Schedules" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="29" hits="37" branch="False" />
+                <line number="29" hits="39" branch="False" />
               </lines>
             </method>
             <method name="OnModelCreating" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="1" branch-rate="1" complexity="1">
@@ -2163,21 +2209,21 @@
             </method>
             <method name=".ctor" signature="(Microsoft.EntityFrameworkCore.DbContextOptions`1&lt;JobFinder.Data.JobFinderDbContext&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="36" branch="False" />
-                <line number="13" hits="36" branch="False" />
-                <line number="15" hits="36" branch="False" />
+                <line number="12" hits="38" branch="False" />
+                <line number="13" hits="38" branch="False" />
+                <line number="15" hits="38" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="17" hits="67" branch="False" />
-            <line number="18" hits="44" branch="False" />
-            <line number="20" hits="44" branch="False" />
-            <line number="22" hits="37" branch="False" />
-            <line number="24" hits="56" branch="False" />
-            <line number="25" hits="43" branch="False" />
-            <line number="27" hits="36" branch="False" />
-            <line number="29" hits="37" branch="False" />
+            <line number="17" hits="69" branch="False" />
+            <line number="18" hits="46" branch="False" />
+            <line number="20" hits="46" branch="False" />
+            <line number="22" hits="39" branch="False" />
+            <line number="24" hits="58" branch="False" />
+            <line number="25" hits="49" branch="False" />
+            <line number="27" hits="43" branch="False" />
+            <line number="29" hits="39" branch="False" />
             <line number="32" hits="2" branch="False" />
             <line number="34" hits="2" branch="False" />
             <line number="35" hits="2" branch="False" />
@@ -2199,9 +2245,9 @@
             <line number="102" hits="2" branch="False" />
             <line number="107" hits="2" branch="False" />
             <line number="108" hits="2" branch="False" />
-            <line number="12" hits="36" branch="False" />
-            <line number="13" hits="36" branch="False" />
-            <line number="15" hits="36" branch="False" />
+            <line number="12" hits="38" branch="False" />
+            <line number="13" hits="38" branch="False" />
+            <line number="15" hits="38" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Data.StartUp" filename="JobFinder.Data\StartUp.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -2267,7 +2313,7 @@
             </method>
             <method name="get_OwnerId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="65" branch="False" />
+                <line number="22" hits="67" branch="False" />
               </lines>
             </method>
             <method name="get_Owner" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -2295,7 +2341,7 @@
             <line number="11" hits="75" branch="False" />
             <line number="15" hits="77" branch="False" />
             <line number="19" hits="71" branch="False" />
-            <line number="22" hits="65" branch="False" />
+            <line number="22" hits="67" branch="False" />
             <line number="23" hits="0" branch="False" />
             <line number="25" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
@@ -2498,47 +2544,47 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="14" branch="False" />
+                <line number="10" hits="17" branch="False" />
               </lines>
             </method>
             <method name="get_PicturePath" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="14" branch="False" />
+                <line number="12" hits="16" branch="False" />
               </lines>
             </method>
             <method name="get_CompanyId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="13" branch="False" />
+                <line number="14" hits="14" branch="False" />
               </lines>
             </method>
             <method name="get_Company" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="1" branch="False" />
+                <line number="15" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="10" hits="14" branch="False" />
-            <line number="12" hits="14" branch="False" />
-            <line number="14" hits="13" branch="False" />
-            <line number="15" hits="1" branch="False" />
+            <line number="10" hits="17" branch="False" />
+            <line number="12" hits="16" branch="False" />
+            <line number="14" hits="14" branch="False" />
+            <line number="15" hits="3" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Data.Models.Resume" filename="JobFinder.Data\Models\Resume.cs" line-rate="0.75" branch-rate="1" complexity="4">
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="13" branch="False" />
+                <line number="12" hits="18" branch="False" />
               </lines>
             </method>
             <method name="get_ResumePath" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="13" branch="False" />
+                <line number="13" hits="20" branch="False" />
               </lines>
             </method>
             <method name="get_UserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="13" branch="False" />
+                <line number="17" hits="18" branch="False" />
               </lines>
             </method>
             <method name="get_User" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -2548,9 +2594,9 @@
             </method>
           </methods>
           <lines>
-            <line number="12" hits="13" branch="False" />
-            <line number="13" hits="13" branch="False" />
-            <line number="17" hits="13" branch="False" />
+            <line number="12" hits="18" branch="False" />
+            <line number="13" hits="20" branch="False" />
+            <line number="17" hits="18" branch="False" />
             <line number="19" hits="0" branch="False" />
           </lines>
         </class>
@@ -2580,7 +2626,7 @@
         </class>
       </classes>
     </package>
-    <package name="JobFinder" line-rate="0.48229999999999995" branch-rate="0.0412" complexity="701">
+    <package name="JobFinder" line-rate="0.44310000000000005" branch-rate="0.0378" complexity="835">
       <classes>
         <class name="Program" filename="JobFinder\Program.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
@@ -2639,11 +2685,16 @@
                 <line number="70" hits="0" branch="False" />
                 <line number="71" hits="0" branch="False" />
                 <line number="72" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
                 <line number="74" hits="0" branch="False" />
                 <line number="75" hits="0" branch="False" />
+                <line number="76" hits="0" branch="False" />
                 <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="False" />
                 <line number="79" hits="0" branch="False" />
+                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
+                <line number="83" hits="0" branch="False" />
+                <line number="85" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -2701,14 +2752,761 @@
             <line number="70" hits="0" branch="False" />
             <line number="71" hits="0" branch="False" />
             <line number="72" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
             <line number="74" hits="0" branch="False" />
             <line number="75" hits="0" branch="False" />
+            <line number="76" hits="0" branch="False" />
             <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="False" />
             <line number="79" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
+            <line number="83" hits="0" branch="False" />
+            <line number="85" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_AdminPanel_Index/&lt;ExecuteAsync&gt;d__0" filename="JobFinder\Areas\Administration\Views\AdminPanel\Index.cshtml" line-rate="0" branch-rate="1" complexity="1">
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_AdminCompany_CompanySearch/&lt;ExecuteAsync&gt;d__16" filename="JobFinder\Areas\Administration\Views\AdminCompany\CompanySearch.cshtml" line-rate="0" branch-rate="0" complexity="16">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="16">
+              <lines>
+                <line number="4" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="87" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="8" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="207" type="jump" coverage="0%" />
+                    <condition number="299" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="11" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="750" type="jump" coverage="0%" />
+                    <condition number="1422" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1627" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="0" branch="False" />
+                <line number="51" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2388" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="52" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2166" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="87" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="8" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="207" type="jump" coverage="0%" />
+                <condition number="299" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="11" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="750" type="jump" coverage="0%" />
+                <condition number="1422" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="33" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1627" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="34" hits="0" branch="False" />
+            <line number="51" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2388" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="52" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2166" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_AdminHome_Index/&lt;ExecuteAsync&gt;d__15" filename="JobFinder\Areas\Administration\Views\AdminHome\Index.cshtml" line-rate="0" branch-rate="0" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="2" hits="0" branch="True" condition-coverage="0% (0/6)">
+                  <conditions>
+                    <condition number="546" type="jump" coverage="0%" />
+                    <condition number="1168" type="jump" coverage="0%" />
+                    <condition number="1790" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="2" hits="0" branch="True" condition-coverage="0% (0/6)">
+              <conditions>
+                <condition number="546" type="jump" coverage="0%" />
+                <condition number="1168" type="jump" coverage="0%" />
+                <condition number="1790" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_AdminJobListing_SearchForJobs/&lt;&lt;ExecuteAsync&gt;b__37_13&gt;d" filename="JobFinder\Areas\Administration\Views\AdminJobListing\SearchForJobs.cshtml" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="30" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="737" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="533" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="737" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="533" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="33" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_AdminJobListing_SearchForJobs/&lt;&lt;ExecuteAsync&gt;b__37_19&gt;d" filename="JobFinder\Areas\Administration\Views\AdminJobListing\SearchForJobs.cshtml" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="40" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="737" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="533" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="40" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="737" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="533" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="43" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_AdminJobListing_SearchForJobs/&lt;&lt;ExecuteAsync&gt;b__37_1&gt;d" filename="JobFinder\Areas\Administration\Views\AdminJobListing\SearchForJobs.cshtml" line-rate="0" branch-rate="0" complexity="32">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="32">
+              <lines>
+                <line number="23" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="795" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="24" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1530" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="25" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2189" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2848" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="29" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="3515" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="4176" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="38" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="4837" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="5506" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="45" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="6167" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="49" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="6769" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="50" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="7393" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="54" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="8009" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="57" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="8611" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="58" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="9235" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="62" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="9851" type="jump" coverage="0%" />
+                    <condition number="10533" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="795" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="24" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1530" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="25" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2189" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2848" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="29" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="3515" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="35" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="4176" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="38" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="4837" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="5506" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="45" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="6167" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="49" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="6769" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="50" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="7393" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="54" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="8009" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="57" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="8611" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="58" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="9235" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="62" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="9851" type="jump" coverage="0%" />
+                <condition number="10533" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_AdminJobListing_SearchForJobs/&lt;ExecuteAsync&gt;d__37" filename="JobFinder\Areas\Administration\Views\AdminJobListing\SearchForJobs.cshtml" line-rate="0" branch-rate="0" complexity="30">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="30">
+              <lines>
+                <line number="5" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="123" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="9" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="243" type="jump" coverage="0%" />
+                    <condition number="335" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="12" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="786" type="jump" coverage="0%" />
+                    <condition number="1512" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="74" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1722" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="75" hits="0" branch="False" />
+                <line number="95" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2470" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="96" hits="0" branch="False" />
+                <line number="97" hits="0" branch="False" />
+                <line number="99" hits="0" branch="False" />
+                <line number="100" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2266" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="105" hits="0" branch="False" />
+                <line number="112" hits="0" branch="False" />
+                <line number="116" hits="0" branch="False" />
+                <line number="119" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="3017" type="jump" coverage="0%" />
+                    <condition number="3145" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="120" hits="0" branch="False" />
+                <line number="122" hits="0" branch="False" />
+                <line number="123" hits="0" branch="False" />
+                <line number="124" hits="0" branch="False" />
+                <line number="125" hits="0" branch="False" />
+                <line number="126" hits="0" branch="False" />
+                <line number="127" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="4239" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="132" hits="0" branch="True" condition-coverage="0% (0/6)">
+                  <conditions>
+                    <condition number="4812" type="jump" coverage="0%" />
+                    <condition number="4835" type="jump" coverage="0%" />
+                    <condition number="4963" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="133" hits="0" branch="False" />
+                <line number="135" hits="0" branch="False" />
+                <line number="136" hits="0" branch="False" />
+                <line number="137" hits="0" branch="False" />
+                <line number="138" hits="0" branch="False" />
+                <line number="139" hits="0" branch="False" />
+                <line number="140" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="6057" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="123" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="9" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="243" type="jump" coverage="0%" />
+                <condition number="335" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="12" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="786" type="jump" coverage="0%" />
+                <condition number="1512" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="74" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1722" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="75" hits="0" branch="False" />
+            <line number="95" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2470" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="96" hits="0" branch="False" />
+            <line number="97" hits="0" branch="False" />
+            <line number="99" hits="0" branch="False" />
+            <line number="100" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2266" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="105" hits="0" branch="False" />
+            <line number="112" hits="0" branch="False" />
+            <line number="116" hits="0" branch="False" />
+            <line number="119" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="3017" type="jump" coverage="0%" />
+                <condition number="3145" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="120" hits="0" branch="False" />
+            <line number="122" hits="0" branch="False" />
+            <line number="123" hits="0" branch="False" />
+            <line number="124" hits="0" branch="False" />
+            <line number="125" hits="0" branch="False" />
+            <line number="126" hits="0" branch="False" />
+            <line number="127" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="4239" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="132" hits="0" branch="True" condition-coverage="0% (0/6)">
+              <conditions>
+                <condition number="4812" type="jump" coverage="0%" />
+                <condition number="4835" type="jump" coverage="0%" />
+                <condition number="4963" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="133" hits="0" branch="False" />
+            <line number="135" hits="0" branch="False" />
+            <line number="136" hits="0" branch="False" />
+            <line number="137" hits="0" branch="False" />
+            <line number="138" hits="0" branch="False" />
+            <line number="139" hits="0" branch="False" />
+            <line number="140" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="6057" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_AdminUser_SearchForUser/&lt;ExecuteAsync&gt;d__16" filename="JobFinder\Areas\Administration\Views\AdminUser\SearchForUser.cshtml" line-rate="0" branch-rate="0" complexity="16">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="16">
+              <lines>
+                <line number="5" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="87" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="9" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="207" type="jump" coverage="0%" />
+                    <condition number="299" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="12" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="750" type="jump" coverage="0%" />
+                    <condition number="1422" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1627" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="0" branch="False" />
+                <line number="52" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2388" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2166" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="87" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="9" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="207" type="jump" coverage="0%" />
+                <condition number="299" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="12" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="750" type="jump" coverage="0%" />
+                <condition number="1422" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="34" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1627" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="35" hits="0" branch="False" />
+            <line number="52" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2388" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2166" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__ComapanySearchPartial/&lt;ExecuteAsync&gt;d__11" filename="JobFinder\Areas\Administration\Views\Shared\_ComapanySearchPartial.cshtml" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="3" hits="0" branch="False" />
+                <line number="4" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="446" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="5" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="780" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="0" branch="False" />
+            <line number="4" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="446" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="5" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="780" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__LoginPartial/&lt;ExecuteAsync&gt;d__17" filename="JobFinder\Areas\Administration\Views\Shared\_LoginPartial.cshtml" line-rate="0" branch-rate="0" complexity="14">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="14">
+              <lines>
+                <line number="5" hits="0" branch="True" condition-coverage="0% (0/6)">
+                  <conditions>
+                    <condition number="117" type="jump" coverage="0%" />
+                    <condition number="137" type="jump" coverage="0%" />
+                    <condition number="171" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="6" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="629" type="jump" coverage="0%" />
+                    <condition number="1303" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="15" hits="0" branch="False" />
+                <line number="17" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="1951" type="jump" coverage="0%" />
+                    <condition number="2575" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="True" condition-coverage="0% (0/6)">
+              <conditions>
+                <condition number="117" type="jump" coverage="0%" />
+                <condition number="137" type="jump" coverage="0%" />
+                <condition number="171" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="6" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="629" type="jump" coverage="0%" />
+                <condition number="1303" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="15" hits="0" branch="False" />
+            <line number="17" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="1951" type="jump" coverage="0%" />
+                <condition number="2575" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="24" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__SearchForJobPartial/&lt;ExecuteAsync&gt;d__11" filename="JobFinder\Areas\Administration\Views\Shared\_SearchForJobPartial.cshtml" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="3" hits="0" branch="False" />
+                <line number="4" hits="0" branch="False" />
+                <line number="5" hits="0" branch="False" />
+                <line number="6" hits="0" branch="False" />
+                <line number="7" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="591" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="8" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="925" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="0" branch="False" />
+            <line number="4" hits="0" branch="False" />
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="591" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="8" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="925" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__UserSearchPartial/&lt;ExecuteAsync&gt;d__11" filename="JobFinder\Areas\Administration\Views\Shared\_UserSearchPartial.cshtml" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="3" hits="0" branch="False" />
+                <line number="4" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="446" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="5" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="775" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="0" branch="False" />
+            <line number="4" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="446" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="5" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="775" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views__ViewStart/&lt;ExecuteAsync&gt;d__0" filename="JobFinder\Areas\Administration\Views\_ViewStart.cshtml" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2718,38 +3516,6 @@
           </methods>
           <lines>
             <line number="2" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__LoginPartial/&lt;ExecuteAsync&gt;d__0" filename="JobFinder\Areas\Administration\Views\Shared\_LoginPartial.cshtml" line-rate="0" branch-rate="0" complexity="6">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
-              <lines>
-                <line number="5" hits="0" branch="True" condition-coverage="0% (0/6)">
-                  <conditions>
-                    <condition number="37" type="jump" coverage="0%" />
-                    <condition number="57" type="jump" coverage="0%" />
-                    <condition number="91" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="6" hits="0" branch="False" />
-                <line number="15" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="5" hits="0" branch="True" condition-coverage="0% (0/6)">
-              <conditions>
-                <condition number="37" type="jump" coverage="0%" />
-                <condition number="57" type="jump" coverage="0%" />
-                <condition number="91" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="6" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
           </lines>
         </class>
         <class name="AspNetCoreGeneratedDocument.Areas_Employer_Views_Company_CompanyInterviews/&lt;ExecuteAsync&gt;d__8" filename="JobFinder\Areas\Employer\Views\Company\CompanyInterviews.cshtml" line-rate="0" branch-rate="0" complexity="12">
@@ -2773,21 +3539,21 @@
                   </conditions>
                 </line>
                 <line number="7" hits="0" branch="False" />
-                <line number="24" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="23" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="1114" type="jump" coverage="0%" />
                   </conditions>
                 </line>
+                <line number="24" hits="0" branch="False" />
                 <line number="25" hits="0" branch="False" />
-                <line number="26" hits="0" branch="False" />
                 <line number="27" hits="0" branch="False" />
                 <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="892" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="29" hits="0" branch="False" />
                 <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
                 <line number="34" hits="0" branch="False" />
               </lines>
             </method>
@@ -2810,21 +3576,21 @@
               </conditions>
             </line>
             <line number="7" hits="0" branch="False" />
-            <line number="24" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="23" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="1114" type="jump" coverage="0%" />
               </conditions>
             </line>
+            <line number="24" hits="0" branch="False" />
             <line number="25" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="892" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="29" hits="0" branch="False" />
             <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
             <line number="34" hits="0" branch="False" />
           </lines>
         </class>
@@ -3799,28 +4565,28 @@
                   </conditions>
                 </line>
                 <line number="7" hits="0" branch="False" />
-                <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="19" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="398" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="21" hits="0" branch="False" />
-                <line number="23" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="20" hits="0" branch="False" />
+                <line number="22" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="1140" type="jump" coverage="0%" />
                   </conditions>
                 </line>
+                <line number="23" hits="0" branch="False" />
                 <line number="24" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
                 <line number="26" hits="0" branch="False" />
                 <line number="27" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="917" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="28" hits="0" branch="False" />
                 <line number="29" hits="0" branch="False" />
                 <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
                 <line number="34" hits="0" branch="False" />
               </lines>
             </method>
@@ -3843,28 +4609,28 @@
               </conditions>
             </line>
             <line number="7" hits="0" branch="False" />
-            <line number="20" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="19" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="398" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="21" hits="0" branch="False" />
-            <line number="23" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="20" hits="0" branch="False" />
+            <line number="22" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="1140" type="jump" coverage="0%" />
               </conditions>
             </line>
+            <line number="23" hits="0" branch="False" />
             <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
             <line number="26" hits="0" branch="False" />
             <line number="27" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="917" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="28" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
             <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
             <line number="34" hits="0" branch="False" />
           </lines>
         </class>
@@ -4178,36 +4944,48 @@
             <line number="2" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="AspNetCoreGeneratedDocument.Views_Account_AccountSettings/&lt;&lt;ExecuteAsync&gt;b__25_0&gt;d" filename="JobFinder\Views\Account\AccountSettings.cshtml" line-rate="0" branch-rate="0" complexity="8">
+        <class name="AspNetCoreGeneratedDocument.Views_Account_AccountSettings/&lt;&lt;ExecuteAsync&gt;b__21_0&gt;d" filename="JobFinder\Views\Account\AccountSettings.cshtml" line-rate="0" branch-rate="0" complexity="6">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="8">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
               <lines>
-                <line number="4" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="11" hits="0" branch="True" condition-coverage="0% (0/6)">
                   <conditions>
-                    <condition number="684" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="6" hits="0" branch="True" condition-coverage="0% (0/6)">
-                  <conditions>
-                    <condition number="1343" type="jump" coverage="0%" />
-                    <condition number="1911" type="jump" coverage="0%" />
-                    <condition number="2479" type="jump" coverage="0%" />
+                    <condition number="433" type="jump" coverage="0%" />
+                    <condition number="1001" type="jump" coverage="0%" />
+                    <condition number="1569" type="jump" coverage="0%" />
                   </conditions>
                 </line>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="4" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="11" hits="0" branch="True" condition-coverage="0% (0/6)">
               <conditions>
-                <condition number="684" type="jump" coverage="0%" />
+                <condition number="433" type="jump" coverage="0%" />
+                <condition number="1001" type="jump" coverage="0%" />
+                <condition number="1569" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="6" hits="0" branch="True" condition-coverage="0% (0/6)">
+          </lines>
+        </class>
+        <class name="AspNetCoreGeneratedDocument.Views_Account_AccountSettings/&lt;ExecuteAsync&gt;d__21" filename="JobFinder\Views\Account\AccountSettings.cshtml" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+                <line number="7" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="762" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="1343" type="jump" coverage="0%" />
-                <condition number="1911" type="jump" coverage="0%" />
-                <condition number="2479" type="jump" coverage="0%" />
+                <condition number="762" type="jump" coverage="0%" />
               </conditions>
             </line>
           </lines>
@@ -4821,7 +5599,7 @@
                   </conditions>
                 </line>
                 <line number="41" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -4861,7 +5639,7 @@
               </conditions>
             </line>
             <line number="41" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
           </lines>
         </class>
         <class name="AspNetCoreGeneratedDocument.Views_Home_Index/&lt;ExecuteAsync&gt;d__0" filename="JobFinder\Views\Home\Index.cshtml" line-rate="0" branch-rate="1" complexity="1">
@@ -5205,50 +5983,50 @@
                     <condition number="1512" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="75" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="76" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="2375" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="76" hits="0" branch="False" />
-                <line number="77" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="2171" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="78" hits="0" branch="False" />
-                <line number="85" hits="0" branch="False" />
-                <line number="88" hits="0" branch="True" condition-coverage="0% (0/4)">
+                <line number="79" hits="0" branch="False" />
+                <line number="86" hits="0" branch="False" />
+                <line number="89" hits="0" branch="True" condition-coverage="0% (0/4)">
                   <conditions>
                     <condition number="2904" type="jump" coverage="0%" />
                     <condition number="3032" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="89" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
+                <line number="90" hits="0" branch="False" />
                 <line number="92" hits="0" branch="False" />
                 <line number="93" hits="0" branch="False" />
                 <line number="94" hits="0" branch="False" />
                 <line number="95" hits="0" branch="False" />
-                <line number="96" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="96" hits="0" branch="False" />
+                <line number="97" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="4126" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="101" hits="0" branch="True" condition-coverage="0% (0/6)">
+                <line number="102" hits="0" branch="True" condition-coverage="0% (0/6)">
                   <conditions>
                     <condition number="4699" type="jump" coverage="0%" />
                     <condition number="4722" type="jump" coverage="0%" />
                     <condition number="4850" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="102" hits="0" branch="False" />
-                <line number="104" hits="0" branch="False" />
+                <line number="103" hits="0" branch="False" />
                 <line number="105" hits="0" branch="False" />
                 <line number="106" hits="0" branch="False" />
                 <line number="107" hits="0" branch="False" />
                 <line number="108" hits="0" branch="False" />
-                <line number="109" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="109" hits="0" branch="False" />
+                <line number="110" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="5944" type="jump" coverage="0%" />
                   </conditions>
@@ -5274,50 +6052,50 @@
                 <condition number="1512" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="75" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="76" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="2375" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="76" hits="0" branch="False" />
-            <line number="77" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="2171" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="78" hits="0" branch="False" />
-            <line number="85" hits="0" branch="False" />
-            <line number="88" hits="0" branch="True" condition-coverage="0% (0/4)">
+            <line number="79" hits="0" branch="False" />
+            <line number="86" hits="0" branch="False" />
+            <line number="89" hits="0" branch="True" condition-coverage="0% (0/4)">
               <conditions>
                 <condition number="2904" type="jump" coverage="0%" />
                 <condition number="3032" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="89" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
+            <line number="90" hits="0" branch="False" />
             <line number="92" hits="0" branch="False" />
             <line number="93" hits="0" branch="False" />
             <line number="94" hits="0" branch="False" />
             <line number="95" hits="0" branch="False" />
-            <line number="96" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="96" hits="0" branch="False" />
+            <line number="97" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="4126" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="101" hits="0" branch="True" condition-coverage="0% (0/6)">
+            <line number="102" hits="0" branch="True" condition-coverage="0% (0/6)">
               <conditions>
                 <condition number="4699" type="jump" coverage="0%" />
                 <condition number="4722" type="jump" coverage="0%" />
                 <condition number="4850" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="102" hits="0" branch="False" />
-            <line number="104" hits="0" branch="False" />
+            <line number="103" hits="0" branch="False" />
             <line number="105" hits="0" branch="False" />
             <line number="106" hits="0" branch="False" />
             <line number="107" hits="0" branch="False" />
             <line number="108" hits="0" branch="False" />
-            <line number="109" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="109" hits="0" branch="False" />
+            <line number="110" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="5944" type="jump" coverage="0%" />
               </conditions>
@@ -5603,20 +6381,19 @@
                 <line number="7" hits="0" branch="False" />
                 <line number="25" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="1114" type="jump" coverage="0%" />
+                    <condition number="1096" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
                 <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="892" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -5640,20 +6417,19 @@
             <line number="7" hits="0" branch="False" />
             <line number="25" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="1114" type="jump" coverage="0%" />
+                <condition number="1096" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="892" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
           </lines>
         </class>
         <class name="AspNetCoreGeneratedDocument.Views__ViewStart/&lt;ExecuteAsync&gt;d__0" filename="JobFinder\Views\_ViewStart.cshtml" line-rate="0" branch-rate="1" complexity="1">
@@ -5668,54 +6444,86 @@
             <line number="2" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__18_0&gt;d" filename="JobFinder\Areas\Administration\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="6">
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__28_0&gt;d" filename="JobFinder\Areas\Administration\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="6">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
               <lines>
-                <line number="6" hits="0" branch="True" condition-coverage="0% (0/6)">
+                <line number="6" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="443" type="jump" coverage="0%" />
-                    <condition number="961" type="jump" coverage="0%" />
-                    <condition number="1479" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="8" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1088" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="9" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1733" type="jump" coverage="0%" />
                   </conditions>
                 </line>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="6" hits="0" branch="True" condition-coverage="0% (0/6)">
+            <line number="6" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="443" type="jump" coverage="0%" />
-                <condition number="961" type="jump" coverage="0%" />
-                <condition number="1479" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="8" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1088" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="9" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1733" type="jump" coverage="0%" />
               </conditions>
             </line>
           </lines>
         </class>
-        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__18_1&gt;d" filename="JobFinder\Areas\Administration\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="6">
+        <class name="AspNetCoreGeneratedDocument.Areas_Administration_Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__28_1&gt;d" filename="JobFinder\Areas\Administration\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="14">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="14">
               <lines>
-                <line number="36" hits="0" branch="True" condition-coverage="0% (0/6)">
+                <line number="34" hits="0" branch="True" condition-coverage="0% (0/12)">
                   <conditions>
-                    <condition number="621" type="jump" coverage="0%" />
-                    <condition number="1095" type="jump" coverage="0%" />
-                    <condition number="1591" type="jump" coverage="0%" />
+                    <condition number="600" type="jump" coverage="0%" />
+                    <condition number="1222" type="jump" coverage="0%" />
+                    <condition number="1728" type="jump" coverage="0%" />
+                    <condition number="2368" type="jump" coverage="0%" />
+                    <condition number="2842" type="jump" coverage="0%" />
+                    <condition number="3318" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="48" hits="0" branch="False" />
+                <line number="45" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="3943" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="46" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="36" hits="0" branch="True" condition-coverage="0% (0/6)">
+            <line number="34" hits="0" branch="True" condition-coverage="0% (0/12)">
               <conditions>
-                <condition number="621" type="jump" coverage="0%" />
-                <condition number="1095" type="jump" coverage="0%" />
-                <condition number="1591" type="jump" coverage="0%" />
+                <condition number="600" type="jump" coverage="0%" />
+                <condition number="1222" type="jump" coverage="0%" />
+                <condition number="1728" type="jump" coverage="0%" />
+                <condition number="2368" type="jump" coverage="0%" />
+                <condition number="2842" type="jump" coverage="0%" />
+                <condition number="3318" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="48" hits="0" branch="False" />
+            <line number="45" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="3943" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="46" hits="0" branch="False" />
           </lines>
         </class>
         <class name="AspNetCoreGeneratedDocument.Areas_Employer_Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__33_0&gt;d" filename="JobFinder\Areas\Employer\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="6">
@@ -5758,52 +6566,50 @@
             </line>
           </lines>
         </class>
-        <class name="AspNetCoreGeneratedDocument.Areas_Employer_Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__33_1&gt;d" filename="JobFinder\Areas\Employer\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="20">
+        <class name="AspNetCoreGeneratedDocument.Areas_Employer_Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__33_1&gt;d" filename="JobFinder\Areas\Employer\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="18">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="20">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="18">
               <lines>
-                <line number="45" hits="0" branch="True" condition-coverage="0% (0/18)">
+                <line number="44" hits="0" branch="True" condition-coverage="0% (0/16)">
                   <conditions>
-                    <condition number="654" type="jump" coverage="0%" />
-                    <condition number="1276" type="jump" coverage="0%" />
-                    <condition number="1898" type="jump" coverage="0%" />
-                    <condition number="2520" type="jump" coverage="0%" />
-                    <condition number="3142" type="jump" coverage="0%" />
-                    <condition number="3766" type="jump" coverage="0%" />
-                    <condition number="4274" type="jump" coverage="0%" />
-                    <condition number="4790" type="jump" coverage="0%" />
-                    <condition number="5266" type="jump" coverage="0%" />
+                    <condition number="636" type="jump" coverage="0%" />
+                    <condition number="1258" type="jump" coverage="0%" />
+                    <condition number="1880" type="jump" coverage="0%" />
+                    <condition number="2502" type="jump" coverage="0%" />
+                    <condition number="3124" type="jump" coverage="0%" />
+                    <condition number="3632" type="jump" coverage="0%" />
+                    <condition number="4148" type="jump" coverage="0%" />
+                    <condition number="4624" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="54" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="53" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="5891" type="jump" coverage="0%" />
+                    <condition number="5249" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="55" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="45" hits="0" branch="True" condition-coverage="0% (0/18)">
+            <line number="44" hits="0" branch="True" condition-coverage="0% (0/16)">
               <conditions>
-                <condition number="654" type="jump" coverage="0%" />
-                <condition number="1276" type="jump" coverage="0%" />
-                <condition number="1898" type="jump" coverage="0%" />
-                <condition number="2520" type="jump" coverage="0%" />
-                <condition number="3142" type="jump" coverage="0%" />
-                <condition number="3766" type="jump" coverage="0%" />
-                <condition number="4274" type="jump" coverage="0%" />
-                <condition number="4790" type="jump" coverage="0%" />
-                <condition number="5266" type="jump" coverage="0%" />
+                <condition number="636" type="jump" coverage="0%" />
+                <condition number="1258" type="jump" coverage="0%" />
+                <condition number="1880" type="jump" coverage="0%" />
+                <condition number="2502" type="jump" coverage="0%" />
+                <condition number="3124" type="jump" coverage="0%" />
+                <condition number="3632" type="jump" coverage="0%" />
+                <condition number="4148" type="jump" coverage="0%" />
+                <condition number="4624" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="54" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="53" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="5891" type="jump" coverage="0%" />
+                <condition number="5249" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="55" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
           </lines>
         </class>
         <class name="AspNetCoreGeneratedDocument.Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__36_0&gt;d" filename="JobFinder\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="6">
@@ -5846,80 +6652,78 @@
             </line>
           </lines>
         </class>
-        <class name="AspNetCoreGeneratedDocument.Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__36_1&gt;d" filename="JobFinder\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="24">
+        <class name="AspNetCoreGeneratedDocument.Views_Shared__Layout/&lt;&lt;ExecuteAsync&gt;b__36_1&gt;d" filename="JobFinder\Views\Shared\_Layout.cshtml" line-rate="0" branch-rate="0" complexity="22">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="24">
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="22">
               <lines>
-                <line number="34" hits="0" branch="True" condition-coverage="0% (0/12)">
+                <line number="31" hits="0" branch="True" condition-coverage="0% (0/10)">
                   <conditions>
-                    <condition number="672" type="jump" coverage="0%" />
-                    <condition number="1294" type="jump" coverage="0%" />
-                    <condition number="1916" type="jump" coverage="0%" />
-                    <condition number="2538" type="jump" coverage="0%" />
-                    <condition number="3160" type="jump" coverage="0%" />
-                    <condition number="3371" type="jump" coverage="0%" />
+                    <condition number="654" type="jump" coverage="0%" />
+                    <condition number="1276" type="jump" coverage="0%" />
+                    <condition number="1898" type="jump" coverage="0%" />
+                    <condition number="2520" type="jump" coverage="0%" />
+                    <condition number="2730" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="35" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="32" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="3832" type="jump" coverage="0%" />
+                    <condition number="3190" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="36" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="3716" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="45" hits="0" branch="True" condition-coverage="0% (0/6)">
                   <conditions>
                     <condition number="4358" type="jump" coverage="0%" />
+                    <condition number="4834" type="jump" coverage="0%" />
+                    <condition number="5310" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="48" hits="0" branch="True" condition-coverage="0% (0/6)">
+                <line number="56" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="5000" type="jump" coverage="0%" />
-                    <condition number="5476" type="jump" coverage="0%" />
-                    <condition number="5952" type="jump" coverage="0%" />
+                    <condition number="5935" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="59" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="6577" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="60" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="34" hits="0" branch="True" condition-coverage="0% (0/12)">
+            <line number="31" hits="0" branch="True" condition-coverage="0% (0/10)">
               <conditions>
-                <condition number="672" type="jump" coverage="0%" />
-                <condition number="1294" type="jump" coverage="0%" />
-                <condition number="1916" type="jump" coverage="0%" />
-                <condition number="2538" type="jump" coverage="0%" />
-                <condition number="3160" type="jump" coverage="0%" />
-                <condition number="3371" type="jump" coverage="0%" />
+                <condition number="654" type="jump" coverage="0%" />
+                <condition number="1276" type="jump" coverage="0%" />
+                <condition number="1898" type="jump" coverage="0%" />
+                <condition number="2520" type="jump" coverage="0%" />
+                <condition number="2730" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="35" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="32" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="3832" type="jump" coverage="0%" />
+                <condition number="3190" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="36" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="3716" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="45" hits="0" branch="True" condition-coverage="0% (0/6)">
               <conditions>
                 <condition number="4358" type="jump" coverage="0%" />
+                <condition number="4834" type="jump" coverage="0%" />
+                <condition number="5310" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="48" hits="0" branch="True" condition-coverage="0% (0/6)">
+            <line number="56" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="5000" type="jump" coverage="0%" />
-                <condition number="5476" type="jump" coverage="0%" />
-                <condition number="5952" type="jump" coverage="0%" />
+                <condition number="5935" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="59" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="6577" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="60" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.AccountController" filename="JobFinder\Controllers\AccountController.cs" line-rate="0" branch-rate="1" complexity="4">
@@ -5936,9 +6740,9 @@
             </method>
             <method name="AccountSettings" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="144" hits="0" branch="False" />
-                <line number="145" hits="0" branch="False" />
                 <line number="146" hits="0" branch="False" />
+                <line number="147" hits="0" branch="False" />
+                <line number="148" hits="0" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(Microsoft.AspNetCore.Identity.UserManager`1&lt;JobFinder.Data.Models.ApplicationUser&gt;,Microsoft.AspNetCore.Identity.SignInManager`1&lt;JobFinder.Data.Models.ApplicationUser&gt;,JobFinder.Core.Contracts.IUserServiceInterface)" line-rate="0" branch-rate="1" complexity="1">
@@ -5955,9 +6759,9 @@
           <lines>
             <line number="29" hits="0" branch="False" />
             <line number="68" hits="0" branch="False" />
-            <line number="144" hits="0" branch="False" />
-            <line number="145" hits="0" branch="False" />
             <line number="146" hits="0" branch="False" />
+            <line number="147" hits="0" branch="False" />
+            <line number="148" hits="0" branch="False" />
             <line number="19" hits="0" branch="False" />
             <line number="20" hits="0" branch="False" />
             <line number="21" hits="0" branch="False" />
@@ -5973,7 +6777,7 @@
                 <line number="117" hits="0" branch="False" />
                 <line number="118" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="66" type="jump" coverage="0%" />
+                    <condition number="75" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="119" hits="0" branch="False" />
@@ -5981,14 +6785,15 @@
                 <line number="122" hits="0" branch="False" />
                 <line number="123" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="367" type="jump" coverage="0%" />
+                    <condition number="376" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="124" hits="0" branch="False" />
                 <line number="125" hits="0" branch="False" />
                 <line number="127" hits="0" branch="False" />
-                <line number="129" hits="0" branch="False" />
-                <line number="132" hits="0" branch="False" />
+                <line number="128" hits="0" branch="False" />
+                <line number="130" hits="0" branch="False" />
+                <line number="134" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -5996,7 +6801,7 @@
             <line number="117" hits="0" branch="False" />
             <line number="118" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="66" type="jump" coverage="0%" />
+                <condition number="75" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="119" hits="0" branch="False" />
@@ -6004,56 +6809,59 @@
             <line number="122" hits="0" branch="False" />
             <line number="123" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="367" type="jump" coverage="0%" />
+                <condition number="376" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="124" hits="0" branch="False" />
             <line number="125" hits="0" branch="False" />
             <line number="127" hits="0" branch="False" />
-            <line number="129" hits="0" branch="False" />
-            <line number="132" hits="0" branch="False" />
+            <line number="128" hits="0" branch="False" />
+            <line number="130" hits="0" branch="False" />
+            <line number="134" hits="0" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.AccountController/&lt;DeleteAccount&gt;d__13" filename="JobFinder\Controllers\AccountController.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="148" hits="0" branch="False" />
-                <line number="149" hits="0" branch="False" />
+                <line number="150" hits="0" branch="False" />
                 <line number="151" hits="0" branch="False" />
-                <line number="152" hits="0" branch="False" />
                 <line number="153" hits="0" branch="False" />
                 <line number="154" hits="0" branch="False" />
+                <line number="155" hits="0" branch="False" />
+                <line number="156" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="148" hits="0" branch="False" />
-            <line number="149" hits="0" branch="False" />
+            <line number="150" hits="0" branch="False" />
             <line number="151" hits="0" branch="False" />
-            <line number="152" hits="0" branch="False" />
             <line number="153" hits="0" branch="False" />
             <line number="154" hits="0" branch="False" />
+            <line number="155" hits="0" branch="False" />
+            <line number="156" hits="0" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.AccountController/&lt;DeleteEmployerAccount&gt;d__11" filename="JobFinder\Controllers\AccountController.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="135" hits="0" branch="False" />
-                <line number="136" hits="0" branch="False" />
                 <line number="137" hits="0" branch="False" />
+                <line number="138" hits="0" branch="False" />
                 <line number="139" hits="0" branch="False" />
-                <line number="142" hits="0" branch="False" />
+                <line number="140" hits="0" branch="False" />
+                <line number="141" hits="0" branch="False" />
+                <line number="144" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="135" hits="0" branch="False" />
-            <line number="136" hits="0" branch="False" />
             <line number="137" hits="0" branch="False" />
+            <line number="138" hits="0" branch="False" />
             <line number="139" hits="0" branch="False" />
-            <line number="142" hits="0" branch="False" />
+            <line number="140" hits="0" branch="False" />
+            <line number="141" hits="0" branch="False" />
+            <line number="144" hits="0" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.AccountController/&lt;Login&gt;d__7" filename="JobFinder\Controllers\AccountController.cs" line-rate="0" branch-rate="0" complexity="8">
@@ -6262,16 +7070,16 @@
           <methods>
             <method name="GetUserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="5" branch="False" />
-                <line number="13" hits="5" branch="False" />
-                <line number="14" hits="5" branch="False" />
+                <line number="12" hits="6" branch="False" />
+                <line number="13" hits="6" branch="False" />
+                <line number="14" hits="6" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="12" hits="5" branch="False" />
-            <line number="13" hits="5" branch="False" />
-            <line number="14" hits="5" branch="False" />
+            <line number="12" hits="6" branch="False" />
+            <line number="13" hits="6" branch="False" />
+            <line number="14" hits="6" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.CompanyController" filename="JobFinder\Controllers\CompanyController.cs" line-rate="1" branch-rate="0.5" complexity="11">
@@ -6335,10 +7143,10 @@
             </method>
             <method name=".ctor" signature="(JobFinder.Core.Contracts.ICompanyServiceInterface)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="16" branch="False" />
-                <line number="15" hits="16" branch="False" />
-                <line number="16" hits="16" branch="False" />
-                <line number="17" hits="16" branch="False" />
+                <line number="14" hits="17" branch="False" />
+                <line number="15" hits="17" branch="False" />
+                <line number="16" hits="17" branch="False" />
+                <line number="17" hits="17" branch="False" />
               </lines>
             </method>
           </methods>
@@ -6380,10 +7188,10 @@
             <line number="93" hits="1" branch="False" />
             <line number="94" hits="1" branch="False" />
             <line number="95" hits="1" branch="False" />
-            <line number="14" hits="16" branch="False" />
-            <line number="15" hits="16" branch="False" />
-            <line number="16" hits="16" branch="False" />
-            <line number="17" hits="16" branch="False" />
+            <line number="14" hits="17" branch="False" />
+            <line number="15" hits="17" branch="False" />
+            <line number="16" hits="17" branch="False" />
+            <line number="17" hits="17" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.CompanyController/&lt;CompanyInformation&gt;d__2" filename="JobFinder\Controllers\CompanyController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -6498,7 +7306,7 @@
             </method>
             <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;JobFinder.Controllers.HomeController&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="6" branch="False" />
+                <line number="12" hits="8" branch="False" />
               </lines>
             </method>
           </methods>
@@ -6513,7 +7321,7 @@
             <line number="18" hits="1" branch="False" />
             <line number="20" hits="1" branch="False" />
             <line number="21" hits="2" branch="False" />
-            <line number="12" hits="6" branch="False" />
+            <line number="12" hits="8" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.InterviewController" filename="JobFinder\Controllers\InterviewController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -6784,53 +7592,85 @@
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="48" hits="1" branch="False" />
-                <line number="49" hits="1" branch="False" />
-                <line number="50" hits="1" branch="False" />
-                <line number="51" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="72" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="48" hits="1" branch="False" />
-            <line number="49" hits="1" branch="False" />
-            <line number="50" hits="1" branch="False" />
-            <line number="51" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="72" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="JobFinder.Controllers.ResumeController/&lt;Download&gt;d__3" filename="JobFinder\Controllers\ResumeController.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="JobFinder.Controllers.ResumeController/&lt;Download&gt;d__3" filename="JobFinder\Controllers\ResumeController.cs" line-rate="0.625" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="0.625" branch-rate="1" complexity="2">
               <lines>
-                <line number="40" hits="1" branch="False" />
-                <line number="41" hits="1" branch="False" />
-                <line number="42" hits="1" branch="False" />
+                <line number="40" hits="2" branch="False" />
+                <line number="42" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="42" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="1" branch="False" />
                 <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+                <line number="57" hits="1" branch="False" />
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="68" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="40" hits="1" branch="False" />
-            <line number="41" hits="1" branch="False" />
-            <line number="42" hits="1" branch="False" />
+            <line number="40" hits="2" branch="False" />
+            <line number="42" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="42" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="43" hits="1" branch="False" />
             <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="57" hits="1" branch="False" />
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="68" hits="2" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.ResumeController/&lt;Upload&gt;d__2" filename="JobFinder\Controllers\ResumeController.cs" line-rate="0.875" branch-rate="0.75" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0.875" branch-rate="0.75" complexity="4">
               <lines>
-                <line number="18" hits="3" branch="False" />
-                <line number="19" hits="3" branch="True" condition-coverage="100% (2/2)">
+                <line number="18" hits="2" branch="False" />
+                <line number="19" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="50" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="20" hits="2" branch="False" />
-                <line number="21" hits="2" branch="False" />
+                <line number="20" hits="1" branch="False" />
+                <line number="21" hits="1" branch="False" />
                 <line number="23" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="93" type="jump" coverage="50%" />
+                    <condition number="103" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="24" hits="0" branch="False" />
@@ -6843,22 +7683,22 @@
                 <line number="33" hits="1" branch="False" />
                 <line number="34" hits="1" branch="False" />
                 <line number="36" hits="1" branch="False" />
-                <line number="37" hits="3" branch="False" />
+                <line number="37" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="18" hits="3" branch="False" />
-            <line number="19" hits="3" branch="True" condition-coverage="100% (2/2)">
+            <line number="18" hits="2" branch="False" />
+            <line number="19" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="50" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="20" hits="2" branch="False" />
-            <line number="21" hits="2" branch="False" />
+            <line number="20" hits="1" branch="False" />
+            <line number="21" hits="1" branch="False" />
             <line number="23" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="93" type="jump" coverage="50%" />
+                <condition number="103" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="24" hits="0" branch="False" />
@@ -6871,7 +7711,7 @@
             <line number="33" hits="1" branch="False" />
             <line number="34" hits="1" branch="False" />
             <line number="36" hits="1" branch="False" />
-            <line number="37" hits="3" branch="False" />
+            <line number="37" hits="2" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Controllers.UserController" filename="JobFinder\Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -6938,10 +7778,10 @@
             </method>
             <method name=".ctor" signature="(JobFinder.Core.Contracts.ICompanyServiceInterface)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="16" branch="False" />
-                <line number="17" hits="16" branch="False" />
-                <line number="18" hits="16" branch="False" />
-                <line number="19" hits="16" branch="False" />
+                <line number="16" hits="17" branch="False" />
+                <line number="17" hits="17" branch="False" />
+                <line number="18" hits="17" branch="False" />
+                <line number="19" hits="17" branch="False" />
               </lines>
             </method>
           </methods>
@@ -6962,10 +7802,10 @@
             <line number="94" hits="1" branch="False" />
             <line number="95" hits="1" branch="False" />
             <line number="96" hits="1" branch="False" />
-            <line number="16" hits="16" branch="False" />
-            <line number="17" hits="16" branch="False" />
-            <line number="18" hits="16" branch="False" />
-            <line number="19" hits="16" branch="False" />
+            <line number="16" hits="17" branch="False" />
+            <line number="17" hits="17" branch="False" />
+            <line number="18" hits="17" branch="False" />
+            <line number="19" hits="17" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Areas.Employer.Controllers.CompanyController/&lt;CompanyInterviews&gt;d__4" filename="JobFinder\Areas\Employer\Controllers\CompanyController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -7159,10 +7999,10 @@
             </method>
             <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;JobFinder.Areas.Employer.Controllers.HomeController&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="3" branch="False" />
-                <line number="14" hits="3" branch="False" />
-                <line number="15" hits="3" branch="False" />
-                <line number="16" hits="3" branch="False" />
+                <line number="13" hits="4" branch="False" />
+                <line number="14" hits="4" branch="False" />
+                <line number="15" hits="4" branch="False" />
+                <line number="16" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
@@ -7170,10 +8010,10 @@
             <line number="19" hits="1" branch="False" />
             <line number="20" hits="1" branch="False" />
             <line number="21" hits="1" branch="False" />
-            <line number="13" hits="3" branch="False" />
-            <line number="14" hits="3" branch="False" />
-            <line number="15" hits="3" branch="False" />
-            <line number="16" hits="3" branch="False" />
+            <line number="13" hits="4" branch="False" />
+            <line number="14" hits="4" branch="False" />
+            <line number="15" hits="4" branch="False" />
+            <line number="16" hits="4" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Areas.Employer.Controllers.InterviewController" filename="JobFinder\Areas\Employer\Controllers\InterviewController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -7630,10 +8470,10 @@
             </method>
             <method name=".ctor" signature="(JobFinder.Core.Contracts.ICompanyServiceInterface)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="16" branch="False" />
-                <line number="13" hits="16" branch="False" />
-                <line number="14" hits="16" branch="False" />
-                <line number="15" hits="16" branch="False" />
+                <line number="12" hits="17" branch="False" />
+                <line number="13" hits="17" branch="False" />
+                <line number="14" hits="17" branch="False" />
+                <line number="15" hits="17" branch="False" />
               </lines>
             </method>
           </methods>
@@ -7644,10 +8484,10 @@
             <line number="43" hits="1" branch="False" />
             <line number="44" hits="1" branch="False" />
             <line number="45" hits="1" branch="False" />
-            <line number="12" hits="16" branch="False" />
-            <line number="13" hits="16" branch="False" />
-            <line number="14" hits="16" branch="False" />
-            <line number="15" hits="16" branch="False" />
+            <line number="12" hits="17" branch="False" />
+            <line number="13" hits="17" branch="False" />
+            <line number="14" hits="17" branch="False" />
+            <line number="15" hits="17" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Areas.Administration.Controllers.AdminCompanyController/&lt;CompanySearch&gt;d__2" filename="JobFinder\Areas\Administration\Controllers\AdminCompanyController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -7670,48 +8510,48 @@
             <line number="23" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="JobFinder.Areas.Administration.Controllers.AdminCompanyController/&lt;DeleteCompany&gt;d__3" filename="JobFinder\Areas\Administration\Controllers\AdminCompanyController.cs" line-rate="0.6666" branch-rate="1" complexity="1">
+        <class name="JobFinder.Areas.Administration.Controllers.AdminCompanyController/&lt;DeleteCompany&gt;d__3" filename="JobFinder\Areas\Administration\Controllers\AdminCompanyController.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0.6666" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="1" branch="False" />
-                <line number="28" hits="1" branch="False" />
-                <line number="29" hits="1" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="2" branch="False" />
                 <line number="30" hits="1" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
                 <line number="37" hits="1" branch="False" />
-                <line number="38" hits="1" branch="False" />
+                <line number="38" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="26" hits="1" branch="False" />
-            <line number="28" hits="1" branch="False" />
-            <line number="29" hits="1" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="2" branch="False" />
             <line number="30" hits="1" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
             <line number="37" hits="1" branch="False" />
-            <line number="38" hits="1" branch="False" />
+            <line number="38" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="JobFinder.Areas.Administration.Controllers.AdminHomeController" filename="JobFinder\Areas\Administration\Controllers\AdminHomeController.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="JobFinder.Areas.Administration.Controllers.AdminHomeController" filename="JobFinder\Areas\Administration\Controllers\AdminHomeController.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="Index" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Index" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Areas.Administration.Controllers.AdminJobListingController" filename="JobFinder\Areas\Administration\Controllers\AdminJobListingController.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -7882,24 +8722,40 @@
             <line number="21" hits="3" branch="False" />
           </lines>
         </class>
-        <class name="JobFinder.Areas.Administration.Controllers.AdminUserController/&lt;DeleteUser&gt;d__4" filename="JobFinder\Areas\Administration\Controllers\AdminUserController.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="JobFinder.Areas.Administration.Controllers.AdminUserController/&lt;DeleteUser&gt;d__4" filename="JobFinder\Areas\Administration\Controllers\AdminUserController.cs" line-rate="0.7777" branch-rate="0.5" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="0.7777" branch-rate="0.5" complexity="2">
               <lines>
                 <line number="29" hits="1" branch="False" />
                 <line number="30" hits="1" branch="False" />
-                <line number="31" hits="1" branch="False" />
-                <line number="33" hits="1" branch="False" />
-                <line number="34" hits="1" branch="False" />
+                <line number="31" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="311" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="29" hits="1" branch="False" />
             <line number="30" hits="1" branch="False" />
-            <line number="31" hits="1" branch="False" />
-            <line number="33" hits="1" branch="False" />
-            <line number="34" hits="1" branch="False" />
+            <line number="31" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="311" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
           </lines>
         </class>
         <class name="JobFinder.Areas.Administration.Controllers.AdminUserController/&lt;SearchForUser&gt;d__3" filename="JobFinder\Areas\Administration\Controllers\AdminUserController.cs" line-rate="1" branch-rate="1" complexity="1">

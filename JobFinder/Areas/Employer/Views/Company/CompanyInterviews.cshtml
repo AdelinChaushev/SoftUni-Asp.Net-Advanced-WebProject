@@ -20,15 +20,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
      @foreach (var item in Model)
             {
                 int counter = 1;
+               <tr>
                 <td>@counter</td>
              <partial name="_CompanyInterviewPartial" model="item"></partial>          
+               </tr>
              counter++;
             }
-    </tr>
   </tbody>
 </table>
 }

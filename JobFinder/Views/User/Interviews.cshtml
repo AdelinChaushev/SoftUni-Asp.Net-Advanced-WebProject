@@ -21,16 +21,19 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    
      @foreach (var item in Model)
             {
+
              int counter = 1;
+             <tr>
              <td>@counter</td>
              <partial name="_UserInterviewPartial" model="item"></partial>
              
              counter++;
+              </tr>
             }
-    </tr>
+   
   </tbody>
 </table>
 }

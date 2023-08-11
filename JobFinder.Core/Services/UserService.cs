@@ -45,8 +45,9 @@ namespace JobFinder.Core.Services
                  Email = c.Email,
                  UserName = c.UserName
                  
-             })
+             })             
             .ToListAsync();
+            
             if (!string.IsNullOrWhiteSpace(keyword))
             {
 

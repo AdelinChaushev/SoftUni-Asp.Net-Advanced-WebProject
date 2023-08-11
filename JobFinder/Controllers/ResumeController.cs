@@ -14,32 +14,55 @@ namespace JobFinder.Controllers
             this.fileService = fileService;
         }
         
-        public async Task<IActionResult> Upload(FileUploadViewModel file)
+        public async Task<IActionResult> Upload(IFormFile file)
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return RedirectToAction("AccountSettings", "Account");
             }
-            if (User.IsInRole("Employer") )
+            if (User.IsInRole("Employer"))
             {
                 return RedirectToAction("AccountSettings", "Account");
             }
-            byte[] bytes = new byte[file.File.Length];
-            using (MemoryStream ms = new  MemoryStream())
+            byte[] bytes = new byte[file.Length];
+            using (MemoryStream ms = new MemoryStream())
             {
-               await file.File.CopyToAsync(ms);
-               bytes = ms.ToArray();
+                await file.CopyToAsync(ms);
+                bytes = ms.ToArray();
 
             }
-              await fileService.UploadResumeAsync(bytes,GetUserId());
-            
-            return RedirectToAction("AccountSettings","Account");
+            await fileService.UploadResumeAsync(bytes, GetUserId());
+
+            return RedirectToAction("AccountSettings", "Account");
         }
 
         public async Task<IActionResult> Download(Guid? id)
         {
-            string path = await fileService.GetResumePathByIdAsync(id);
-            return PhysicalFile(path, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+            string path;
+            if (id == null)
+            {
+                try
+                {
+                    path = await fileService.GetResumePathByUserIdAsync(GetUserId());
+                    return PhysicalFile(path, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+                }
+                catch (Exception)
+                {
+
+                    return RedirectToAction("AccountSettings", "Account");
+                }
+                 
+            }
+            try
+            {
+                path = await fileService.GetResumePathByIdAsync(id);
+                return PhysicalFile(path, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+            }
+            catch (Exception)
+            {
+                return Redirect("/Employer/Company/CompanyInterviews");
+            }
+           
 
             //"application/msword"
         }

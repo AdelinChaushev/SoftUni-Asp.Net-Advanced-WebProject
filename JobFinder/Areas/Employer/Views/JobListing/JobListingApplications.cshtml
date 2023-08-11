@@ -16,19 +16,19 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
            @if(Model.Any())
            {
                     
               @foreach (var item in Model)
               {
               int counter = 1;
+               <tr>
               <td scope="col">@counter</td>
-              <partial name="_JobListingApplication" model="@item"></partial>
+               <partial name="_JobListingApplication" model="@item"></partial>
+               </tr>
               counter++;
                }
            }
-    </tr>
   </tbody>
 </table>
 }

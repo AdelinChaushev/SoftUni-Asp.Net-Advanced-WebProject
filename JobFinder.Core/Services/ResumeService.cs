@@ -17,6 +17,10 @@ namespace JobFinder.Core.Services
         }
         public async Task UploadResumeAsync(byte[] bytes, string userId)
         {
+            if (await context.Resumes.AnyAsync(c => c.UserId == userId))
+            {
+                return;
+            }
             string path = "C:/Users/Adi/Dropbox/Resumes" + $"/{userId}";
             if (!Directory.Exists(path))
             {
@@ -62,13 +66,22 @@ namespace JobFinder.Core.Services
 
         public async Task<string> GetResumePathByIdAsync(Guid? id)
         {
-         var resume = await context.Resumes.FirstOrDefaultAsync(c => c.Id == id);
+           
+           var resume = await context.Resumes.FirstOrDefaultAsync(c => c.Id == id);
+            if(resume == null)
+            {
+                throw new InvalidOperationException();
+            }
             return resume.ResumePath;
         }
 
         public async Task<string> GetResumePathByUserIdAsync(string id)
         {
             var resume = await context.Resumes.FirstOrDefaultAsync(c => c.UserId == id);
+            if (resume == null)
+            {
+                throw new InvalidOperationException();
+            }
             return resume.ResumePath;
         }
     }

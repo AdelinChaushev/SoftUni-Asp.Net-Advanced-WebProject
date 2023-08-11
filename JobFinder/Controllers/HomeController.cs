@@ -17,7 +17,7 @@ namespace JobFinder.Controllers
             {
                 return Redirect("/Employer/Home/Index");
             }
-            return View();
+            return RedirectToAction("SearchForJobs", "JobListing");
         }
        
 

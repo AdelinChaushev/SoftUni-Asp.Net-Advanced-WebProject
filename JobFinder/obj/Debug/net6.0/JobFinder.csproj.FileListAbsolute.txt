@@ -85,3 +85,4 @@ C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Common.
 C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Common.dll
 C:\Users\Adi\source\repos\JobFinder\JobFinder\bin\Debug\net6.0\JobFinder.Common.pdb
 C:\Users\Adi\source\repos\JobFinder\JobFinder\obj\Debug\net6.0\scopedcss\Areas\Administration\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Adi\source\repos\JobFinder\JobFinder\obj\Debug\net6.0\JobFinder.MvcApplicationPartsAssemblyInfo.cs

@@ -40,7 +40,8 @@ namespace JobFinder.Core.Services
         {
             JobListing jobListing = await FindByIdAsync(id);
             Guid companyId = await GetCompanyId(userId);
-            if(jobListing.CompanyId != companyId && !await context.UserRoles.AnyAsync( c => c.UserId == userId && c.RoleId ==  context.Roles.FirstOrDefault(c => c.NormalizedName == "ADMIN").Id))
+            if(jobListing  == null|| jobListing.CompanyId != companyId 
+               && !await context.UserRoles.AnyAsync( c => c.UserId == userId && c.RoleId ==  context.Roles.FirstOrDefault(c => c.NormalizedName == "ADMIN").Id))
             {
                 throw new InvalidOperationException();
             }
