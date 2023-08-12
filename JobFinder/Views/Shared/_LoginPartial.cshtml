@@ -4,6 +4,9 @@
 <ul class="navbar-nav">
 @if (User?.Identity?.IsAuthenticated ?? false)
 {
+     <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Company" asp-action = "Create">Become an employer</a>
+    </li>
       <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action = "AccountSettings">Account settings</a>
     </li>
