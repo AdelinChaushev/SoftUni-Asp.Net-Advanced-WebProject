@@ -48,6 +48,7 @@ namespace JobFinder.Core.Services
             
             var jobApplications = context.JobApplications
                 .Where(c => c.JobListingId == id);
+            context.RemoveRange(jobApplications);
             context.Remove(jobListing);
             await context.SaveChangesAsync();
         }
