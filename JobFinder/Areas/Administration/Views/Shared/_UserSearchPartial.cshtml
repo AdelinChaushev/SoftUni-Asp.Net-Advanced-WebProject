@@ -1,0 +1,5 @@
+﻿@using JobFinder.Core.Models.UserViewModels
+@model UserOutputViewModel
+<td>@Model.UserName</td>
+<td>@Model.Email</td>
+<td><a class="btn btn-danger" asp-area="Administration" asp-controller="AdminUser" asp-action="DeleteUser" asp-route-id="@Model.Id">Delete</a></td>

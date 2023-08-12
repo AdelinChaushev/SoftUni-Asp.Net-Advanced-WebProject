@@ -151,6 +151,7 @@ namespace JobFinder.Controllers
             ApplicationUser user = await userManager.FindByIdAsync(GetUserId());
 
             await signInManager.SignOutAsync();
+            await userService.DeleteInterviewsAndJoblistings(GetUserId());
             await userManager.DeleteAsync(user);
             return RedirectToAction("Index", "Home");
         }

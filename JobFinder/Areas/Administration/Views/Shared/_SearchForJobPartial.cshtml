@@ -1,0 +1,8 @@
+﻿@model JobListingOutputViewModel
+
+<td >@Model.JobTitle</td>
+<td >@Model.SalaryPerMonth</td>
+<td >@Model.VaccantionDays</td>
+<td>@Model.JobCategory</td>
+<td>@Model.Schedule</td>
+<td><a class="btn btn-danger" asp-area="Administration" asp-controller="AdminJobListing" asp-action="Delete" asp-route-id="@Model.Id">Delete</a></td>

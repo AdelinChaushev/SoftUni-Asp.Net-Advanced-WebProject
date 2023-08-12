@@ -15,6 +15,19 @@ namespace JobFinder.Core.Services
         {
             context = jobFinderDbContext;
         }
+
+        public async Task DeleteInterviewsAndJoblistings(string userId)
+        {
+            var jobLisintgs = await context.JobApplications.Where(a => a.UserId == userId).ToListAsync();
+            var intervewsDb = await context.Interviews
+                .Where(c => c.UserId == userId)
+                .ToListAsync();
+            context.RemoveRange(intervewsDb);
+            context.RemoveRange(jobLisintgs);
+            await context.SaveChangesAsync();
+
+        }
+
         public async Task<IEnumerable<UserInterviewOutputViewModel>> GetInterviewsAsync(string userId)
         {
            var intervewsDb = await context.Interviews

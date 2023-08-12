@@ -155,7 +155,11 @@ namespace JobFinder.Core.Services
             {
                 throw new InvalidOperationException();
             }
-             context.Remove(company);
+            var companyApplications = context.JobApplications.Where(c => c.JobListing.CompanyId == company.Id);
+            var companyListings = context.JobListings.Where(c => c.CompanyId == company.Id);
+            context.RemoveRange(companyApplications);
+            context.RemoveRange(companyListings);
+            context.Remove(company);
             await context.SaveChangesAsync();
         }
     }

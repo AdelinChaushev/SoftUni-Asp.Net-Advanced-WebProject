@@ -1,0 +1,150 @@
+﻿@using JobFinder.Core.Models.JobListingViewModels
+@model AllJobListingOutputViewModel
+
+@{
+    ViewBag.Title = "Search for a job";
+}
+
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<div asp-validation-summary="ModelOnly" class="text-danger text-center"></div>
+
+
+<div class="row-10">
+    <div class="align-items-baseline">
+        <section class="s">
+        <form class="input-group-sm col-10 form-inline row gy-2 gx-3 align-items-center" method="post" asp-area="" asp-controller="JobListing" asp-action="SearchForJob">          
+            <div>
+                <div class="row-10 offset-4">
+                    <div>
+                     <div class="text-center mb-3">
+                    <label asp-for="@Model.Keyword" class="form-label"></label>
+                    <input asp-for="@Model.Keyword" type="text" class="form-control" aria-required="true"></input>
+                    <span asp-validation-for="@Model.Keyword" class="text-danger"></span>
+                </div>
+                 <div class="text-center mb-3">
+                    <label asp-for="@Model.Schedule" class="form-label"></label>
+                    <select asp-for="@Model.Schedule" class="form-control" aria-required="true">                       
+                    @foreach (var type in Model.Schedules)
+                    {
+                        <option value="@type.WorkingSchedule">@type.WorkingSchedule</option>
+                    }
+                </select>
+                    <span asp-validation-for="@Model.Schedule" class="text-danger"></span>
+                </div>
+                   <div class="text-center mb-3">
+                    <label asp-for="@Model.Category" class="form-label"></label>
+                    <select asp-for="@Model.Category" class="form-control" aria-required="true">
+                    @foreach (var type in Model.Categories)
+                    {
+                        <option value="@type.Name">@type.Name</option>
+                    }
+                     </select> 
+                    <span asp-validation-for="@Model.Category" class="text-danger"></span>
+                    </div>
+                
+                <div>
+                    <label asp-for="JobListingSort" class="form-label-add-edit">Order By</label>
+                    <select asp-for="JobListingSort" class="form-control" aria-required="true">
+                        <option value="0">Salary</option>
+                        <option value="1">VaccaintionDays</option>                        
+                    </select>
+                    <span asp-validation-for="JobListingSort" class="text-danger"></span>
+                </div>
+                <div>
+                    <label  asp-for="OrderBy" class="form-label-add-edit">Order type</label>
+                    <select asp-for="OrderBy" class="form-control" aria-required="true">
+                        <option value="0">Asscending</option>
+                        <option value="1">Descending</option>
+                    </select>
+                    <span asp-validation-for="OrderBy" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="offset-4">
+                <input class="btn btn-primary" type="submit" value="Search" asp-area="" asp-controller="JobListing" asp-action="SearchForJobs">
+            </div>
+
+        </form>
+        </section>
+
+    </div>
+        @if (Model.JobLitings.Any())
+        {
+    <div class="col-lg-9 col-md-6 ">
+        <h4 class="text-center offset-3">Jobs</h4>
+            
+        <table class="table table-hover table-dark">
+        <thead>
+          <tr>      
+            <th scope="col">Number</th>
+        
+            <th scope="col">Job Title</th>     
+            <th scope="col">Salary</th>
+            <th scope="col">Vaccantion days</th>
+            <th scope="col">Job category</th>
+            <th scope="col">Job schedule</th>
+            <th scope="col">Delete</th>
+      
+          </tr>
+        </thead>
+        <tbody>
+          
+           @foreach (var item in Model.JobLitings)
+                  {
+                   int counter = 1;
+                   <tr>
+                   <th>@counter</th>
+                   <partial name="_SearchForJobPartial" model="item"></partial>
+                   
+                   counter++;
+                   </tr>
+
+                  }
+          
+        </tbody>
+      </table>
+      
+          
+    </div>
+      }      
+</div>
+
+<div class="row align-items-end">
+    Page @Model.Page / @Model.MaxPages
+    <div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-start">
+        <div>
+            <a class="btn btn-success mb-2 w-100 p-3 fw-bold
+                @(Model.Page == 1 ? "disabled" : string.Empty)"
+               asp-action="SearchForJobs"
+               asp-route-keyword="@Model.Keyword"
+               asp-route-sortBy="@((int)Model.OrderBy)"
+               asp-route-schedule="@Model.Schedule"
+               asp-route-category="@Model.Category"
+               asp-route-jobListingSort="@((int)Model.JobListingSort)"
+               asp-route-page="@(Model.Page - 1)">
+                Previos
+            </a>
+        </div>
+        <div>
+            <a class="btn btn-success mb-2 w-100 p-3 fw-bold
+                @(Model.Page == Model.MaxPages || !Model.JobLitings.Any() ? "disabled" : string.Empty)"
+                asp-action="SearchForJobs"
+                asp-route-keyword="@Model.Keyword"
+                asp-route-sortBy="@((int)Model.OrderBy)"
+               asp-route-schedule="@Model.Schedule"
+               asp-route-category="@Model.Category"
+               asp-route-jobListingSort="@((int)Model.JobListingSort)"
+               asp-route-page="@(Model.Page + 1)">
+                Next
+            </a>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

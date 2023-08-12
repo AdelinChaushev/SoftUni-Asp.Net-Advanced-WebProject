@@ -17,7 +17,11 @@ namespace JobFinder.Controllers
             {
                 return Redirect("/Employer/Home/Index");
             }
-            return RedirectToAction("SearchForJobs", "JobListing");
+            if(User?.Identity?.IsAuthenticated ?? false)
+            {
+                return RedirectToAction("SearchForJobs", "JobListing");
+            }
+            return View();
         }
        
 

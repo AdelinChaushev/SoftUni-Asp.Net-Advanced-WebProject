@@ -20,7 +20,7 @@ namespace JobFinder.Core.Services
         {
             this.context = jobFinderDbContext;
         }
-
+        
         public async Task CreateAsync(JobListing jobListing, string userId)
         {
            
@@ -45,6 +45,9 @@ namespace JobFinder.Core.Services
             {
                 throw new InvalidOperationException();
             }
+            
+            var jobApplications = context.JobApplications
+                .Where(c => c.JobListingId == id);
             context.Remove(jobListing);
             await context.SaveChangesAsync();
         }

@@ -9,6 +9,7 @@ namespace JobFinder.Core.Contracts
 
         public Task<IEnumerable<UserOutputViewModel>> SearchForUser(string keyword);
         public Task<bool> UserHasCompany(string userId);
+        public Task DeleteInterviewsAndJoblistings(string userId);
      
 
         

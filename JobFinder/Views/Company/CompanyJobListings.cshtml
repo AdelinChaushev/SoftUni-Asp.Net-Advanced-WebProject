@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<JobListingOutputViewModel>
 @{
-    ViewData["Title"] = "Here are your job listings";
+    ViewData["Title"] = "Here are the company job listings";
 }
 <h1>@ViewData["Title"]</h1>
 <div class="row">
@@ -13,7 +13,7 @@
      }
     @if(!Model.Any())
     {
-        <h2>No products yet.</h2>
+        <h2>No job listings yet.</h2>
     }
      
 </div>
