@@ -40,6 +40,7 @@ namespace JobFinder.Core.Services
             context.RemoveRange(companyApplications);
             context.RemoveRange(companyListings);
             context.Remove(company);
+            CleanUpPictures(company.CompanyName);
            await context.SaveChangesAsync();
         }
 
@@ -49,7 +50,7 @@ namespace JobFinder.Core.Services
             Company company = await GetCompanyByUserId(userId);
             company.CompanyDescription = editedEntity.CompanyDescription;
             company.CompanyName = editedEntity.CompanyName;
-
+          
             await context.SaveChangesAsync();
 
         }
@@ -164,7 +165,19 @@ namespace JobFinder.Core.Services
             context.RemoveRange(companyApplications);
             context.RemoveRange(companyListings);
             context.Remove(company);
+            CleanUpPictures(company.CompanyName);
             await context.SaveChangesAsync();
+        }
+        private void CleanUpPictures(string company)
+        {
+            if (Directory.Exists($"C:/Users/Adi/Dropbox/Pictures/{company}"))
+            {
+                foreach (var item in new DirectoryInfo($"C:/Users/Adi/Dropbox/Pictures/{company}").EnumerateFiles())
+                {
+                    File.Delete(item.FullName);
+                }
+                Directory.Delete($"C:/Users/Adi/Dropbox/Pictures/{company}");
+            }
         }
     }
 }
