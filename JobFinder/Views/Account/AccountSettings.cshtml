@@ -8,6 +8,9 @@
        <p class="">Email : @User.FindFirstValue(ClaimTypes.Email)</p>
        <a class="btn btn-danger" asp-controller="Account" asp-action="DeleteAccount">Delete Account</a>
 </h3>
+@if (! await userService.UserHasCompany(@User.FindFirstValue(ClaimTypes.NameIdentifier)))
+{
+    
 <div class="text-center col-md-4 offset-md-4" >
      <form asp-controller="Resume" asp-action="Upload" enctype="multipart/form-data" method="post">         
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>  
@@ -24,6 +27,7 @@
      </form>
       
  </div>
+}
 
  @section Scripts {
     <partial name="_ValidationScriptsPartial" />    

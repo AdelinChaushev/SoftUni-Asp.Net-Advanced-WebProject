@@ -80,7 +80,7 @@ namespace JobFinder.Tests.ControllersTests
         public async Task UploadPictureWithModelError()
         {
             var content = "Hello World from a Fake File";
-            var fileName = "test.docx";
+            var fileName = "test.pdf";
             var stream = new MemoryStream();
             var writer = new StreamWriter(stream);
             writer.Write(content);
@@ -93,7 +93,7 @@ namespace JobFinder.Tests.ControllersTests
             resumeService.Setup(s => s.UploadResumeAsync(It.IsAny<byte[]>(), It.IsAny<string>()));
 
             var result = await resumeController.Upload(file);
-            var actionResult = result as ViewResult;
+            var actionResult = result as RedirectToActionResult;
             Assert.IsNotNull(actionResult);
             
            
@@ -101,7 +101,7 @@ namespace JobFinder.Tests.ControllersTests
                 .Returns(true);
 
             var result2 = await resumeController.Upload(file);
-            var actionResult2 = result2 as ViewResult;
+            var actionResult2 = result2 as RedirectToActionResult;
             Assert.IsNotNull(actionResult2);
             //Assert.That(actionResult2.ControllerName == "Account");
             //Assert.That(actionResult2.ActionName == "AccountSettings");

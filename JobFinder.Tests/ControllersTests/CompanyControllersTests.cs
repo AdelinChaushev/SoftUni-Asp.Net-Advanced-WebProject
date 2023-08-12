@@ -7,8 +7,11 @@ using JobFinder.Core.Models.JobListingViewModels;
 using JobFinder.Core.Models.PictureViewModel;
 using JobFinder.Data.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -33,7 +36,7 @@ namespace JobFinder.Tests.ControllersTests
         private AdminCompanyController adminController;
 
         private Mock<ICompanyServiceInterface> companyService;
-      
+        private Mock<UserManager<ApplicationUser>> userManager;
 
         [SetUp]
         public void SetUp()
@@ -92,15 +95,24 @@ namespace JobFinder.Tests.ControllersTests
             adminMock.Setup(s => s.IsInRole("Admin"))
                 .Returns(true);
 
-           
 
+            userManager = new Mock<UserManager<ApplicationUser>>(
+           new Mock<IUserStore<ApplicationUser>>().Object,
+           new Mock<IOptions<IdentityOptions>>().Object,
+           new Mock<IPasswordHasher<ApplicationUser>>().Object,
+           new IUserValidator<ApplicationUser>[0],
+           new IPasswordValidator<ApplicationUser>[0],
+           new Mock<ILookupNormalizer>().Object,
+           new Mock<IdentityErrorDescriber>().Object,
+           new Mock<IServiceProvider>().Object,
+           new Mock<ILogger<UserManager<ApplicationUser>>>().Object);
 
             testControllerContext = new ControllerContext
             {
                 HttpContext = new DefaultHttpContext { User = adminMock.Object }
             };
 
-            adminController = new AdminCompanyController(companyService.Object)
+            adminController = new AdminCompanyController(companyService.Object,userManager.Object)
             {
                 ControllerContext = testControllerContext
             };
@@ -305,7 +317,8 @@ namespace JobFinder.Tests.ControllersTests
         {
             companyService
               .Setup(s => s.DeleteAsyncById(It.IsAny<Guid>()));
-            var result = await adminController.DeleteCompany(Guid.NewGuid());
+            userManager.Setup(s => s.RemoveFromRoleAsync(It.IsAny<ApplicationUser>(), It.IsAny<string>()));
+            var result = await adminController.DeleteCompany(Guid.NewGuid(),userId);
             var actionResult = result as RedirectToActionResult;
 
             Assert.IsNotNull(actionResult);
@@ -318,7 +331,7 @@ namespace JobFinder.Tests.ControllersTests
             companyService
               .Setup(s => s.DeleteAsyncById(It.IsAny<Guid>()))
               .ThrowsAsync(new InvalidOperationException());
-            var result = await adminController.DeleteCompany(Guid.NewGuid());
+            var result = await adminController.DeleteCompany(Guid.NewGuid(), userId);
             var actionResult = result as BadRequestResult;
 
             Assert.IsNotNull(actionResult);

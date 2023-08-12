@@ -129,6 +129,11 @@ namespace JobFinder.Tests.ControllersTests
             userManager.Setup(s => s.FindByIdAsync(It.IsAny<string>()))
                 .ReturnsAsync(new ApplicationUser());
 
+            userManager.Setup(s => s.RemoveFromRolesAsync(It.IsAny<ApplicationUser>(), It.IsAny<IEnumerable<string>>()));
+
+            userService.Setup(s => s.DeleteInterviewsAndJoblistings(It.IsAny<string>()));
+              
+
             userManager.Setup(s => s.DeleteAsync(It.IsAny<ApplicationUser>()));
                
 

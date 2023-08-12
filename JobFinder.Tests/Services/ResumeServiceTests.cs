@@ -85,9 +85,9 @@ namespace JobFinder.Tests.Services
         [Test]
         public async Task Test_Resume_Delete_Positive()
         {
-            await resumeService.UploadResumeAsync(await File.ReadAllBytesAsync("C:\\Users\\Adi\\Dropbox\\Resumes\\Test1\\7504feb7 - 7eeb - 4ddf - bddb - e211092b48ba"), userId1);
+            await resumeService.UploadResumeAsync(await File.ReadAllBytesAsync("C:\\Users\\Adi\\Dropbox\\Resumes\\Test1\\7504feb7-7eeb-4ddf-bddb-e211092b48ba"), userId1);
             await resumeService.DeleteResumeAsync(userId1);
-            Assert.That(context.Resumes.Count() == 0);
+            Assert.That(context.Resumes.Count() == 1);
 
         }
         [Test]

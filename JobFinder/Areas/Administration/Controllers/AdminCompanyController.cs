@@ -1,6 +1,7 @@
 ﻿using JobFinder.Core.Contracts;
 using JobFinder.Core.Models.CompanyViewModels;
 using JobFinder.Data.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobFinder.Areas.Administration.Controllers
@@ -9,9 +10,14 @@ namespace JobFinder.Areas.Administration.Controllers
     {
         private readonly ICompanyServiceInterface companyService;
 
-        public AdminCompanyController(ICompanyServiceInterface companyService)
+
+
+        private readonly UserManager<ApplicationUser> userManager;
+
+        public AdminCompanyController(ICompanyServiceInterface companyService, UserManager<ApplicationUser> userManager)
         {
             this.companyService = companyService;
+            this.userManager = userManager;
         }
 
         [HttpGet]
@@ -22,7 +28,7 @@ namespace JobFinder.Areas.Administration.Controllers
             return View(outputViewModel);
         }
 
-        public async Task<IActionResult> DeleteCompany(Guid id)
+        public async Task<IActionResult> DeleteCompany(Guid id,string ownerId)
         {
             try
             {
@@ -33,13 +39,14 @@ namespace JobFinder.Areas.Administration.Controllers
 
                 return BadRequest();
             }
-
+            await userManager.RemoveFromRoleAsync(await userManager.FindByIdAsync(ownerId),"Employer");  
             return RedirectToAction(nameof(CompanySearch));
         }
         private IEnumerable<CompanyOutputViewModel> ToViewModelMany(IEnumerable<Company> dbModel)
         => dbModel.Select(c => new CompanyOutputViewModel()
         {
             Id = c.Id,
+            OwnerId = c.OwnerId,
             Description = c.CompanyDescription,
             CompanyName = c.CompanyName,
         });

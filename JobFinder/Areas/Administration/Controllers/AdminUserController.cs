@@ -34,7 +34,7 @@ namespace JobFinder.Areas.Administration.Controllers
             }
             
             userManager.RemoveFromRolesAsync(user, new List<string>() { "Employer", "User" });
-            await userService.DeleteInterviewsAndJoblistings(GetUserId());
+            await userService.DeleteInterviewsAndJoblistings(id);
             await userManager.DeleteAsync(user);
 
             return RedirectToAction(nameof(SearchForUser));
