@@ -28,7 +28,7 @@ namespace JobFinder.Areas.Administration.Controllers
             return View(outputViewModel);
         }
 
-        public async Task<IActionResult> DeleteCompany(Guid id,string ownerId)
+        public async Task<IActionResult> DeleteCompany(Guid id,string? ownerId)
         {
             try
             {
@@ -39,7 +39,9 @@ namespace JobFinder.Areas.Administration.Controllers
 
                 return BadRequest();
             }
+            if(ownerId != null)
             await userManager.RemoveFromRoleAsync(await userManager.FindByIdAsync(ownerId),"Employer");  
+
             return RedirectToAction(nameof(CompanySearch));
         }
         private IEnumerable<CompanyOutputViewModel> ToViewModelMany(IEnumerable<Company> dbModel)

@@ -10,18 +10,34 @@ namespace JobFinder.Core.Services
     public class UserService : IUserServiceInterface
     {
         private readonly JobFinderDbContext context;
+        private readonly IResumeServiceInterface resumeService;
 
-        public UserService(JobFinderDbContext jobFinderDbContext)
+      
+
+        public UserService(JobFinderDbContext context, IResumeServiceInterface resumeService)
         {
-            context = jobFinderDbContext;
+            this.context = context;
+            this.resumeService = resumeService;
         }
 
         public async Task DeleteInterviewsAndJoblistings(string userId)
         {
-            var jobLisintgs = await context.JobApplications.Where(a => a.UserId == userId).ToListAsync();
+            var jobLisintgs = await context.JobApplications.AsNoTracking()
+                .Where(a => a.UserId == userId).ToListAsync();
+
             var intervewsDb = await context.Interviews
+                .AsNoTracking()
                 .Where(c => c.UserId == userId)
                 .ToListAsync();
+
+            var company = await context.Companies
+                .FirstOrDefaultAsync(c => c.OwnerId == userId);
+
+
+            await resumeService.DeleteResumeAsync(userId);
+            if(company != null)
+            context.Companies.Remove(company);
+
             context.RemoveRange(intervewsDb);
             context.RemoveRange(jobLisintgs);
             await context.SaveChangesAsync();

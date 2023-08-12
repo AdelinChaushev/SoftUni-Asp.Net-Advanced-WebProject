@@ -21,6 +21,7 @@ namespace JobFinder.Tests.Services
 
         private IUserServiceInterface userService;
         private JobFinderDbContext context;
+        private IResumeServiceInterface resumeService;
 
         [SetUp]
         public void Setup()
@@ -82,8 +83,8 @@ namespace JobFinder.Tests.Services
             context.Add(company);
             context.Add(interview);
             context.SaveChanges();
-
-            userService = new UserService(context);
+            resumeService = new ResumeService(context);
+            userService = new UserService(context,resumeService);
         }
         [Test]
         public async Task Test_User_UserInterviews()

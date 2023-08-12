@@ -8,225 +8,133 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = JobFinder
 build_property.RootNamespace = JobFinder
-build_property.ProjectDir = C:\Users\Adi\source\repos\JobFinder\JobFinder\
+build_property.ProjectDir = C:\Users\Adi\Source\Repos\SoftUni-Asp.Net-Advanced-WebProject\1\JobFinder\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Adi\source\repos\JobFinder\JobFinder
+build_property.MSBuildProjectDirectory = C:\Users\Adi\Source\Repos\SoftUni-Asp.Net-Advanced-WebProject\1\JobFinder
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/AdminCompany/CompanySearch.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/AdminCompany/CompanySearch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcQWRtaW5Db21wYW55XENvbXBhbnlTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/AdminHome/Index.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/AdminHome/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcQWRtaW5Ib21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/AdminJobListing/SearchForJobs.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/AdminJobListing/SearchForJobs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcQWRtaW5Kb2JMaXN0aW5nXFNlYXJjaEZvckpvYnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/AdminUser/SearchForUser.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/AdminUser/SearchForUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcQWRtaW5Vc2VyXFNlYXJjaEZvclVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/Shared/_ComapanySearchPartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/Shared/_ComapanySearchPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9Db21hcGFueVNlYXJjaFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/Shared/_SearchForJobPartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/Shared/_SearchForJobPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9TZWFyY2hGb3JKb2JQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/Shared/_UserSearchPartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/Shared/_UserSearchPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9Vc2VyU2VhcmNoUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/_ViewImports.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/_ViewStart.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/CompanyInterviews.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Company/CompanyInterviews.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxDb21wYW55SW50ZXJ2aWV3cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/CompanyJobListings.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Company/CompanyJobListings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxDb21wYW55Sm9iTGlzdGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/CompanyPictures.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Company/CompanyPictures.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxDb21wYW55UGljdHVyZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/CompanySettings.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Company/CompanySettings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxDb21wYW55U2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Company/Edit.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Company/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcQ29tcGFueVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Home/Index.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Interview/ScheduleInterview.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Interview/ScheduleInterview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcSW50ZXJ2aWV3XFNjaGVkdWxlSW50ZXJ2aWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/JobListing/Add.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/JobListing/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcSm9iTGlzdGluZ1xBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/JobListing/Edit.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/JobListing/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcSm9iTGlzdGluZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/JobListing/JobListingApplications.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/JobListing/JobListingApplications.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcSm9iTGlzdGluZ1xKb2JMaXN0aW5nQXBwbGljYXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_CompanyInterviewPartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Shared/_CompanyInterviewPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9Db21wYW55SW50ZXJ2aWV3UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_CompanyJobListingsPartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Shared/_CompanyJobListingsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9Db21wYW55Sm9iTGlzdGluZ3NQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_CompanyPicturePartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Shared/_CompanyPicturePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9Db21wYW55UGljdHVyZVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_JobListingApplication.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Shared/_JobListingApplication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9Kb2JMaXN0aW5nQXBwbGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/_ViewImports.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/_ViewStart.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Account/AccountSettings.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50U2V0dGluZ3MuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Account/SelectAccountType.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTZWxlY3RBY2NvdW50VHlwZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Company/CompanyInformation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDb21wYW55SW5mb3JtYXRpb24uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Company/CompanyJobListings.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDb21wYW55Sm9iTGlzdGluZ3MuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Company/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Company/SearchForCompanies.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxTZWFyY2hGb3JDb21wYW5pZXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/JobListing/JobListingFullInformation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iTGlzdGluZ1xKb2JMaXN0aW5nRnVsbEluZm9ybWF0aW9uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/JobListing/SearchForJobs.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iTGlzdGluZ1xTZWFyY2hGb3JKb2JzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/_CompanyPicturePartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db21wYW55UGljdHVyZVBhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/_LoginPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/_SearchForCompaniesPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZWFyY2hGb3JDb21wYW5pZXNQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/_SearchJobListingPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZWFyY2hKb2JMaXN0aW5nUGFydGlhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/_UserInterviewPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VySW50ZXJ2aWV3UGFydGlhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/User/Interviews.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbnRlcnZpZXdzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Administration/Views/Shared/_Layout.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Administration/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-c586cc4ney
 
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Areas/Employer/Views/Shared/_Layout.cshtml]
+[C:/Users/Adi/Source/Repos/SoftUni-Asp.Net-Advanced-WebProject/1/JobFinder/Areas/Employer/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZXJcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1uqpmhk62r
-
-[C:/Users/Adi/source/repos/JobFinder/JobFinder/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-17syggccb6

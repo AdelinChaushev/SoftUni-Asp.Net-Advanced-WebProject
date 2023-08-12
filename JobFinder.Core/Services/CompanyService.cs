@@ -19,6 +19,10 @@ namespace JobFinder.Core.Services
         }
         public async Task AddAsync(Company company, string userId)
         {
+            if (await context.Companies.AnyAsync(c => c.OwnerId == userId))
+            {
+                return;
+            }
             company.OwnerId = userId;
             await context.AddAsync(company);
             await context.SaveChangesAsync();
