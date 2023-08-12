@@ -33,7 +33,7 @@ namespace JobFinder.Areas.Administration.Controllers
                 return RedirectToAction(nameof(SearchForUser));
             }
             
-            userManager.RemoveFromRolesAsync(user, new List<string>() { "Employer", "User" });
+            await userManager.RemoveFromRolesAsync(user, new List<string>() { "Employer", "User" });
             await userService.DeleteInterviewsAndJoblistings(id);
             await userManager.DeleteAsync(user);
 
