@@ -43,6 +43,7 @@ namespace JobFinder.Controllers
         {
             if (!ModelState.IsValid )
             {
+                ModelState.AddModelError("","Invalid input");
                 return View(compnay);
             }
             await companyService.AddAsync(ToDbModel(compnay), GetUserId());

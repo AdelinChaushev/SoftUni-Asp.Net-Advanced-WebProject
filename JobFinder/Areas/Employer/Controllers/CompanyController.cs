@@ -35,6 +35,7 @@ namespace JobFinder.Areas.Employer.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ModelState.AddModelError("", "Invalid input");
                 return View(compnayViewModel);
             }
             var company = ToDbModel(compnayViewModel);

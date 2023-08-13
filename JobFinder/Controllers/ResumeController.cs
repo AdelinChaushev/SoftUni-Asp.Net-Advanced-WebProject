@@ -18,10 +18,12 @@ namespace JobFinder.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ModelState.AddModelError("", "Invalid input");
                 return RedirectToAction("AccountSettings", "Account");
             }
-            if (User.IsInRole("Employer"))
+            if (User.IsInRole("Employer"))                
             {
+                ModelState.AddModelError("", "Employers can not upload resumes");
                 return RedirectToAction("AccountSettings", "Account");
             }
             byte[] bytes = new byte[file.Length];
@@ -31,7 +33,16 @@ namespace JobFinder.Controllers
                 bytes = ms.ToArray();
 
             }
+            try
+            {
+
             await fileService.UploadResumeAsync(bytes, GetUserId());
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "You already have a resume.");
+                return RedirectToAction("AccountSettings", "Account");
+            }
 
             return RedirectToAction("AccountSettings", "Account");
         }
@@ -48,7 +59,7 @@ namespace JobFinder.Controllers
                 }
                 catch (Exception)
                 {
-
+                    ModelState.AddModelError("", "You do not have a resume to download.");
                     return RedirectToAction("AccountSettings", "Account");
                 }
                  
@@ -69,7 +80,16 @@ namespace JobFinder.Controllers
 
         public async Task<IActionResult> Delete() 
         {
+            try
+            {
             await fileService.DeleteResumeAsync(GetUserId());
+
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "You do not have a resume to delete.");
+                return RedirectToAction("AccountSettings", "Account");
+            }
              return RedirectToAction("AccountSettings", "Account");
         }
     }

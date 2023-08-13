@@ -96,7 +96,8 @@ namespace JobFinder.Controllers
             }
             catch (InvalidOperationException)
             {
-                return BadRequest();
+                ModelState.AddModelError("","You can not apply for this job");
+                return RedirectToAction("SearchForJobs");
 
             }
             return RedirectToAction("SearchForJobs");

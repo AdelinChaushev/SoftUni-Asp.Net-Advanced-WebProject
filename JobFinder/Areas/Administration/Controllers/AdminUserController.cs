@@ -30,6 +30,7 @@ namespace JobFinder.Areas.Administration.Controllers
             var user = await userManager.FindByIdAsync(id);
             if (await userManager.IsInRoleAsync(user,"Admin"))
             {
+                ModelState.AddModelError("", "Can not delete admins.");
                 return RedirectToAction(nameof(SearchForUser));
             }
             

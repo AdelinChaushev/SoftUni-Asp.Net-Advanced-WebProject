@@ -37,11 +37,13 @@ namespace JobFinder.Core.Services
             }
             var companyApplications = context.JobApplications.Where(c => c.JobListing.CompanyId == company.Id);
             var companyListings = context.JobListings.Where(c => c.CompanyId == company.Id);
+
             context.RemoveRange(companyApplications);
             context.RemoveRange(companyListings);
-            context.Remove(company);
+            context.Remove(company); 
             CleanUpPictures(company.CompanyName);
-           await context.SaveChangesAsync();
+
+            await context.SaveChangesAsync();
         }
 
         public async Task EditAsync( Company editedEntity,string userId)
@@ -50,7 +52,7 @@ namespace JobFinder.Core.Services
             Company company = await GetCompanyByUserId(userId);
             company.CompanyDescription = editedEntity.CompanyDescription;
             company.CompanyName = editedEntity.CompanyName;
-          
+
             await context.SaveChangesAsync();
 
         }
@@ -65,14 +67,12 @@ namespace JobFinder.Core.Services
         public async Task<IEnumerable<CompanyInterviewOutputViewModel>> GetCompanyInterviewsAsync(string userId)
         {
             var company = await GetCompanyByUserId(userId);
-            
-             var interviewsToDelete = await context.Interviews
+            var interviewsToDelete = await context.Interviews
                 .Where(c => c.CompanyId == company.Id && c.InterviewEnd < DateTime.Now)
                 .ToListAsync();
             context.RemoveRange(interviewsToDelete);
             await context.SaveChangesAsync();
-       
-         
+
             IEnumerable<CompanyInterviewOutputViewModel> companyOutputViewModels = await context.Interviews
                 .Where(c => c.CompanyId == company.Id)
                 .Select(c => new CompanyInterviewOutputViewModel()

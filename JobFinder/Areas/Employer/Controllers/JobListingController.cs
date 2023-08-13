@@ -38,6 +38,7 @@ namespace JobFinder.Areas.Employer.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ModelState.AddModelError("", "Invalid input");
                 return View(jobListingInputViewModel);
             }
             JobListing jobListing = ToDbModel(jobListingInputViewModel);
@@ -72,6 +73,7 @@ namespace JobFinder.Areas.Employer.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ModelState.AddModelError("", "Invalid input");
                 return View(jobListingInputViewModel);
             }
             JobListing jobListing = ToDbModel(jobListingInputViewModel);
