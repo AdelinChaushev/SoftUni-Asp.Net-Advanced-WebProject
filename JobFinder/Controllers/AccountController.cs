@@ -149,7 +149,7 @@ namespace JobFinder.Controllers
         public async Task<IActionResult> DeleteAccount()
         {
             ApplicationUser user = await userManager.FindByIdAsync(GetUserId());
-
+            
             await signInManager.SignOutAsync();
             await userService.DeleteInterviewsAndJoblistings(GetUserId());
             await userManager.DeleteAsync(user);

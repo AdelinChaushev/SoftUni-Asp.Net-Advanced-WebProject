@@ -18,6 +18,7 @@ namespace JobFinder.Areas.Employer.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ModelState.AddModelError("", "Invalid input");
                 return RedirectToAction("CompanyPictures", "Company");
             }            
             byte[] bytes = new byte[file.Length];

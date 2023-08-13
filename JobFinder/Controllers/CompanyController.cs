@@ -41,7 +41,7 @@ namespace JobFinder.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CompanyInputViewModel compnay)
         {
-            if (!ModelState.IsValid )
+            if (!ModelState.IsValid)
             {
                 ModelState.AddModelError("","Invalid input");
                 return View(compnay);

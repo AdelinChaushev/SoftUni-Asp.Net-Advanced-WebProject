@@ -1,6 +1,5 @@
 ﻿@using JobFinder.Core.Contracts
 @using System.Security.Claims
-@model FileUploadViewModel
 @inject IUserServiceInterface userService
 <h1 class="text-center">Account Settings</h1>
 <h3 class="text-center">
@@ -13,7 +12,7 @@
     
 <div class="text-center col-md-4 offset-md-4" >
      <form asp-controller="Resume" asp-action="Upload" enctype="multipart/form-data" method="post">         
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>  
+        <div asp-validation-summary="All" class="text-danger"></div>  
          <input class="form-control" type="file"  name="file" />
 
         <button type="submit" value="Upload"  class="btn btn-success">Upload</button>
