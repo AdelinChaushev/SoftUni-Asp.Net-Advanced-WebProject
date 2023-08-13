@@ -88,7 +88,7 @@ namespace JobFinder.Controllers
         
         public async Task<IActionResult> ApplyForJob(Guid id)
         {
-            try
+             try
             {
 
             await jobListingService.ApplyForJob(id,GetUserId());
@@ -96,12 +96,22 @@ namespace JobFinder.Controllers
             }
             catch (InvalidOperationException)
             {
-                ModelState.AddModelError("","You can not apply for this job");
-                return RedirectToAction("SearchForJobs");
+                ModelState.AddModelError("", "You can not apply for this job");
+                if (Equals(null, Request.ContentType))
+                {
+                    return RedirectToAction(nameof(SearchForJobs));
+                }
+               
+                return Redirect(Request.Headers["Referer"].ToString());
 
             }
-            return RedirectToAction("SearchForJobs");
+            if(Equals(null, Request.ContentType))
+            {
+                return RedirectToAction(nameof(SearchForJobs));
+            }
+            return Redirect(Request.Headers["Referer"].ToString());
         }
+        
          
 
        
