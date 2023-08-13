@@ -46,6 +46,12 @@ namespace JobFinder.Core.Services
 
         public async Task<IEnumerable<UserInterviewOutputViewModel>> GetInterviewsAsync(string userId)
         {
+          var interviewsToDelete = await context.Interviews
+                .Where(c => c.UserId == userId && c.InterviewEnd < DateTime.Now)
+                .ToListAsync();
+            context.RemoveRange(interviewsToDelete);
+            await context.SaveChangesAsync();
+            
            var intervewsDb = await context.Interviews
                 .Where(c => c.UserId == userId)
                 .Select(c => new UserInterviewOutputViewModel()
